@@ -1,18 +1,39 @@
 <!DOCTYPE html>
 <html>
-
+	<style>
+		h1 {
+			color: red;
+			font-family: 'cursive';
+		}
+	</style>
 	<head>
 		<link rel="shortcut icon" type="favicon.ico" href="favicon.ico">
-    	<title>Physics</title>
+    		<title>Physics</title>
     	<h1>Physics</h1>
   	</head>
 
   	<body>
-  
+  		<form>
+			<table>
+				<tr>
+					<td>ID</td>
+					<td><input id="angularVelociy" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>	
+				</tr>
+				<tr>
+					<td>Password</td>
+					<td><input id="radius" type="number"  onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
+				</tr>
+			</table>
+			
+			<button id="btn1" type="button" onclick="calculate()">Calculate</button>
+		</form>
+
   	</body>
   
   	<script>
-  
+  		function calculate(){
+  			return 0;
+  		}
   	</script>
 
 </html>

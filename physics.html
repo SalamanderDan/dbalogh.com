@@ -82,7 +82,24 @@
   
   	<script>
   		function calculate(){
-  			return 0;
+  			momentum = document.getElementById("momentum").value;
+  			force = document.getElementById("force").value;
+  			inertia = document.getElementById("inertia").value;
+  			torque = document.getElementById("torque").value;
+  			mass = document.getElementById("mass").value;
+  			accelC = document.getElementById("accelC").value;
+  			forceC = document.getElementById("forceC").value;
+  			radius = document.getElementById("radius").value;
+  			period = document.getElementById("period").value;
+  			frequency = document.getElementById("frequency").value;
+  			tanVelocity = document.getElementById("tangentialVelocity").value;
+  			accelA = document.getElementById("angularAcceleration").value;
+  			angVelocity = document.getElementById("angularVelociy").value;
+  			units = document.getElementById("units").value;
+  			
+  			
+  			
+  			console.log(momentum + " " + force + " " + inertia + " " + torque  + " " + mass + " " + accelC + " " + forceC + " " + radius + " " + period + " " + frequency + " " + tanVelocity + " " + accelA + " " + angVelocity + " " + units);
   		}
   	</script>
 

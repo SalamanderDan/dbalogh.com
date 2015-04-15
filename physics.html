@@ -98,10 +98,6 @@
   	</body>
   
   	<script>
-  		function isNumber(n) {
-  			return !isNaN(parseFloat(n)) && isFinite(n);
-		}
-  	
   	
   		function calculate(){
   			momentum = document.getElementById("momentum").value;
@@ -120,64 +116,64 @@
   			units = document.getElementById("units").value;
   			shape = document.getElementById("shape").value;
   			
-  			/*
   			
-  			 if (isNumber(momentum)){
+  			
+  			 if (!isNaN(momentum)){
   				return momentum;
   			}
   			
-  			if (isNumber(angVelocity)){
+  			if (isNaN(angVelocity)){
   				return angVelocity;
   			}
   			
-  			if (isNumber(inertia)){
+  			if (isNaN(inertia)){
   				return inertia;
   			}
   			
-  			if (isNumber(force)){
+  			if (isNaN(force)){
   				return force;
   			}
   			
-  			if (isNumber(torque)){
+  			if (isNaN(torque)){
   				return torque;
   			}
   			
-  			if (isNumber(mass)){
+  			if (isNaN(mass)){
   				return mass;
   			}
   			
-  			if (isNumber(accelC)){
+  			if (isNaN(accelC)){
   				return accelC;
   			}
   			
-  			if (isNumber(forceC)){
+  			if (isNaN(forceC)){
   				return forceC;
   			}
   			
-  			if (isNumber(radius)){
+  			if (isNaN(radius)){
   				return radius;
   			}
   			
-  			if (isNumber(period)){
+  			if (isNaN(period)){
   				return period;
   			}
   			
-  			if (isNumber(frequency)){
+  			if (isNaN(frequency)){
   				return frequency;
   			}
   			
-  			if (isNumber(tanVelocity)){
+  			if (isNaN(tanVelocity)){
   				return tanVelocity;
   			}
   			
-  			if (isNumber(accelA)){
+  			if (isNaN(accelA)){
   				return accelA;
   			}
   			
-  			if (isNumber(angVelocity)){
+  			if (isNaN(angVelocity)){
   				return angVelocity;
   			}
-  			
+  			/*
   			if (units.indexOf("radian")){
   				return angVelocity;
   			}

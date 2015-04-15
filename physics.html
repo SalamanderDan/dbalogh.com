@@ -120,6 +120,13 @@
   			units = document.getElementById("units").value;
   			shape = document.getElementById("shape").value;
   			
+  			if (isNumber(momentum)){
+  				return momentum;
+  			}
+  			else {
+  				momentum = angVelocity * inertia;
+  			}
+  			
   			if (shape.indexOf("na")){
   				return 0;
   			}

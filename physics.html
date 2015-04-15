@@ -127,6 +127,38 @@
   				momentum = angVelocity * inertia;
   			}
   			
+  			if (isNumber(angVelocity)){
+  				return angVelocity;
+  			}
+  			
+  			if (isNumber(inertia)){
+  				return inertia;
+  			}
+  			
+  			if (isNumber(force)){
+  				return force;
+  			}
+  			
+  			if (isNumber(torque)){
+  				return torque;
+  			}
+  			
+  			if (isNumber(mass)){
+  				return mass;
+  			}
+  			
+  			if (isNumber(accelC)){
+  				return accelC;
+  			}
+  			
+  			if (isNumber(forceC)){
+  				return forceC;
+  			}
+  			
+  			if (isNumber(radius)){
+  				return radius;
+  			}
+  			
   			if (shape.indexOf("na")){
   				return 0;
   			}

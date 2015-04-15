@@ -179,6 +179,16 @@
   				return angVelocity;
   			}
   			
+  			if (units.indexOf("radian")){
+  				return angVelocity;
+  			}
+  			else if (units.indexOf("degree")){
+  				angVelocity = angVelocity * 0.0174532925;
+  			}
+  			else if (units.indexOf("revolution")){
+  				angVelocity = angVelocity * 6.28;
+  			}
+  			
   			if (shape.indexOf("na")){
   				return 0;
   			}

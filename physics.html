@@ -66,6 +66,23 @@
 					<td><input id="inertia" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
 				</tr>
 				<tr>
+					<td>Shape</td>
+					<td>	<select id="shape">
+							<option value="na">Don't know/doesn't matter</option>
+							<option value="point">Point</option>
+							<option value="rod">Thin rod around center</option>
+							<option value="rod2">Thin rod around end</option>
+							<option value="shell">Cylindrical Shell</option>
+							<option value="cylinder">Solid Cylindrical</option>
+							<option value="annular">Annular Cylinder</option>
+							<option value="sphere">Solid Shpere</option>
+							<option value="thin">Spherical Shell</option>
+							<option value="plate">Rectangular Plate</option>
+							<option value="sheet">Rectangular Sheet around center</option>
+							<option value="sheetA">Rectangular Sheet around axis</option>
+						</select></td>
+				</tr>
+				<tr>
 					<td>Force</td>
 					<td><input id="force" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
 				</tr>
@@ -96,10 +113,10 @@
   			accelA = document.getElementById("angularAcceleration").value;
   			angVelocity = document.getElementById("angularVelociy").value;
   			units = document.getElementById("units").value;
+  			shape = document.getElementById("shape").value;
   			
   			
-  			
-  			console.log(momentum + " " + force + " " + inertia + " " + torque  + " " + mass + " " + accelC + " " + forceC + " " + radius + " " + period + " " + frequency + " " + tanVelocity + " " + accelA + " " + angVelocity + " " + units);
+  			console.log(momentum + " " + force + " " + inertia + " " + torque  + " " + mass + " " + accelC + " " + forceC + " " + radius + " " + period + " " + frequency + " " + tanVelocity + " " + accelA + " " + angVelocity + " " + units + " " + shape);
   		}
   	</script>
 

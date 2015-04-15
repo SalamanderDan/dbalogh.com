@@ -94,10 +94,15 @@
 			
 			<button id="btn1" type="button" onclick="calculate()">Calculate</button>
 		</form>
-
+		<p id="result"></p>
   	</body>
   
   	<script>
+  		function isNumber(n) {
+  			return !isNaN(parseFloat(n)) && isFinite(n);
+		}
+  	
+  	
   		function calculate(){
   			momentum = document.getElementById("momentum").value;
   			force = document.getElementById("force").value;
@@ -120,6 +125,8 @@
   			}
   			else if (shape.indexOf("point")){
   				return 1;
+  				inertia = mass * radius^2;
+  				document.getElementById("result").innerHTML = inertia;
   			}
   			else if (shape.indexOf("rod")){
   				return 2;

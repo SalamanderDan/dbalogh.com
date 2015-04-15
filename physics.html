@@ -115,6 +115,42 @@
   			units = document.getElementById("units").value;
   			shape = document.getElementById("shape").value;
   			
+  			if (shape.indexOf("na")){
+  				return 0;
+  			}
+  			else if (shape.indexOf("point")){
+  				return 1;
+  			}
+  			else if (shape.indexOf("rod")){
+  				return 2;
+  			}
+  			else if (shape.indexOf("rod2")){
+  				return 3;
+  			}
+  			else if (shape.indexOf("shell")){
+  				return 4;
+  			}
+  			else if (shape.indexOf("cylinder")){
+  				return 5;
+  			}
+  			else if (shape.indexOf("annular")){
+  				return 6;
+  			}
+  			else if (shape.indexOf("sphere")){
+  				return 7;
+  			}
+  			else if (shape.indexOf("thin")){
+  				return 8;
+  			}
+  			else if (shape.indexOf("plate")){
+  				return 9;
+  			}
+  			else if (shape.indexOf("sheet")){
+  				return 10;
+  			}
+  			else if (shape.indexOf("sheetA")){
+  				return 11;
+  			}
   			
   			console.log(momentum + " " + force + " " + inertia + " " + torque  + " " + mass + " " + accelC + " " + forceC + " " + radius + " " + period + " " + frequency + " " + tanVelocity + " " + accelA + " " + angVelocity + " " + units + " " + shape);
   		}

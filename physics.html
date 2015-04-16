@@ -135,13 +135,13 @@
   			var t = isNaN(torque);
   			console.log(t);
   			
-  			if (units.indexOf("radian") < 1){
+  			if (units.indexOf("rad") < 1){
   				angVelocity = angVelocity;
   			}
-  			else if (units.indexOf("degree") < 1){
+  			else if (units.indexOf("deg") < 1){
   				angVelocity = angVelocity * 0.0174532925;
   			}
-  			else if (units.indexOf("revolution") < 1){
+  			else if (units.indexOf("rev") < 1){
   				angVelocity = angVelocity * 6.28;
   			}
   			console.log("converted");

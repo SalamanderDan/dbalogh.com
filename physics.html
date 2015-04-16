@@ -132,6 +132,8 @@
   			arc = document.getElementById("arc").value;
   			angD = document.getElementById("angD").value;
   			
+  			var t = isNan(torque);
+  			console.log(t);
   			
   			if (units.indexOf("radian") < 1){
   				angVelocity = angVelocity;

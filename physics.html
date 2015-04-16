@@ -90,6 +90,18 @@
 					<td>Momentum</td>
 					<td><input id="momentum" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
 				</tr>
+				<tr>
+					<td>Time</td>
+					<td><input id="time" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
+				</tr>
+				<tr>
+					<td>Arc Length</td>
+					<td><input id="arc" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
+				</tr>
+				<tr>
+					<td>Angular Distance</td>
+					<td><input id="angD" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
+				</tr>
 			</table>
 			
 			<button id="btn1" type="button" onclick="calculate()">Calculate</button>
@@ -115,6 +127,9 @@
   			angVelocity = document.getElementById("angularVelociy").value;
   			units = document.getElementById("units").value;
   			shape = document.getElementById("shape").value;
+  			time = document.getElementById("time").value;
+  			arc = document.getElementById("arc").value;
+  			angD = document.getElementById("angD").value;
   			
   			
   			if (units.indexOf("radian") < 1){
@@ -129,6 +144,14 @@
   			
   			if (angVelocity.indexOf(" ") < 1){
   				if (radius.indexOf(" ") < 1){
+  					if (arc.indexOf(" ") < 1){
+  						return;
+  					}
+  					if (angD.indexOf(" ") < 1){
+  						return;
+  					}
+  					radius = arc / angD;
+  					return;
   					if (accelC.indexOf(" ") < 1){
   						if (mass.indexOf(" ") < 1){
   							if (forceC.indexOf(" ") < 1){
@@ -156,10 +179,58 @@
   					radius = (tanVelocity^2) / accelC;
   				}
   				if (tanVelocity.indexOf(" ") < 1){
+  					if (angD.indexOf(" ") < 1){
+  						if (period.indexOf(" ")){
+  							if (frequency.indexOf(" ") < 1){
+  								return;
+  							}
+  							angVelocity = 6.28 * frequency;
+  							return;
+  						}
+  						angVelocity = 6.28 / period;
+  					}
+  					if(time.indexOf(" ") < 1){
+  						return;
+  					}	
+  					angVelocity = angD / time
   					return;
   				}
-  				
   				angVelocity = tanVelocity / radius;
+  			}
+  			if (radius.indexOf(" ") < 1){
+  				if (arc.indexOf(" ") < 1){
+  						return;
+  					}
+  					if (angD.indexOf(" ") < 1){
+  						return;
+  					}
+  					radius = arc / angD;
+  					return;
+  					if (accelC.indexOf(" ") < 1){
+  						if (mass.indexOf(" ") < 1){
+  							if (forceC.indexOf(" ") < 1){
+  								return;
+  							}
+  							if (accelC.indexOf(" ") < 1){
+  								return;
+  							}
+  							mass = forceC / accelC;
+  						}
+  						if (forceC.indexOf(" ") < 1){
+  							if (accelC.indexOf(" ") < 1){
+  								return;
+  							}
+  							forceC = mass * accelC;
+  						}
+  						if (tanVelocity.indexOf(" ") < 1){
+  								return;
+  						}
+  						radius = (mass * tanVelocity^2) / forceC;
+  					}
+  					if (tanVelocity.indexOf(" ") < 1){
+  						return;
+  					}
+  					radius = (tanVelocity^2) / accelC;	
   			}
   			
   			console.log(momentum + " " + force + " " + inertia + " " + torque  + " " + mass + " " + accelC + " " + forceC + " " + radius + " " + period + " " + frequency + " " + tanVelocity + " " + accelA + " " + angVelocity + " " + units + " " + shape);

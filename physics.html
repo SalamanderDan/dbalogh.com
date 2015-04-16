@@ -149,20 +149,27 @@
   			}
   			console.log("converted");
   			console.log(angVelocity);
-  			/*
-  			if (angVelocity.indexOf(" ") < 1){
-  				if (radius.indexOf(" ") < 1){
+  			
+  			if (angVelocity.indexOf("") < 1){
+  				console.log("no angVelocity");
+  				if (radius.indexOf("") < 1){
+  					console.log("no radius");
   					if (arc.indexOf("") < 1 && angD.indexOf("") < 1){
+  						console.log("no arc or angD");
   						return;
   					}
   					else if (arc.indexOf("") != 0 && angD.indexOf("") != 0){
   						radius = arc / angD;
+  						console.log("yes arc and angD");
   						return;
   					}
   					
   					if (accelC.indexOf("") < 1){
+  						console.log("no accelC");
   						if (mass.indexOf("") < 1){
+  							console.log("no mass");
   							if (forceC.indexOf("") < 1 && accelC.indexOf("") < 1){
+  								console.log("no forceC or accelC");
   								return;
   							}
   							else if (forceC.indexOf("") != 0 && accelC.indexOf("") != 0){
@@ -170,6 +177,7 @@
   							}
   						}
   						if (forceC.indexOf("") < 1){
+  							conosle.log("no forceC");
   							if (accelC.indexOf("") < 1){
   								return;
   							}
@@ -178,11 +186,13 @@
   							}
   						}
   						if (tanVelocity.indexOf("") < 1){
+  							console.log("no tanVelocity");
   								return;
   						}
   						radius = (mass * tanVelocity^2) / forceC;
   					}
   					if (tanVelocity.indexOf("") < 1){
+  						console.log("no tanVelocity");
   						return;
   					}
   					else if (tanVelocity.indexOf("") != 0 && accelC.indexOf("") != 0){
@@ -190,6 +200,7 @@
   					}
   				}
   				if (tanVelocity.indexOf("") < 1){
+  					console.log("no tanVelocity");
   					if (angD.indexOf("") < 1){
   						if (period.indexOf("")){
   							if (frequency.indexOf("") < 1){
@@ -255,7 +266,7 @@
   						radius = (tanVelocity^2) / accelC;
   					}
   				}
-  			*/
+  			
   			console.log(momentum + " " + force + " " + inertia + " " + torque  + " " + mass + " " + accelC + " " + forceC + " " + radius + " " + period + " " + frequency + " " + tanVelocity + " " + accelA + " " + angVelocity + " " + units + " " + shape);
   		}
   	</script>

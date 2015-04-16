@@ -118,7 +118,7 @@
   			
   			
   			if (units.indexOf("radian") < 1){
-  				return angVelocity;
+  				angVelocity = angVelocity;
   			}
   			else if (units.indexOf("degree") < 1){
   				angVelocity = angVelocity * 0.0174532925;
@@ -127,8 +127,41 @@
   				angVelocity = angVelocity * 6.28;
   			}
   			
+  			if (angVelocity.indexOf(" ") < 1){
+  				if (radius.indexOf(" ") < 1){
+  					if (accelC.indexOf(" ") < 1){
+  						if (mass.indexOf(" ") < 1){
+  							if (forceC.indexOf(" ") < 1){
+  								return;
+  							}
+  							if (accelC.indexOf(" ") < 1){
+  								return;
+  							}
+  							mass = forceC / accelC;
+  						}
+  						if (forceC.indexOf(" ") < 1){
+  							if (accelC.indexOf(" ") < 1){
+  								return;
+  							}
+  							forceC = mass * accelC;
+  						}
+  						if (tanVelocity.indexOf(" ") < 1){
+  								return;
+  						}
+  						radius = (mass * tanVelocity^2) / forceC;
+  					}
+  					if (tanVelocity.indexOf(" ") < 1){
+  						return;
+  					}
+  					radius = (tanVelocity^2) / accelC;
+  				}
+  				if (tanVelocity.indexOf(" ") < 1){
+  					return;
+  				}
+  				
+  				angVelocity = tanVelocity / radius;
+  			}
   			
-  			document.getElementById("result").innerHTML = angVelocity;
   			console.log(momentum + " " + force + " " + inertia + " " + torque  + " " + mass + " " + accelC + " " + forceC + " " + radius + " " + period + " " + frequency + " " + tanVelocity + " " + accelA + " " + angVelocity + " " + units + " " + shape);
   		}
   	</script>

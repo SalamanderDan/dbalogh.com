@@ -118,57 +118,18 @@
   			
   			
   			
-			/*
+			
   			
-  			if (units.indexOf("radian")){
+  			if (units.indexOf("radian") < 1){
   				return angVelocity;
   			}
-  			else if (units.indexOf("degree")){
+  			else if (units.indexOf("degree") < 1){
   				angVelocity = angVelocity * 0.0174532925;
   			}
-  			else if (units.indexOf("revolution")){
+  			else if (units.indexOf("revolution") < 1){
   				angVelocity = angVelocity * 6.28;
   			}
   			
-  			if (shape.indexOf("na")){
-  				return 0;
-  			}
-  			else if (shape.indexOf("point")){
-  				return 1;
-  				inertia = mass * radius^2;
-  				document.getElementById("result").innerHTML = inertia;
-  			}
-  			else if (shape.indexOf("rod")){
-  				return 2;
-  			}
-  			else if (shape.indexOf("rod2")){
-  				return 3;
-  			}
-  			else if (shape.indexOf("shell")){
-  				return 4;
-  			}
-  			else if (shape.indexOf("cylinder")){
-  				return 5;
-  			}
-  			else if (shape.indexOf("annular")){
-  				return 6;
-  			}
-  			else if (shape.indexOf("sphere")){
-  				return 7;
-  			}
-  			else if (shape.indexOf("thin")){
-  				return 8;
-  			}
-  			else if (shape.indexOf("plate")){
-  				return 9;
-  			}
-  			else if (shape.indexOf("sheet")){
-  				return 10;
-  			}
-  			else if (shape.indexOf("sheetA")){
-  				return 11;
-  			}
-  			*/
   			console.log(momentum + " " + force + " " + inertia + " " + torque  + " " + mass + " " + accelC + " " + forceC + " " + radius + " " + period + " " + frequency + " " + tanVelocity + " " + accelA + " " + angVelocity + " " + units + " " + shape);
   		}
   	</script>

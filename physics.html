@@ -144,29 +144,30 @@
   			
   			if (angVelocity.indexOf(" ") < 1){
   				if (radius.indexOf(" ") < 1){
-  					if (arc.indexOf(" ") < 1){
+  					if (arc.indexOf(" ") < 1 && angD.indexOf(" ") < 1){
   						continue;
   					}
-  					if (angD.indexOf(" ") < 1){
-  						continue;
+  					else if (arc.indexOf(" ") != 0 && angD.indexOf(" ") != 0){
+  						radius = arc / angD;
+  						return;
   					}
-  					radius = arc / angD;
-  					return;
+  					
   					if (accelC.indexOf(" ") < 1){
   						if (mass.indexOf(" ") < 1){
-  							if (forceC.indexOf(" ") < 1){
+  							if (forceC.indexOf(" ") < 1 && accelC.indexOf(" ") < 1){
   								continue;
   							}
-  							if (accelC.indexOf(" ") < 1){
-  								continue;
+  							else if (forceC.indexOf(" ") != 0 && accelC.indexOf(" ") != 0){
+  								mass = forceC / accelC;
   							}
-  							mass = forceC / accelC;
   						}
   						if (forceC.indexOf(" ") < 1){
   							if (accelC.indexOf(" ") < 1){
   								continue;
   							}
-  							forceC = mass * accelC;
+  							else if (accelC.indexOf(" ") != 0){
+  								forceC = mass * accelC;
+  							}
   						}
   						if (tanVelocity.indexOf(" ") < 1){
   								continue;
@@ -176,7 +177,9 @@
   					if (tanVelocity.indexOf(" ") < 1){
   						continue;
   					}
-  					radius = (tanVelocity^2) / accelC;
+  					else if (tanVelocity.indexOf(" ") != 0 && accelC.indexOf(" ") != 0){
+  						radius = (tanVelocity^2) / accelC;
+  					}
   				}
   				if (tanVelocity.indexOf(" ") < 1){
   					if (angD.indexOf(" ") < 1){
@@ -184,43 +187,53 @@
   							if (frequency.indexOf(" ") < 1){
   								continue;
   							}
-  							angVelocity = 6.28 * frequency;
-  							continue;
+  							else if (frequency.indexOf(" ") != 0){
+  								angVelocity = 6.28 * frequency;
+  								continue;
+  							}
   						}
-  						angVelocity = 6.28 / period;
+  						else if (period.indexOf(" ") != 0){
+  							angVelocity = 6.28 / period;
+  						}
   					}
   					if(time.indexOf(" ") < 1){
   						continue;
   					}	
-  					angVelocity = angD / time
-  					continue;
+  					else if (time.indexOf(" ") != 0 && angD.indexOf(" ") != 0){
+  						angVelocity = angD / time
+  						continue;
+  					}
   				}
-  				angVelocity = tanVelocity / radius;
+  				else if (tanVelocity.indexOf(" ") != 0 && radius.indexOf(" ") != 0){
+  					angVelocity = tanVelocity / radius;
+  				}
   			}
+  			
   			if (radius.indexOf(" ") < 1){
-  				if (arc.indexOf(" ") < 1){
+  					if (arc.indexOf(" ") < 1 && angD.indexOf(" ") < 1){
   						continue;
   					}
-  					if (angD.indexOf(" ") < 1){
-  						continue;
+  					else if (arc.indexOf(" ") != 0 && angD.indexOf(" ") != 0){
+  						radius = arc / angD;
+  						return;
   					}
-  					radius = arc / angD;
-  					continue;
+  					
   					if (accelC.indexOf(" ") < 1){
   						if (mass.indexOf(" ") < 1){
-  							if (forceC.indexOf(" ") < 1){
+  							if (forceC.indexOf(" ") < 1 && accelC.indexOf(" ") < 1){
   								continue;
   							}
-  							if (accelC.indexOf(" ") < 1){
-  								continue;
+  							else if (forceC.indexOf(" ") != 0 && accelC.indexOf(" ") != 0){
+  								mass = forceC / accelC;
   							}
-  							mass = forceC / accelC;
   						}
   						if (forceC.indexOf(" ") < 1){
   							if (accelC.indexOf(" ") < 1){
   								continue;
   							}
-  							forceC = mass * accelC;
+  							else if (accelC.indexOf(" ") != 0){
+  								forceC = mass * accelC;
+  							}
   						}
   						if (tanVelocity.indexOf(" ") < 1){
   								continue;
@@ -230,8 +243,10 @@
   					if (tanVelocity.indexOf(" ") < 1){
   						continue;
   					}
-  					radius = (tanVelocity^2) / accelC;	
-  			}
+  					else if (tanVelocity.indexOf(" ") != 0 && accelC.indexOf(" ") != 0){
+  						radius = (tanVelocity^2) / accelC;
+  					}
+  				}
   			
   			console.log(momentum + " " + force + " " + inertia + " " + torque  + " " + mass + " " + accelC + " " + forceC + " " + radius + " " + period + " " + frequency + " " + tanVelocity + " " + accelA + " " + angVelocity + " " + units + " " + shape);
   		}

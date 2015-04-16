@@ -117,9 +117,6 @@
   			shape = document.getElementById("shape").value;
   			
   			
-  			
-			
-  			
   			if (units.indexOf("radian") < 1){
   				return angVelocity;
   			}
@@ -130,6 +127,8 @@
   				angVelocity = angVelocity * 6.28;
   			}
   			
+  			
+  			document.getElementById("result").innerHTML = angVelocity;
   			console.log(momentum + " " + force + " " + inertia + " " + torque  + " " + mass + " " + accelC + " " + forceC + " " + radius + " " + period + " " + frequency + " " + tanVelocity + " " + accelA + " " + angVelocity + " " + units + " " + shape);
   		}
   	</script>

@@ -145,7 +145,7 @@
   			if (angVelocity.indexOf(" ") < 1){
   				if (radius.indexOf(" ") < 1){
   					if (arc.indexOf(" ") < 1 && angD.indexOf(" ") < 1){
-  						continue;
+  						return;
   					}
   					else if (arc.indexOf(" ") != 0 && angD.indexOf(" ") != 0){
   						radius = arc / angD;
@@ -155,7 +155,7 @@
   					if (accelC.indexOf(" ") < 1){
   						if (mass.indexOf(" ") < 1){
   							if (forceC.indexOf(" ") < 1 && accelC.indexOf(" ") < 1){
-  								continue;
+  								return;
   							}
   							else if (forceC.indexOf(" ") != 0 && accelC.indexOf(" ") != 0){
   								mass = forceC / accelC;
@@ -163,19 +163,19 @@
   						}
   						if (forceC.indexOf(" ") < 1){
   							if (accelC.indexOf(" ") < 1){
-  								continue;
+  								return;
   							}
   							else if (accelC.indexOf(" ") != 0){
   								forceC = mass * accelC;
   							}
   						}
   						if (tanVelocity.indexOf(" ") < 1){
-  								continue;
+  								return;
   						}
   						radius = (mass * tanVelocity^2) / forceC;
   					}
   					if (tanVelocity.indexOf(" ") < 1){
-  						continue;
+  						return;
   					}
   					else if (tanVelocity.indexOf(" ") != 0 && accelC.indexOf(" ") != 0){
   						radius = (tanVelocity^2) / accelC;
@@ -185,11 +185,11 @@
   					if (angD.indexOf(" ") < 1){
   						if (period.indexOf(" ")){
   							if (frequency.indexOf(" ") < 1){
-  								continue;
+  								return;
   							}
   							else if (frequency.indexOf(" ") != 0){
   								angVelocity = 6.28 * frequency;
-  								continue;
+  								return;
   							}
   						}
   						else if (period.indexOf(" ") != 0){
@@ -197,11 +197,11 @@
   						}
   					}
   					if(time.indexOf(" ") < 1){
-  						continue;
+  						return;
   					}	
   					else if (time.indexOf(" ") != 0 && angD.indexOf(" ") != 0){
   						angVelocity = angD / time
-  						continue;
+  						return;
   					}
   				}
   				else if (tanVelocity.indexOf(" ") != 0 && radius.indexOf(" ") != 0){
@@ -211,7 +211,7 @@
   			
   			if (radius.indexOf(" ") < 1){
   					if (arc.indexOf(" ") < 1 && angD.indexOf(" ") < 1){
-  						continue;
+  						return;
   					}
   					else if (arc.indexOf(" ") != 0 && angD.indexOf(" ") != 0){
   						radius = arc / angD;
@@ -221,7 +221,7 @@
   					if (accelC.indexOf(" ") < 1){
   						if (mass.indexOf(" ") < 1){
   							if (forceC.indexOf(" ") < 1 && accelC.indexOf(" ") < 1){
-  								continue;
+  								return;
   							}
   							else if (forceC.indexOf(" ") != 0 && accelC.indexOf(" ") != 0){
   								mass = forceC / accelC;
@@ -229,19 +229,19 @@
   						}
   						if (forceC.indexOf(" ") < 1){
   							if (accelC.indexOf(" ") < 1){
-  								continue;
+  								return;
   							}
   							else if (accelC.indexOf(" ") != 0){
   								forceC = mass * accelC;
   							}
   						}
   						if (tanVelocity.indexOf(" ") < 1){
-  								continue;
+  								return;
   						}
   						radius = (mass * tanVelocity^2) / forceC;
   					}
   					if (tanVelocity.indexOf(" ") < 1){
-  						continue;
+  						return;
   					}
   					else if (tanVelocity.indexOf(" ") != 0 && accelC.indexOf(" ") != 0){
   						radius = (tanVelocity^2) / accelC;

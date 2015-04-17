@@ -135,18 +135,7 @@
   			var t = !isNaN(torque);
   			console.log(t);
   			
-  			if (units.indexOf("rad") === 0){
-  				angVelocity = angVelocity;
-  				console.log("radians");
-  			}
-  			else if (units.indexOf("deg") === 0){
-  				angVelocity = angVelocity * 0.0174532925;
-  				console.log("degrees");
-  			}
-  			else if (units.indexOf("rev") === 0){
-  				angVelocity = angVelocity * 6.28;
-  				console.log("revolutions");
-  			}
+  			
   			console.log("converted");
   			console.log(angVelocity);
   		
@@ -286,6 +275,18 @@
   					
   					break;
   				default:
+  					switch (units) {
+  						case "degrees":
+  							angVelocity = angvelocity * 0.0174532925;
+  							break;
+  						case "revolution":
+  							angVolocity = angVelocity * 6.283;
+  							break;
+  						default:
+  							break;
+  					}
+  							
+  					
   					break;
   			}
   			console.log("out");

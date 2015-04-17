@@ -151,15 +151,20 @@
   			console.log(angVelocity);
   		
   			switch (angVelocity) {
+  				console.log("enter switch");
   				case "":
+  					console.log("case1");
   					switch (radius) {
   						case "":
+  							console.log("case in radius");
   							switch (arc) {
   								case "":
+  									console.log("case in arc");
   									break;
   								default:
   									switch (angD) {
   										case "":
+  											console.log("case in angd");
   											break;
   										default:
   											radius = arc / angD;
@@ -168,14 +173,18 @@
   							}
   							switch (tanVelocity) {
   								case "":
+  									console.log("case in tanV");
   									break;
   								default:
   									switch (accelC) {
   										case "":
+  											console.log("case in accelC");
   											switch (mass) {
   												case "":
+  													console.log("case in mass");
   													switch (forceC) {
   														case "":
+  															console.log("case in forceC");
   															break;
   														default:
   															switch (accelC) {
@@ -186,8 +195,10 @@
   												default:
   													switch (forceC) {
   														case "":
+  															console.log("case in force");
   															switch (accelC) {
   																case "":
+  																	console.log("case in accel");
   																	break;
   																default:
   																	forceC = mass * accelC;
@@ -196,6 +207,7 @@
   														default:
   															switch (tanVelocity) {
   																case "";
+  																	console.log("case in tanv");
   																	break;
   																default:
   																	radius = (mass * tanVelocity) / forceC;
@@ -205,6 +217,7 @@
   											}
   											break;
   										default:
+  											console.log("easy solve");
   											radius = tanVelocity^2 / accelC;
   											break;
   									}
@@ -214,6 +227,7 @@
   				default:
   					break;
   			}
+  			console.log("out");
   			
   		
   		/*	/*

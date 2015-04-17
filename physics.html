@@ -206,6 +206,8 @@
   								default:
   									switch (accelC) {
   										case "":
+  											break;
+  										default:
   											console.log("case in accelC");
   											switch (mass) {
   												case "":
@@ -215,12 +217,9 @@
   															console.log("case in forceC");
   															break;
   														default:
-  															switch (accelC) {
-  																case "":
-  																	break;
-  																default:
-  																	mass = forceC / accelC;
-  															}
+  															mass = forceC / accelC;
+  															break;
+  															
   													}
   													break;
   												default:
@@ -256,6 +255,27 @@
   						default:
   							switch (tanVelocity) {
   								case "":
+  									switch (accelC) {
+  										case "":
+  											switch (mass) {
+  												case "":
+  													switch (forceC) {
+  														case "":
+  															forceC = mass * accelC;
+  															break;
+  														default:
+  															tanVelocity = (radius * forceC) / mass;
+  															break;
+  													
+  													}
+  												default:
+  											}
+  											
+  											break;
+  										default:
+  											tanVelocity = Math.sqrt(radius * accelC);
+  											break;
+  									}
   									break;
   								default:
   									angVelocity = tanVelocity / radius;

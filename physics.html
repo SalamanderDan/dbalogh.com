@@ -270,15 +270,15 @@
   					break;
   				default:
   					console.log("converting");
-  					if (units.indexOf("deg") < 1){
+  					if (units.indexOf("deg") === 0){
   						console.log("from degrees");
   						angVelocity = angVelocity * 0.01745329252;
   					}
-  					else if (units.indexOf("rev") < 1) {
+  					else if (units.indexOf("rev") === 0) {
   						console.log("from revolutions");
   						angVelocity = angVelocity * 6.28;
   					}
-  					else if (units.indexOf("rad") < 1){
+  					else if (units.indexOf("rad") === 0){
   						console.log("from radians");
   						angVelocity = angVelocity;
   					}

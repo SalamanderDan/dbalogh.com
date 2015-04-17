@@ -156,6 +156,34 @@
   					console.log("case1");
   					switch (radius) {
   						case "":
+  							switch (angD) {
+  								case "":
+  									console.log("in angD");
+  									switch (period) {
+  										case "":
+  											switch (frequency){
+  												case "":
+  													break;
+  												default:
+  													angVelocity = 6.28 * frequency;	
+  													break;
+  											}
+  										default:
+  											angVelocity = 6.28 / period;
+  											break;
+  									}
+  									break;
+  								default:
+  									console.log("in angD");
+  									switch (time) {
+  										case "":
+  										break;
+  										default:
+  											angVelocity = angD / time;
+  											break;
+  									}
+  									break;
+  							}
   							console.log("case in radius");
   							switch (arc) {
   								case "":
@@ -231,38 +259,11 @@
   									break;
   								default:
   									angVelocity = tanVelocity / radius;
-  									console.log("angVelocity");
+  									console.log("angVelocity" + angVelocity);
   									break;
   							}
   					}
-  					switch (angD) {
-  							case "":
-  								console.log("in angD");
-  								switch (period) {
-  									case "":
-  										switch (frequency){
-  											case "":
-  												break;
-  											default:
-  												angVelocity = 6.28 * frequency;	
-  												break;
-  										}
-  									default:
-  										angVelocity = 6.28 / period;
-  										break;
-  								}
-  								break;
-  							default:
-  								console.log("in angD");
-  								switch (time) {
-  									case "":
-  										break;
-  									default:
-  										angVelocity = angD / time;
-  										break;
-  								}
-  								break;
-  						}
+  					
   					break;
   				default:
   					break;

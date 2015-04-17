@@ -228,37 +228,40 @@
   						default:
   							switch (tanVelocity) {
   								case "":
-  									switch (angD) {
-  										case "":
-  											switch (period) {
-  												case "":
-  													switch (frequency){
-  														case "":
-  															break;
-  														default:
-  															angVelocity = 6.28 * frequency;	
-  															break;
-  													}
-  												default:
-  													angVelocity = 6.28 / period;
-  													break;
-  											}
-  										default:
-  											switch (time) {
-  												case "":
-  													break;
-  												default:
-  													angVelocity = angD / time;
-  													break;
-  											}
-  											break;
-  									}
+  									break;
   								default:
   									angVelocity = tanVelocity / radius;
   									console.log("angVelocity");
   									break;
   							}
   					}
+  					switch (angD) {
+  							case "":
+  								console.log("in angD");
+  								switch (period) {
+  									case "":
+  										switch (frequency){
+  											case "":
+  												break;
+  											default:
+  												angVelocity = 6.28 * frequency;	
+  												break;
+  										}
+  									default:
+  										angVelocity = 6.28 / period;
+  										break;
+  								}
+  							default:
+  								console.log("in angD");
+  								switch (time) {
+  									case "":
+  										break;
+  									default:
+  										angVelocity = angD / time;
+  										break;
+  								}
+  								break;
+  						}
   					break;
   				default:
   					break;

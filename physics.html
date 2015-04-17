@@ -17,7 +17,7 @@
 			<table>
 				<tr>
 					<td>Angular Velocity</td>
-					<td><input id="angularVelociy" type="text" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
+					<td><input id="angularVelociy" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
 					<td>	<select id="units">
 							<option value="radian">Radians</option>
 							<option value="degree">Degrees</option>
@@ -27,43 +27,43 @@
 				</tr>
 				<tr>
 					<td>Angular Acceleration</td>
-					<td><input id="angularAcceleration" type="text" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
+					<td><input id="angularAcceleration" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
 				</tr>
 				<tr>
 					<td>Tangential Velocity</td>
-					<td><input id="tangentialVelocity" type="text" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
+					<td><input id="tangentialVelocity" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
 				</tr>
 				<tr>
 					<td>Frequency</td>
-					<td><input id="frequency" type="text" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
+					<td><input id="frequency" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
 				</tr>
 				<tr>
 					<td>Period</td>
-					<td><input id="period" type="text" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
+					<td><input id="period" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
 				</tr>
 				<tr>
 					<td>Radius</td>
-					<td><input id="radius" type="text"  onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
+					<td><input id="radius" type="number"  onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
 				</tr>
 				<tr>
 					<td>Centripital Force</td>
-					<td><input id="forceC" type="text" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
+					<td><input id="forceC" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
 				</tr>
 				<tr>
 					<td>Centripital Acceleration</td>
-					<td><input id="accelC" type="text" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
+					<td><input id="accelC" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
 				</tr>
 				<tr>
 					<td>Mass</td>
-					<td><input id="mass" type="text" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
+					<td><input id="mass" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
 				</tr>
 				<tr>
 					<td>Torque</td>
-					<td><input id="torque" type="text" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
+					<td><input id="torque" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
 				</tr>
 				<tr>
 					<td>Moment of Inertia</td>
-					<td><input id="inertia" type="text" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
+					<td><input id="inertia" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
 				</tr>
 				<tr>
 					<td>Shape</td>
@@ -84,23 +84,23 @@
 				</tr>
 				<tr>
 					<td>Force</td>
-					<td><input id="force" type="text" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
+					<td><input id="force" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
 				</tr>
 				<tr>
 					<td>Momentum</td>
-					<td><input id="momentum" type="text" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
+					<td><input id="momentum" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
 				</tr>
 				<tr>
 					<td>Time</td>
-					<td><input id="time" type="text" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
+					<td><input id="time" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
 				</tr>
 				<tr>
 					<td>Arc Length</td>
-					<td><input id="arc" type="text" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
+					<td><input id="arc" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
 				</tr>
 				<tr>
 					<td>Angular Distance</td>
-					<td><input id="angD" type="text" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
+					<td><input id="angD" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
 				</tr>
 			</table>
 			
@@ -132,7 +132,7 @@
   			arc = document.getElementById("arc").value;
   			angD = document.getElementById("angD").value;
   			
-  			var t = isNaN(torque);
+  			var t = !isNaN(torque);
   			console.log(t);
   			
   			if (units.indexOf("rad") === 0){
@@ -150,10 +150,73 @@
   			console.log("converted");
   			console.log(angVelocity);
   		
-  			
+  			switch (angVelocity) {
+  				case "":
+  					switch (radius) {
+  						case "":
+  							switch (arc) {
+  								case "":
+  									break;
+  								default:
+  									switch (angD) {
+  										case "":
+  											break;
+  										default:
+  											radius = arc / angD;
+  											break;
+  									}
+  							}
+  							switch (tanVelocity) {
+  								case "":
+  									break;
+  								default:
+  									switch (accelC) {
+  										case "":
+  											switch (mass) {
+  												case "":
+  													switch (forceC) {
+  														case "":
+  															break;
+  														default:
+  															switch (accelC) {
+  																mass = forceC / accelC;
+  															}
+  													}
+  													break;
+  												default:
+  													switch (forceC) {
+  														case "":
+  															switch (accelC) {
+  																case "":
+  																	break;
+  																default:
+  																	forceC = mass * accelC;
+  																	break;
+  															}
+  														default:
+  															switch (tanVelocity) {
+  																case "";
+  																	break;
+  																default:
+  																	radius = (mass * tanVelocity) / forceC;
+  																	break;
+  															}
+  													}
+  											}
+  											break;
+  										default:
+  											radius = tanVelocity^2 / accelC;
+  											break;
+  									}
+  							}
+  					}
+  					break;
+  				default:
+  					break;
+  			}
   			
   		
-  		/*	
+  		/*	/*
   			if (angVelocity.indexOf("") < 1){
   				console.log("no angVelocity");
   				if (radius.indexOf("") < 1){
@@ -167,7 +230,6 @@
   						console.log("yes arc and angD");
   						return;
   					}
-  					
   					if (accelC.indexOf("") < 1){
   						console.log("no accelC");
   						if (mass.indexOf("") < 1){

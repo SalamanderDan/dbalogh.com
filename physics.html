@@ -132,11 +132,7 @@
   			arc = document.getElementById("arc").value;
   			angD = document.getElementById("angD").value;
   			
-  			var t = !isNaN(torque);
-  			console.log(t);
   			
-  			
-  			console.log("converted");
   			console.log(angVelocity);
   		
   			switch (angVelocity) {
@@ -273,14 +269,18 @@
   					
   					break;
   				default:
+  					console.log("converting");
   					switch (units) {
   						case "degrees":
+  							console.log("from degrees");
   							angVelocity = angvelocity * 0.0174532925;
   							break;
   						case "revolution":
+  							console.log("from revs");
   							angVolocity = angVelocity * 6.283;
   							break;
   						default:
+  							console.log("from rads");
   							break;
   					}
   							

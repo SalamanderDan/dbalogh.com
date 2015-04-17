@@ -270,23 +270,18 @@
   					break;
   				default:
   					console.log("converting");
-  					switch (units) {
-  						case "degree":
-  							console.log("from degrees");
-  							angVelocity = angvelocity * 0.0174532925;
-  							break;
-  						case "revolution":
-  							console.log("from revs");
-  							angVolocity = angVelocity * 6.283;
-  							break;
-  						default:
-  							console.log("from rads");
-  							break;
+  					if (units.indexOf("deg") < 1){
+  						console.log("degrees");
+  						angVelocity = angVelocity * 0.01745329252;
   					}
-  							
-  					
+  					else if (units.indexOf("rev") < 1) {
+  						console.log("revolutions");
+  						angVelocity = angVelocity * 6.28;
+  					}
   					break;
   			}
+  			
+  			
   			console.log("out");
   			console.log("ang V = " + angVelocity);
   			document.getElementById("result").innerHTML = "Angular Velocity is " + angVelocity;

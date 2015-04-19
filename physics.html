@@ -106,7 +106,8 @@
 			
 			<button id="btn1" type="button" onclick="calculate()">Calculate</button>
 		</form>
-		<p id="result"></p>
+		<p id="resultAngV"></p>
+		<p id="resultPer"></p>
   	</body>
   
   	<script>
@@ -283,7 +284,7 @@
   			}
   			console.log("out");
   			console.log("ang V = " + angVelocity);
-  			document.getElementById("result").innerHTML = "Angular Velocity is " + angVelocity;
+  			document.getElementById("resultAngV").innerHTML = "Angular Velocity is " + angVelocity;
   			
   			switch (period) {
   				case "":
@@ -437,7 +438,7 @@
   					break;
   			}
   			console.log("period is " + period);
-  		
+  			document.getElementById("resultPer").innerHTML = "Period is " + period;
   	
   			console.log(momentum + " " + force + " " + inertia + " " + torque  + " " + mass + " " + accelC + " " + forceC + " " + radius + " " + period + " " + frequency + " " + tanVelocity + " " + accelA + " " + angVelocity + " " + units + " " + shape);
   		}

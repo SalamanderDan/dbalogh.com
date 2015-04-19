@@ -149,12 +149,12 @@
   												case "":
   													break;
   												default:
-  													angVelocity = 6.28 * frequency;	
+  													angVelocity = (2 * Math.PI) * frequency;	
   													break;
   											}
   											break;
   										default:
-  											angVelocity = 6.28 / period;
+  											angVelocity = (2 * Math.PI) / period;
   											break;
   									}
   									break;
@@ -276,7 +276,7 @@
   					}
   					else if (units.indexOf("rev") === 0) {
   						console.log("from revolutions");
-  						angVelocity = angVelocity * 6.28;
+  						angVelocity = angVelocity * (2 * Math.PI);
   					}
   					else if (units.indexOf("rad") === 0){
   						console.log("from radians");
@@ -307,11 +307,11 @@
   																case "":
   																	break;
   															default:
-  																angVelocity = 6.28 * frequency;	
+  																angVelocity = (2 * Math.PI) * frequency;	
   																break;
   															}
   													default:
-  														angVelocity = 6.28 / period;
+  														angVelocity = (2 * Math.PI) / period;
   														break;
   													}
   													break;
@@ -421,7 +421,7 @@
   										break;
   									}
   								default:
-  									period = 6.282 / angVelocity;
+  									period = (2 * Math.PI) / angVelocity;
   									console.log("period = 2pi / velocity");
   									break;
   										
@@ -449,7 +449,7 @@
   							switch (angVelocity) {
   								default:
   									console.log("frequency = angVelocity / 2pi");
-  									frequency = angVelocity / 6.282;
+  									frequency = angVelocity / (2 * Math.PI);
   									break;
   								case "":
   									console.log("case1");
@@ -464,11 +464,11 @@
   																case "":
   																	break;
   															default:
-  																angVelocity = 6.28 * frequency;	
+  																angVelocity = (2 * Math.PI) * frequency;	
   																break;
   															}
   													default:
-  														angVelocity = 6.28 / period;
+  														angVelocity = (2 * Math.PI) / period;
   														break;
   													}
   													break;

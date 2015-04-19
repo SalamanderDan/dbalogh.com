@@ -421,18 +421,19 @@
   												break;
   										}
   											break;
-  										default:
-  											period = 1 / frequency;
-  											console.log("period = 1 / frequency");
-  											break;
   									}
-  									break;
   							}
-  								default:
-  									console.log("there is a period");
-  									break;
-  							}
-  			
+  						default:
+  							period = 1 / frequency;
+  							console.log("period = 1 / frequency");
+  							break;
+  					}
+  					break;
+  				default:
+  					console.log("there is a period");
+  					break;
+  			}
+  			console.log("period is " + period);
   		
   	
   			console.log(momentum + " " + force + " " + inertia + " " + torque  + " " + mass + " " + accelC + " " + forceC + " " + radius + " " + period + " " + frequency + " " + tanVelocity + " " + accelA + " " + angVelocity + " " + units + " " + shape);

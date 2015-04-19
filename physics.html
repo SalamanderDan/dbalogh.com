@@ -132,10 +132,7 @@
   			arc = document.getElementById("arc").value;
   			angD = document.getElementById("angD").value;
   			
-  			
-  			console.log(angVelocity);
-  		
-  			switch (angVelocity) {
+   			switch (angVelocity) {
   				
   				case "":
   					console.log("case1");
@@ -284,135 +281,160 @@
   					}
   					break;
   			}
-  			
-  			
   			console.log("out");
   			console.log("ang V = " + angVelocity);
   			document.getElementById("result").innerHTML = "Angular Velocity is " + angVelocity;
   			
+  			switch (period) {
+  				case "":
+  					console.log("no period");
+  					switch (frequency) {
+  						case "":
+  							switch (angVelocity) {
+  								case "":
+  									console.log("case1");
+  									switch (radius) {
+  										case "":
+  											switch (angD) {
+  												case "":
+  													console.log("in angD");
+  													switch (period) {
+  														case "":
+  															switch (frequency){
+  																case "":
+  																	break;
+  															default:
+  																angVelocity = 6.28 * frequency;	
+  																break;
+  															}
+  													default:
+  														angVelocity = 6.28 / period;
+  														break;
+  													}
+  													break;
+  												default:
+  													console.log("in angD");
+  													switch (time) {
+  														case "":
+  															break;
+  														default:
+  															angVelocity = angD / time;
+  															break;
+  													}
+  												break;
+  											}
+  											console.log("case in radius");
+  											switch (arc) {
+  												case "":
+  													console.log("case in arc");
+  													break;
+  												default:
+  													switch (angD) {
+  														case "":
+  															console.log("case in angd");
+  															break;
+  														default:
+  															radius = arc / angD;
+  															break;
+  													}
+  											}
+  											switch (tanVelocity) {
+  												case "":
+  													console.log("case in tanV");
+  													break;
+  												default:
+  													switch (accelC) {
+  														case "":
+  															break;
+  														default:
+  															console.log("case in accelC");
+  															switch (mass) {
+  																case "":
+  																	console.log("case in mass");
+  																	switch (forceC) {
+  																		case "":
+  																			console.log("case in forceC");
+  																			break;
+  																		default:
+  																			mass = forceC / accelC;
+  																			break;
+  															
+  																	}
+  																	break;
+  																default:
+  																	switch (forceC) {
+  																		case "":
+  																			console.log("case in force");
+  																			switch (accelC) {
+  																				case "":
+  																					console.log("case in accel");
+  																					break;
+  																				default:
+  																					forceC = mass * accelC;
+  																					break;
+  																			}
+  																		default:
+  																			switch (tanVelocity) {
+  																				case "":
+  																					console.log("case in tanv");
+  																					break;
+  																				default:
+  																					radius = (mass * tanVelocity) / forceC;
+  																					break;
+  																			}
+  																	}
+  															}
+  											
+  									
+  														break;  										
+  														break;
+  													}
+  											}
+  									default:
+  										switch (tanVelocity) {
+  											case "":
+  												switch (accelC) {
+  													case "":
+  														switch (mass) {
+  															case "":
+  																switch (forceC) {
+  																	case "":
+  																		forceC = mass * accelC;
+  																		break;
+  																	default:
+  																		tanVelocity = (radius * forceC) / mass;
+  																		break;
+  													
+  																}
+  															default:
+  				  										}
+  														break;
+  													default:
+  														tanVelocity = Math.sqrt(radius * accelC);
+  														break;
+  												}
+  												break;
+  										
+  											default:
+  												period = 6.282 / angVelocity;
+  												console.log("period = 2pi / velocity");
+  												break;
+  										}
+  											break;
+  										default:
+  											period = 1 / frequency;
+  											console.log("period = 1 / frequency");
+  											break;
+  									}
+  									break;
+  							}
+  								default:
+  									console.log("there is a period");
+  									break;
+  							}
+  			
   		
-  		/*	/*
-  			if (angVelocity.indexOf("") < 1){
-  				console.log("no angVelocity");
-  				if (radius.indexOf("") < 1){
-  					console.log("no radius");
-  					if (arc.indexOf("") < 1 && angD.indexOf("") < 1){
-  						console.log("no arc or angD");
-  						return;
-  					}
-  					else if (arc.indexOf("") != 0 && angD.indexOf("") != 0){
-  						radius = arc / angD;
-  						console.log("yes arc and angD");
-  						return;
-  					}
-  					if (accelC.indexOf("") < 1){
-  						console.log("no accelC");
-  						if (mass.indexOf("") < 1){
-  							console.log("no mass");
-  							if (forceC.indexOf("") < 1 && accelC.indexOf("") < 1){
-  								console.log("no forceC or accelC");
-  								return;
-  							}
-  							else if (forceC.indexOf("") != 0 && accelC.indexOf("") != 0){
-  								mass = forceC / accelC;
-  							}
-  						}
-  						if (forceC.indexOf("") < 1){
-  							conosle.log("no forceC");
-  							if (accelC.indexOf("") < 1){
-  								return;
-  							}
-  							else if (accelC.indexOf("") != 0){
-  								forceC = mass * accelC;
-  							}
-  						}
-  						if (tanVelocity.indexOf("") < 1){
-  							console.log("no tanVelocity");
-  								return;
-  						}
-  						radius = (mass * tanVelocity^2) / forceC;
-  					}
-  					if (tanVelocity.indexOf("") < 1){
-  						console.log("no tanVelocity");
-  						return;
-  					}
-  					else if (tanVelocity.indexOf("") != 0 && accelC.indexOf("") != 0){
-  						radius = (tanVelocity^2) / accelC;
-  					}
-  				}
-  				if (tanVelocity.indexOf("") < 1){
-  					console.log("no tanVelocity");
-  					if (angD.indexOf("") < 1){
-  						if (period.indexOf("")){
-  							if (frequency.indexOf("") < 1){
-  								return;
-  							}
-  							else if (frequency.indexOf("") != 0){
-  								angVelocity = 6.28 * frequency;
-  								return;
-  							}
-  						}
-  						else if (period.indexOf("") != 0){
-  							angVelocity = 6.28 / period;
-  						}
-  					}
-  					if(time.indexOf("") < 1){
-  						return;
-  					}	
-  					else if (time.indexOf("") != 0 && angD.indexOf("") != 0){
-  						angVelocity = angD / time
-  						return;
-  					}
-  				}
-  				else if (tanVelocity.indexOf("") != 0 && radius.indexOf("") != 0){
-  					angVelocity = tanVelocity / radius;
-  				}
-  			}
-  			else {
-  				console.log(angVelocity);
-  			}
-  			if (radius.indexOf("") < 1){
-  					if (arc.indexOf("") < 1 && angD.indexOf("") < 1){
-  						return;
-  					}
-  					else if (arc.indexOf("") != 0 && angD.indexOf("") != 0){
-  						radius = arc / angD;
-  						return;
-  					}
-  					
-  					if (accelC.indexOf("") < 1){
-  						if (mass.indexOf("") < 1){
-  							if (forceC.indexOf("") < 1 && accelC.indexOf("") < 1){
-  								return;
-  							}
-  							else if (forceC.indexOf("") != 0 && accelC.indexOf("") != 0){
-  								mass = forceC / accelC;
-  							}
-  						}
-  						if (forceC.indexOf("") < 1){
-  							if (accelC.indexOf("") < 1){
-  								return;
-  							}
-  							else if (accelC.indexOf("") != 0){
-  								forceC = mass * accelC;
-  							}
-  						}
-  						if (tanVelocity.indexOf("") < 1){
-  								return;
-  						}
-  						radius = (mass * tanVelocity^2) / forceC;
-  					}
-  					if (tanVelocity.indexOf("") < 1){
-  						return;
-  					}
-  					else if (tanVelocity.indexOf("") != 0 && accelC.indexOf("") != 0){
-  						radius = (tanVelocity^2) / accelC;
-  					}
-  				}
-  			else {
-  				console.log(radius);
-  			}
-  			*/
+  	
   			console.log(momentum + " " + force + " " + inertia + " " + torque  + " " + mass + " " + accelC + " " + forceC + " " + radius + " " + period + " " + frequency + " " + tanVelocity + " " + accelA + " " + angVelocity + " " + units + " " + shape);
   		}
   	</script>

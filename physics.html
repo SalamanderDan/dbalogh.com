@@ -108,6 +108,7 @@
 		</form>
 		<p id="resultAngV"></p>
 		<p id="resultPer"></p>
+		<p id="resultFreq"></p>
   	</body>
   
   	<script>
@@ -589,6 +590,7 @@
   					break;
   			}
   			console.log("frequency is " + frequency);
+  			document.getElementById("resultFreq").innerHTML = "Frequency is " + frequency + " rotations.";
   	
   			console.log(momentum + " " + force + " " + inertia + " " + torque  + " " + mass + " " + accelC + " " + forceC + " " + radius + " " + period + " " + frequency + " " + tanVelocity + " " + accelA + " " + angVelocity + " " + units + " " + shape);
   		}

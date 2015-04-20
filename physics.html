@@ -109,6 +109,7 @@
 		<p id="resultAngV"></p>
 		<p id="resultPer"></p>
 		<p id="resultFreq"></p>
+		<p id="resuntAngD"></p>
   	</body>
   
   	<script>
@@ -758,6 +759,7 @@
   					break;
   			}
   			console.log("angD is " + angD);
+  			document.getElementById("resultAngD").innerHTML = "Angular Distance is " + angD + " radians";
   	
   			console.log(momentum + " " + force + " " + inertia + " " + torque  + " " + mass + " " + accelC + " " + forceC + " " + radius + " " + period + " " + frequency + " " + tanVelocity + " " + accelA + " " + angVelocity + " " + units + " " + shape);
   		}

@@ -8,15 +8,12 @@
 		p {
 			font-family: serif, 'fantasy';
 		}
-		h6 {
-			position: absolute;
-			background: url('http://www.aplusphysics.com/courses/honors/rotation/images/Moment_of_inertia_examples.gif') no-repeat 0% 90%;
-		}
+		
 	</style>
 	<head>
 		<link rel="shortcut icon" type="favicon.ico" href="favicon.ico">
     		<title>Physics</title>
-    		<h6 hidden id="gif"></h6>
+    		<img hidden id="gif" src="http://www.aplusphysics.com/courses/honors/rotation/images/Moment_of_inertia_examples.gif" alt="inertia gif"></h6>
     	<h1>Physics</h1>
   	</head>
 
@@ -985,7 +982,7 @@
   			}
   			console.log("angD is " + angD);
   			document.getElementById("resultAngD").innerHTML = "Angular Distance is " + angD + " radians";
-  			document.getElementById("gif").style.hidden = false;
+  			document.getElementById("gif").hidden = false;
   	
   			console.log(momentum + " " + force + " " + inertia + " " + torque  + " " + mass + " " + accelC + " " + forceC + " " + radius + " " + period + " " + frequency + " " + tanVelocity + " " + accelA + " " + angVelocity + " " + units + " " + shape);
   		}

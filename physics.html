@@ -167,9 +167,9 @@
   			time = document.getElementById("time").value;
   			arc = document.getElementById("arc").value;
   			angD = document.getElementById("angD").value;
-  			document.getElementById("result1").innerHTML = document.getElementById("solveAV").checked;
   			
-   			switch (angVelocity) {
+  			if (document.getElementById("solveAV")) {
+  				switch (angVelocity) {
   				
   				case "":
   					console.log("case1");
@@ -322,8 +322,10 @@
   			console.log("out");
   			console.log("ang V = " + angVelocity);
   			document.getElementById("resultAngV").innerHTML = "Angular Velocity is " + angVelocity + " radians per second.";
-  			
-  			switch (period) {
+  			}
+   			
+  			if (document.getElementById("solveP")) {
+  				switch (period) {
   				case "":
   					console.log("no period");
   					switch (frequency) {
@@ -476,8 +478,10 @@
   			}
   			console.log("period is " + period);
   			document.getElementById("resultPer").innerHTML = "Period is " + period + " seconds.";
+  			}
   			
-  			switch (frequency) {
+  			if (document.getElementById("solveF")) {
+  				switch (frequency) {
   				case "":
   					switch (period) {
   						case "":
@@ -626,9 +630,11 @@
   					break;
   			}
   			console.log("frequency is " + frequency);
-  			document.getElementById("resultFreq").innerHTML = "Frequency is " + frequency + " rotations.";
+  			document.getElementById("resultFreq").innerHTML = "Frequency is " + frequency + " rotations.";	
+  			}
   			
-  			switch (angD) {
+  			if (document.getElementById("solveAD")) {
+  				switch (angD) {
   				case "":
   					console.log("no angD");
   					switch (arc) {
@@ -1020,6 +1026,8 @@
   			}
   			console.log("angD is " + angD);
   			document.getElementById("resultAngD").innerHTML = "Angular Distance is " + angD + " radians";
+  			}
+  			
   			document.getElementById("gif").hidden = false;
   	
   			console.log(momentum + " " + force + " " + inertia + " " + torque  + " " + mass + " " + accelC + " " + forceC + " " + radius + " " + period + " " + frequency + " " + tanVelocity + " " + accelA + " " + angVelocity + " " + units + " " + shape);

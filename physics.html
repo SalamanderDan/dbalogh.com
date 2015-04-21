@@ -613,8 +613,10 @@
   							console.log("no arc");
   							switch (time) {
   								case "":
+  									console.log("no time");
   									break;
   								default:
+  									console.log("yes time")
   									switch (angVelocity) {
   								default:
   									console.log("angD = angVelocity * time");
@@ -755,19 +757,24 @@
   						default:
   							switch (radius) {
   								case "":
+  									console.log("no radius")
   									switch (tanVelocity) {
   										case "":
+  											console.log("no tanV")
   											switch (torque) {
   												case "":
+  													console.log("no torque")
   													switch (inertia) {
   														case "":
-  															
+  															console.log("no inertia");
   															break;
   														default:
   															switch (accelA) {
   																case "":
+  																	console.log("no accel");
   																	switch (mass) {
   																		case "":
+  																			console.log("no mass");
   																			break;
   																		default:
   																			if (shape.indexOf("na") === 0){
@@ -828,12 +835,14 @@
   												default:
   													switch (force) {
   														case "":
+  															console.log("no force");
   															break;
   														default:
   															console.log("radius = torque / force");
   															radius = torque / force;
   															break;
   													}
+  													break;
   											}
   											break;
   										default:
@@ -972,7 +981,7 @@
   							}
   											break;
   									}
-  									console.log("solving for radius");
+  									
   									break;
   								default:
   									console.log("angD = arc / radius");

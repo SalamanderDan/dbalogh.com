@@ -27,6 +27,10 @@
   		<form> <!--form with all variables to be defined or not be defined -->
 			<table>
 				<tr>
+					<td>Solve For?</td>
+				</tr>
+				<tr>
+					<td><input value="solveAV" type="checkbox"</td>
 					<td>Angular Velocity</td>
 					<td><input id="angularVelociy" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
 					<td>	<select id="units">
@@ -37,42 +41,52 @@
 					</td>
 				</tr>
 				<tr>
+					<td><input value="solveAA" type="checkbox"</td>
 					<td>Angular Acceleration</td>
 					<td><input id="angularAcceleration" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
 				</tr>
 				<tr>
+					<td><input value="solveTV" type="checkbox"</td>
 					<td>Tangential Velocity</td>
 					<td><input id="tangentialVelocity" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
 				</tr>
 				<tr>
+					<td><input value="solveF" type="checkbox"</td>
 					<td>Frequency</td>
 					<td><input id="frequency" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
 				</tr>
 				<tr>
+					<td><input value="solveP" type="checkbox"</td>
 					<td>Period</td>
 					<td><input id="period" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
 				</tr>
 				<tr>
+					<td><input value="solveR" type="checkbox"</td>
 					<td>Radius</td>
 					<td><input id="radius" type="number"  onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
 				</tr>
 				<tr>
+					<td><input value="solveCF" type="checkbox"</td>
 					<td>Centripital Force</td>
 					<td><input id="forceC" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
 				</tr>
 				<tr>
+					<td><input value="solveCA" type="checkbox"</td>
 					<td>Centripital Acceleration</td>
 					<td><input id="accelC" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
 				</tr>
 				<tr>
+					<td><input value="solveM" type="checkbox"</td>
 					<td>Mass</td>
 					<td><input id="mass" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
 				</tr>
 				<tr>
+					<td><input value="solveT" type="checkbox"</td>
 					<td>Torque</td>
 					<td><input id="torque" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
 				</tr>
 				<tr>
+					<td><input value="solveI" type="checkbox"</td>
 					<td>Moment of Inertia</td>
 					<td><input id="inertia" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
 				</tr>
@@ -94,22 +108,27 @@
 						</select></td>
 				</tr>
 				<tr>
+					<td><input value="solveF" type="checkbox"</td>
 					<td>Force</td>
 					<td><input id="force" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
 				</tr>
 				<tr>
+					<td><input value="solveMOM" type="checkbox"</td>
 					<td>Momentum</td>
 					<td><input id="momentum" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
 				</tr>
 				<tr>
+					<td><input value="solveTIME" type="checkbox"</td>
 					<td>Time</td>
 					<td><input id="time" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
 				</tr>
 				<tr>
+					<td><input value="solveAL" type="checkbox"</td>
 					<td>Arc Length</td>
 					<td><input id="arc" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
 				</tr>
 				<tr>
+					<td><input value="solveAD" type="checkbox"</td>
 					<td>Angular Distance</td>
 					<td><input id="angD" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
 				</tr>

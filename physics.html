@@ -31,9 +31,20 @@
 				</tr>
 				<tr>
 					<td><input id="solveAV" type="checkbox"</td>
-					<td>Angular Velocity</td>
+					<td>Final Angular Velocity</td>
 					<td><input id="angularVelociy" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
 					<td>	<select id="units">
+							<option value="radian">Radians</option>
+							<option value="degree">Degrees</option>
+							<option value="revolution">Revolutions per Second</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td><input id="solveAVI" type="checkbox"</td>
+					<td>Initial Angular Velocity</td>
+					<td><input id="angularVelociyInitial" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
+					<td>	<select id="unitsInitial">
 							<option value="radian">Radians</option>
 							<option value="degree">Degrees</option>
 							<option value="revolution">Revolutions per Second</option>

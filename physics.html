@@ -1104,15 +1104,42 @@
   			}
   			
   			if (document.getElementById("solveCF").checked) {
-  				
+  				switch (forceC) {
+  					case "":
+  						console.log("no forceC");
+  						break;
+  					default:
+  						console.log("there is a forceC");
+  						break;
+  				}
+  				document.getElementById("resultCentForce").innerHTMl = "Centripital force is " + forceC + " newtons.";
+  				console.log("forceC is" + forceC);
   			}
   			
   			if (document.getElementById("solveCA").checked) {
-  				
+  				switch (accelC) {
+  					case "":
+  						console.log("no accelC");
+  						break;
+  					default:
+  						console.log("there is a accelC");
+  						break;
+  				}
+  				document.getElementById("resultCentAccel").innerHTML = "Centripital Acceleration is " + accelC + " radians per second squared";
+  				console.log("accelC is " + accelC);
   			}
   			
   			if (document.getElementById("solveM").checked) {
-  				
+  				switch (mass) {
+  					case "":
+  						console.log("no maass");
+  						break;
+  					default:
+  						console.log("there is mass");
+  						break;
+  				}
+  				document.getElementById("resultMass").innerHTML = "Mass is " + mass + " kilograms";
+  				console.log("mass is " + mass);
   			}
   			
   			if (document.getElementById("solveT").checked) {

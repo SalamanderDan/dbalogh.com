@@ -165,6 +165,7 @@
 		<p id="resultArcLength"></p>
 		<p id="resultInertia"></p>
 		<p id="resultMass"></p>
+		<p id="resultAngVI"></p>
   	</body>
   
   	<script>
@@ -1051,23 +1052,55 @@
   			}
   			
   			if (document.getElementById("solveAA").checked) {
-  				
+  				switch (accelA) {
+  					case "":
+  						console.log("no AcccelA");
+  						break;
+  					default:
+  						console.log("there is an accelA");
+  						break;
+  				}
+  				document.getElementById("resultAngAccel").innerHTML = "Angular Acceleration is  " + accelA + " radians per second^2.";
+  				console.log("accelA is " + accelA);
   			}
   			
   			if (document.getElementById("solveTV").checked) {
-  				
+  				switch (tanVelocity) {
+  					case "":
+  						console.log("no tanVelocity");
+  						break;
+  					default:
+  						console.log("there is a tanVelocity");
+  						break;
+  				}
+  				document.getElementById("resultTanVel").innerHTML = "Tangential Velocity is " + tanVelocity + " meters per second.";
+  				console.log("tanV = " + tanVelocity);
   			}
   			
   			if (document.getElementById("solveF").checked) {
-  				
-  			}
-  			
-  			if (document.getElementById("solveP").checked) {
-  				
+  				switch (force) {
+  					case "":
+  						conosle.log("no force");
+  						break;
+  					default:
+  						conosle.log("there is a force");
+  						break;
+  				}
+  				document.getElementById("resultForce").innerHTML = "Force is " + force + "newtons."
+  				console.log("force is " + force);
   			}
   			
   			if (document.getElementById("solveR").checked) {
-  				
+  				switch (radius) {
+  					case "":
+  						console.log("no radius");
+  						break;
+  					default:
+  						console.log("there is a radius");
+  						break;
+    				}
+    				document.getElementById("resultRad").innerHTML = "Radius is " + radius + 'meters.';
+    				console.log("radius is " + radius);
   			}
   			
   			if (document.getElementById("solveCF").checked) {

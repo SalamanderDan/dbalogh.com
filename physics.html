@@ -109,7 +109,7 @@
 						</select></td>
 				</tr>
 				<tr>
-					<td><input id="solveF" value=true type="checkbox"</td>
+					<td><input id="solveFORCE" value=true type="checkbox"</td>
 					<td>Force</td>
 					<td><input id="force" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
 				</tr>
@@ -168,7 +168,7 @@
   			arc = document.getElementById("arc").value;
   			angD = document.getElementById("angD").value;
   			
-  			if (document.getElementById("solveAV").checked) {
+  			if (document.getElementById("solveAV").checked)//solveing for AV done {
   				switch (angVelocity) {
   				
   				case "":
@@ -324,7 +324,7 @@
   			document.getElementById("resultAngV").innerHTML = "Angular Velocity is " + angVelocity + " radians per second.";
   			}
    			
-  			if (document.getElementById("solveP").checked) {
+  			if (document.getElementById("solveP").checked)//solving for Period done {
   				switch (period) {
   				case "":
   					console.log("no period");
@@ -480,7 +480,7 @@
   			document.getElementById("resultPer").innerHTML = "Period is " + period + " seconds.";
   			}
   			
-  			if (document.getElementById("solveF").checked) {
+  			if (document.getElementById("solveF").checked)//solving for Frequency done {
   				switch (frequency) {
   				case "":
   					switch (period) {
@@ -633,7 +633,7 @@
   			document.getElementById("resultFreq").innerHTML = "Frequency is " + frequency + " rotations.";	
   			}
   			
-  			if (document.getElementById("solveAD").checked) {
+  			if (document.getElementById("solveAD").checked)//solving for Angular Distance done {
   				switch (angD) {
   				case "":
   					console.log("no angD");
@@ -1028,7 +1028,63 @@
   			document.getElementById("resultAngD").innerHTML = "Angular Distance is " + angD + " radians";
   			}
   			
-  			document.getElementById("gif").hidden = false;
+  			if (document.getElementById("solveAA").checked) {
+  				
+  			}
+  			
+  			if (document.getElementById("solveTV").checked) {
+  				
+  			}
+  			
+  			if (document.getElementById("solveF").checked) {
+  				
+  			}
+  			
+  			if (document.getElementById("solveP").checked) {
+  				
+  			}
+  			
+  			if (document.getElementById("solveR").checked) {
+  				
+  			}
+  			
+  			if (document.getElementById("solveCF").checked) {
+  				
+  			}
+  			
+  			if (document.getElementById("solveCA").checked) {
+  				
+  			}
+  			
+  			if (document.getElementById("solveM").checked) {
+  				
+  			}
+  			
+  			if (document.getElementById("solveT").checked) {
+  				
+  			}
+  			
+  			if (document.getElementById("solveI").checked) {
+  				
+  			}
+  			
+  			if (document.getElementById("solveFORCE").checked) {
+  				
+  			}
+  			
+  			if (document.getElementById("solveMOM").checked) {
+  				
+  			}
+  			
+  			if (document.getElementById("solveTIME").checked) {
+  				
+  			}
+  			
+  			if (document.getElementById("solveAL").checked) {
+  				
+  			}
+  			
+    			document.getElementById("gif").hidden = false;
   	
   			console.log(momentum + " " + force + " " + inertia + " " + torque  + " " + mass + " " + accelC + " " + forceC + " " + radius + " " + period + " " + frequency + " " + tanVelocity + " " + accelA + " " + angVelocity + " " + units + " " + shape);
   		}

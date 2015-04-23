@@ -1077,7 +1077,7 @@
   				console.log("tanV = " + tanVelocity);
   			}
   			
-  			if (document.getElementById("solveF").checked) {
+  			if (document.getElementById("solveFORCE").checked) {
   				switch (force) {
   					case "":
   						conosle.log("no force");
@@ -1143,27 +1143,67 @@
   			}
   			
   			if (document.getElementById("solveT").checked) {
-  				
+  				switch (torque) {
+  					case "":
+  						console.log("no torque");
+  						break;
+  					default:
+  						console.log("there is a torque");
+  						break;
+  				}
+  				document.getElementById("resultTorque").innerHTML = "Torque is " + torque + " newtons meters.";
+  				console.log("torque is " + torque);
   			}
   			
   			if (document.getElementById("solveI").checked) {
-  				
-  			}
-  			
-  			if (document.getElementById("solveFORCE").checked) {
-  				
+  				switch (inertia) {
+  					case "":
+  						console.log("no inertia");
+  						break;
+  					default:
+  						console.log("there is an inertia");
+  						break;
+  				}
+  				document.getElementById("resultInertia").innerHTML = "Inertia is " + inertia + " kilogram meters squared.";
+  				console.log("inertia is " + inertia);
   			}
   			
   			if (document.getElementById("solveMOM").checked) {
-  				
+  				switch (momentum) {
+  					case "":
+  						console.log("no momentum");
+  						break;
+  					break:
+  						console.log("there is a momentum");
+  						break;
+  				}
+  				document.getElementById("resultMOM").innerHTML = "Momentum is " + momentum + ".";
   			}
   			
   			if (document.getElementById("solveTIME").checked) {
-  				
+  				switch (time) {
+  					case "":
+  						console.log("no time");
+  						break;
+  					default:
+  						console.log("there is time");
+  						break;
+  				}
+  				document.getElementById("resultTime").innerHTML = "Time is " + time + " seconds.";
+  				console.log("time is " + time);
   			}
   			
   			if (document.getElementById("solveAL").checked) {
-  				
+  				switch (arc) {
+  					case "":
+  						console.log("no arc");
+  						break;
+  					default:
+  						console.log("there is an arc");
+  						break;
+  				}
+  				document.getElementById("resultArcLength").innerHTML = "Arc length is " + arc + ".";
+  				console.log("arc is " + arc);
   			}
   			
     			document.getElementById("gif").hidden = false;

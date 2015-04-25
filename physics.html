@@ -1062,8 +1062,10 @@
   										switch (angD) {
   											default:
   											accelA = (angVelocity^2 - initial^2) / (2 * angD);
+  											console.log("accelA = (angVelocity^2 - initial^2) / (2 * angD)");
   											break;
   											case "":
+  												console.log("no angD");
   												switch (arc) {
   						case "":
   							console.log("no arc");
@@ -1454,6 +1456,7 @@
   								}
   								break;
   							case "":
+  								console.log("no ang");
   								switch (radius) {
   										case "":
   											switch (angD) {
@@ -1596,6 +1599,7 @@
   						console.log("no tanVelocity");
   						switch (angVelocity) {
   							default:
+  								console.log("there is an angV");
   								switch (radius) {
   									default:
   										tanVelocity = radius * angVelocity;
@@ -1604,8 +1608,10 @@
   									case "":
   										switch (arc) {
   											default:
+  												console.log("yes arc");
   												switch (angD) {
   													default:
+  														console.log("radius = arc / angD");
   														radius = arc / angD;
   														break;
   													case "":
@@ -1613,10 +1619,13 @@
   												}
   												break;
   											case "":
+  												console.log("solve for torque");
   												switch (torque) {
   													default:
+  														console.log("yes torque");
   														switch (force) {
   															default:
+  																console.log("radius = torque / force");
   																radius = torque / force;
   																break;
   															case "":

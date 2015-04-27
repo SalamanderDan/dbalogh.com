@@ -176,7 +176,7 @@
 		<p id="resultCentForce"></p>
 		<p id="centForceDescription"></p>
 		<p id="resultCentAccel"></p>
-		<p id="ccentAccelDescription"></p>
+		<p id="centAccelDescription"></p>
 		<p id="resultArcLength"></p>
 		<p id="arcLengthDescription"></p>
 		<p id="resultInertia"></p>
@@ -1645,6 +1645,7 @@
   									default:
   										tanVelocity = radius * angVelocity;
   										console.log("TV = radius * angVelocity");
+  										document.getElementById("tanVelDescription").innerHTML += "Tangential velocity was solved by radius multiplied by angular velocity.";
   										break;
   									case "":
   										switch (arc) {
@@ -1866,6 +1867,7 @@
   																		break;
   																	default:
   																		tanVelocity = (radius * forceC) / mass;
+  																		document.getElementById("tanVelDescription").innerHTML += "Tangential velocity was solved by radius multiplied by centripital force divided by mass.";
   																		break;
   													
   																}
@@ -1874,6 +1876,7 @@
   														break;
   													default:
   														tanVelocity = Math.sqrt(radius * accelC);
+  														document.getElementById("tenVelDescription").innerHTML += "Tangential velocity was solved by the square root of radius multiplied by centripital acceleration.";
   														break;
   												}
   												break;
@@ -2395,6 +2398,7 @@
   						break;
   					default:
   						console.log("there is a tanVelocity");
+  						document.getElementById("tanVelDescription").innerHTML = "Tangential velocity was already given.";
   						break;
   				}
   				document.getElementById("resultTanVel").innerHTML = "Tangential Velocity is " + tanVelocity + " meters per second.";
@@ -2411,6 +2415,7 @@
   									default:
   										force = torque / radius;
   										console.log("force = torque / radius");
+  										document.getElementById("forceDescription").innerHTML += "Force was solved by torque divided by radius.";
   										break;
   									case "":
   										switch (angD) {
@@ -2585,6 +2590,7 @@
   									default:
   										force = torque / radius;
   										console.log("force = torque / radius");
+  										document.getElementById("forceDescription").innerHTML += "Force was solved by torque divided by radius.";
   										break;
   									case "":
   										switch (angD) {
@@ -2690,6 +2696,7 @@
   						break;
   					default:
   						console.log("there is a force");
+  						document.getElementById("forceDescription").innerHTML += "Force was already given.";
   						break;
   				}
   				document.getElementById("resultForce").innerHTML = "Force is " + force + " newtons."
@@ -2703,6 +2710,7 @@
   						break;
   					default:
   						console.log("there is a radius");
+  						document.getElementById("radDescription").innerHTML += "Radius was already given.";
   						break;
     				}
     				document.getElementById("resultRad").innerHTML = "Radius is " + radius + ' meters.';
@@ -2716,6 +2724,7 @@
   						break;
   					default:
   						console.log("there is a forceC");
+  						document.getElementById("centForceDescription").innerHTML += "Centripital force was already given.";
   						break;
   				}
   				document.getElementById("resultCentForce").innerHTML = "Centripital force is " + forceC + " newtons.";
@@ -2729,6 +2738,7 @@
   						break;
   					default:
   						console.log("there is a accelC");
+  						document.getElementById("centAccelDescription").innerHTML += "Centripital acceleration was already given.";
   						break;
   				}
   				document.getElementById("resultCentAccel").innerHTML = "Centripital Acceleration is " + accelC + " radians per second squared";
@@ -2742,6 +2752,7 @@
   						break;
   					default:
   						console.log("there is mass");
+  						document.getElementById("massDescription").innerHTML += "Mass was already given.";
   						break;
   				}
   				document.getElementById("resultMass").innerHTML = "Mass is " + mass + " kilograms";
@@ -2755,6 +2766,7 @@
   						break;
   					default:
   						console.log("there is a torque");
+  						document.getElementById("torqueDescription").innerHTML += "Torque was already given.";
   						break;
   				}
   				document.getElementById("resultTorque").innerHTML = "Torque is " + torque + " newtons meters.";
@@ -2768,6 +2780,7 @@
   						break;
   					default:
   						console.log("there is an inertia");
+  						document.getElementById("inertiaDescription").innerHTML += "Inertia was already given.";
   						break;
   				}
   				document.getElementById("resultInertia").innerHTML = "Inertia is " + inertia + " kilogram meters squared.";
@@ -2781,6 +2794,7 @@
   						break;
   					default:
   						console.log("there is a momentum");
+  						document.getElementById("momentumDescription").innerHTML += "Momentum was already given.";
   						break;
   				}
   				document.getElementById("resultMomentum").innerHTML = "Momentum is " + momentum + ".";
@@ -2793,6 +2807,7 @@
   						break;
   					default:
   						console.log("there is time");
+  						document.getElementById("timeDescription").innerHTML += "Time was already given.";
   						break;
   				}
   				document.getElementById("resultTime").innerHTML = "Time is " + time + " seconds.";
@@ -2806,6 +2821,7 @@
   						break;
   					default:
   						console.log("there is an arc");
+  						document.getElementById("arcDescription").innerHTML += "Arc length was already given.";
   						break;
   				}
   				document.getElementById("resultArcLength").innerHTML = "Arc length is " + arc + ".";

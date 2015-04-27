@@ -149,22 +149,39 @@
 			<button id="btn1" type="button" onclick="calculate()">Calculate</button>
 		</form>
 		<p id="resultAngV"></p>
+		<p id="angVDescription"></p>
 		<p id="resultPer"></p>
+		<p id="perDescription"></p>
 		<p id="resultFreq"></p>
+		<p id="freqDescription"></p>
 		<p id="resultAngD"></p>
+		<p id="angDDescription"></p>
 		<p id="resultRad"></p>
+		<p id="radDescription"></p>
 		<p id="resultForce"></p>
+		<p id="forceDescription"></p>
 		<p id="resultTime"></p>
+		<p id="timeDescription"></p>
 		<p id="resultMomentum"></p>
+		<p id="momentumDescription"></p>
 		<p id="resultAngAccel"></p>
+		<p id="angAccelDescription"></p>
 		<p id="resultTanVel"></p>
+		<p id="tanVelDescription"></p>
 		<p id="resultTorque"></p>
+		<p id="torqueDescription"></p>
 		<p id="resultCentForce"></p>
+		<p id="centForceDescription"></p>
 		<p id="resultCentAccel"></p>
+		<p id="ccentAccelDescription"></p>
 		<p id="resultArcLength"></p>
+		<p id="arcLengthDescription"></p>
 		<p id="resultInertia"></p>
+		<p id="inertiaDescription"></p>
 		<p id="resultMass"></p>
+		<p id="massDescription"></p>
 		<p id="resultAngVI"></p>
+		<p id="angVIDescription"></p>
   	</body>
   
   	<script>
@@ -207,12 +224,14 @@
   												case "":
   													break;
   												default:
-  													angVelocity = (2 * Math.PI) * frequency;	
+  													angVelocity = (2 * Math.PI) * frequency;
+  													document.getElementById("angVDescription").innerHTML += "Angular Velocity was solved by 2 pi times the frequency."; 
   													break;
   											}
   											break;
   										default:
   											angVelocity = (2 * Math.PI) / period;
+  											document.getElementById("angVDescription").innerHTML += "Angular Velocity was solved by 2 pi divided by the frequency.";
   											break;
   									}
   									break;
@@ -220,9 +239,10 @@
   									console.log("in angD");
   									switch (time) {
   										case "":
-  										break;
+  											break;
   										default:
   											angVelocity = angD / time;
+  											document.getElementById("angVDescription").innerHTML += "Angular Velocity was solved by angular distance divided by time.";
   											break;
   									}
   									break;
@@ -239,6 +259,7 @@
   											break;
   										default:
   											radius = arc / angD;
+  											document.getElementById("angVDescription").innerHTML += "Radius was solved by arc length divided by angular distance.";
   											break;
   									}
   							}
@@ -284,14 +305,16 @@
   																	break;
   																default:
   																	radius = (mass * tanVelocity) / forceC;
+  																	document.getElementById("angVDescription").innerHTML += "Radius was solved by mass times tengential velocity divided by centripital force.";
   																	break;
   															}
+  															break;
   													}
+  													break;
   											}
-  											
-  									
-  										break;  											break;
+  											break;
   									}
+  									break;
   							}
   						default:
   							switch (tanVelocity) {
@@ -300,29 +323,33 @@
   										case "":
   											switch (mass) {
   												case "":
+  													break;
+  												default:
   													switch (forceC) {
   														case "":
   															forceC = mass * accelC;
-  															break;
+  															
   														default:
   															tanVelocity = (radius * forceC) / mass;
   															break;
   													
   													}
-  												default:
+  													break;
   											}
-  											
-  											break;
+   											break;
   										default:
   											tanVelocity = Math.sqrt(radius * accelC);
+  											document.getElementById("angVDescription").innerHTML += "Tangential velocity was solved by the square root of radius * accelC.";
   											break;
   									}
   									break;
   								default:
   									angVelocity = tanVelocity / radius;
   									console.log("angVelocity" + angVelocity);
+  									document.getElementById("angVDescription").innerHTML += " Angular velocity was solver by tangential velocity / radius.";
   									break;
   							}
+  							break;
   					}
   					
   					break;
@@ -340,6 +367,7 @@
   						console.log("from radians");
   						angVelocity = angVelocity;
   					}
+  					document.getElementById("angVDescription").innerHTML = "Angular velocity was already given.";
   					break;
   			}
   			console.log("out");

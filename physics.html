@@ -8,18 +8,26 @@
 		p {
 			font-family: serif, 'fantasy';
 		}
-		img {
+		#gif {
 			right: 400px;
 			position: fixed;
 			height: 400px;
 			width: 300px;
 		}
 		
+		#meme {
+			height: 400px;
+			width: 300px;
+			position: fixed;
+			right: 400px;
+		}
+		
 	</style>
 	<head>
 		<link rel="shortcut icon" type="favicon.ico" href="favicon.ico">
     		<title>Physics</title>
-    		<img hidden id="gif" src="http://www.aplusphysics.com/courses/honors/rotation/images/Moment_of_inertia_examples.gif" alt="inertia gif"></h6>
+    		<img hidden id="gif" src="http://www.aplusphysics.com/courses/honors/rotation/images/Moment_of_inertia_examples.gif" alt="inertia gif">
+    		<img hidden src='http://www.quickmeme.com/img/67/67bb19951f30dc772282fb249ffc48737007855dbcc204d23c22c062cb706044.jpg' id="meme" alt="meme">
     	<h1>Physics</h1>
   	</head>
 
@@ -2879,6 +2887,7 @@
   				}
   				document.getElementById("resultInertia").innerHTML = "Inertia is " + inertia + " kilogram meters squared.";
   				console.log("inertia is " + inertia);
+  				document.getElementById("meme").hidden = false;
   			}
   			
   			if (document.getElementById("solveMOM").checked) {

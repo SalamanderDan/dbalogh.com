@@ -2756,6 +2756,7 @@
   											default:
   												switch (torque) {
   													default:
+  														console.log("solved");
   														radius = torque / force;
   														document.getElementById("radDescription").innerHTML += "Radius was solved by torque divided by force.";
   														break;
@@ -2764,6 +2765,7 @@
   															default:
   																switch (accelA) {
   																	default:
+  																		console.log("torque done");
   																		torque = inertia * accelA;
   																		break;
   																	case "":
@@ -2786,7 +2788,7 @@
   																}
   																break;
   														}
-  														break;
+  													
   												}
   												break;
   											case "":

@@ -514,6 +514,7 @@
   								default:
   									period = (2 * Math.PI) / angVelocity;
   									console.log("period = 2pi / velocity");
+  									document.getElementById("perDescription").innerHTML += "period was solved for by 2 pi divided by angular velocity.";
   									break;
   										
   											
@@ -523,11 +524,13 @@
   						default:
   							period = 1 / frequency;
   							console.log("period = 1 / frequency");
+  							document.getElementById("perDescription").innerHTML += "Period was solved by 1 divided by frequency.";
   							break;
   					}
   					break;
   				default:
   					console.log("there is a period");
+  					document.getElementById("perDescription").innerHTML += "Period was already given.";
   					break;
   			}
   			console.log("period is " + period);
@@ -543,6 +546,7 @@
   								default:
   									console.log("frequency = angVelocity / 2pi");
   									frequency = angVelocity / (2 * Math.PI);
+  									document.getElementById("freqDescription").innerHTML += "Frequency was solved by angular velocity divided by 2 pi.";
   									break;
   								case "":
   									console.log("case1");
@@ -676,11 +680,13 @@
   						default:
   							console.log("frequency = 1 / period");
   							frequency = 1 / period;
+  							document.getElementById("freqDescription").innerHTML += "Frequency was solved by 1 divided by period.";
   							break;
   					}
   					break;
   				default:
   					console.log("there is a frequency");
+  					document.getElementById("freqDescription").innerHTML += "Frequency was already given.";
   					break;
   			}
   			console.log("frequency is " + frequency);
@@ -930,13 +936,13 @@
   											break;
   										default:
   											switch (angVelocity) {
-  								default:
-  									console.log("radius = tanVelocity / angVelocity");
-  									radius = tanVelocity / angVelocity;
-  									break;
-  								case "":
-  									console.log("case1");
-  									switch (radius) {
+  												default:
+  													console.log("radius = tanVelocity / angVelocity");
+  													radius = tanVelocity / angVelocity;
+  													break;
+  												case "":
+  													console.log("case1");
+  													switch (radius) {
   										case "":
   											switch (angD) {
   												case "":
@@ -1061,7 +1067,7 @@
   										break;
   									}
   									
-  							}
+  											}
   											break;
   									}
   									
@@ -1069,6 +1075,7 @@
   								default:
   									console.log("angD = arc / radius");
   									angD = arc / radius;
+  									document.getElementById("angDDescription") += "Angular distance was solved by arc length divided by radius.";
   									break;
   							}
   							break;
@@ -1076,6 +1083,7 @@
   					break;
   				default:
   					console.log("there is a angD");
+  					document.getElementById("angDDescription").innerHTML += "Angular distance was already given.";
   					break;
   			}
   			console.log("angD is " + angD);
@@ -1094,6 +1102,7 @@
   											default:
   											accelA = (angVelocity^2 - initial^2) / (2 * angD);
   											console.log("accelA = (angVelocity^2 - initial^2) / (2 * angD)");
+  											document.getElementById("angAccelDescription").innerHTML += "Angular acceleration was solved by final angular velocity squared minus initial angular velocity squared divided by 2 times angular distance.";
   											break;
   											case "":
   												console.log("no angD");
@@ -1618,6 +1627,7 @@
   						break;
   					default:
   						console.log("there is an accelA");
+  						document.getElementById("angAccelDescription").innerHTML += "Angular acceleration was already given.";
   						break;
   				}
   				document.getElementById("resultAngAccel").innerHTML = "Angular Acceleration is  " + accelA + " radians per second squared.";

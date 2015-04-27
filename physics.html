@@ -144,9 +144,12 @@
 					<td>Angular Distance</td>
 					<td><input id="angD" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
 				</tr>
+				<tr>
+					<td><button id="btn1" type="button" onclick="calculate()">Calculate</button></td>
+					<td><button id="btn2" type="submit">Clear</button></td>
+				</tr>
 			</table>
 			
-			<button id="btn1" type="button" onclick="calculate()">Calculate</button>
 		</form>
 		<p id="resultAngV"></p>
 		<p id="angVDescription"></p>

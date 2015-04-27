@@ -2731,11 +2731,11 @@
   											case "":
   												switch (initial) {
   													default:
-  														switch (angAccel) {
+  														switch (accelA) {
   															default:
   																switch (time) {
   																	default:
-  																		angVelocity = initial + (angAccel * time);
+  																		angVelocity = initial + (accelA * time);
   																		break;
   																	case "":
   																		break;
@@ -2762,9 +2762,9 @@
   													case "":
   														switch (inertia) {
   															default:
-  																switch (angAccel) {
+  																switch (accelA) {
   																	default:
-  																		torque = inertia * angAccel;
+  																		torque = inertia * accelA;
   																		break;
   																	case "":
   																		break;

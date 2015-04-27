@@ -2707,6 +2707,95 @@
   				switch (radius) {
   					case "":
   						console.log("no radius");
+  						switch (arc) {
+  							default:
+  								switch (angD) {
+  									default:
+  										radius = arc / angD;
+  										document.getElementById("radDescription").innerHTML += "Radius was solved by arc length divided by angular distance.";
+  										break;
+  									case "":
+  										break;
+  									
+  								}
+  								break;
+  							case "":
+  								switch (tanVelocity) {
+  									default:
+  										switch (angVelocity) {
+  											default:
+  												radius = tanVelocity / angVelocity;
+  												document.getElementById("radDescription").innerHTML += "Radius was solved by tangential velocity divided by angular velocity.";
+  												break;
+  												
+  											case "":
+  												switch (initial) {
+  													default:
+  														switch (angAccel) {
+  															default:
+  																switch (time) {
+  																	default:
+  																		angVelocity = initial + (angAccel * time);
+  																		break;
+  																	case "":
+  																		break;
+  																}
+  																break;
+  															case "":
+  																break;
+  														}
+  														break;
+  													case "":
+  														break;
+  												}
+  												break;
+  										}
+  										break;
+  									case "":
+  										switch (force) {
+  											default:
+  												switch (torque) {
+  													default:
+  														radius = torque / force;
+  														document.getElementById("radDescription").innerHTML += "Radius was solved by torque divided by force.";
+  														break;
+  													case "":
+  														switch (inertia) {
+  															default:
+  																switch (angAccel) {
+  																	default:
+  																		torque = inertia * angAccel;
+  																		break;
+  																	case "":
+  																		break;
+  																}
+  																break;
+  															case "":
+  																switch (momentum) {
+  																	default:
+  																		switch (time) {
+  																			default:
+  																				torque = momentum / time;
+  																				break;
+  																			case "":
+  																				break;
+  																		}
+  																		break;
+  																	case "":
+  																		break;
+  																}
+  																break;
+  														}
+  														break;
+  												}
+  												break;
+  											case "":
+  												break;
+  										}
+  										break;
+  								}
+  								break;
+  						}
   						break;
   					default:
   						console.log("there is a radius");

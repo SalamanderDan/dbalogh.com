@@ -2767,6 +2767,9 @@
   																	default:
   																		console.log("torque done");
   																		torque = inertia * accelA;
+  																		console.log("solved");
+  																		radius = torque / force;
+  																		document.getElementById("radDescription").innerHTML += "Radius was solved by torque divided by force.";
   																		break;
   																	case "":
   																		break;

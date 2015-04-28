@@ -2978,6 +2978,145 @@
   				switch (accelC) {
   					case "":
   						console.log("no accelC");
+  						switch (forceC) {
+  							default:
+  								switch (mass) {
+  									default:
+  										accelC = forceC / mass;
+  										document.getElementById(centAccelDescription).innerHTML += "Centripital acceleration was solved by centripital force divided by mass.";
+  										break;
+  									case "":
+  										switch (force) {
+  											default:
+  												mass = force / 9.8;
+  												break;
+  											case "":
+  												switch (inertia) {
+  													default:
+  														switch (radius) {
+  															default:
+  																if (shape.indexOf('na') === 0) {
+  																	break;
+  																}
+  																if (shape.indexOf("point") === 0){
+  																	document.getElementById(centAccelDescription).innerHTML += "Mass was solved for by inertia diveded by radius squared.";
+  																	mass = (inertia / radius^2);
+  																	break;
+  																}
+  																if (shape.indexOf("rod") === 0){
+  																	document.getElementById(centAccelDescription).innerHTML += "Mass was solved for by inertia diveded by radius squared times 12.";
+  																	mass = 12 * inertia / radius^2;
+  																	break;
+  																}
+  																if (shape.indexOf("rod2") === 0){
+  																	document.getElementById(centAccelDescription).innerHTML += "Mass was solved for by inertia diveded by radius squared times 3.";
+  																	mass = 3 * inertia / radius^2;
+  																	break;
+  																}
+  																if (shape.indexOf("shell") === 0){
+  																	document.getElementById(centAccelDescription).innerHTML += "Mass was solved for by inertia diveded by radius squared.";
+  																	mass = inertia / radius^2;
+  																	break;
+  																}
+  																if (shape.indexOf("cylinder") === 0){
+  																	document.getElementById(centAccelDescription).innerHTML += "Mass was solved for by inertia diveded by radius squared times 2.";
+  																	mass = 2 * inertia / radius^2;
+  																	break;
+  																}
+  																if (shape.indexOf("annular") === 0){
+  																	break;
+  																}
+  																if (shape.indexOf("sphere") === 0){
+  																	inertia = (2/5) * mass * radius^2;
+  																	break;
+  																}
+  																if (shape.indexOf("thin") === 0){
+  																	document.getElementById(centAccelDescription).innerHTML += "Mass was solved for by inertia diveded by radius squared times three halves.";
+  																	mass = (3/2) * inertia / radius^2;
+  																	break;
+  																}
+  																if (shape.indexOf("plate") === 0){
+  																	break;
+  																}
+  																if (shape.indexOf("sheet") === 0){
+  																	document.getElementById(centAccelDescription).innerHTML += "Mass was solved for by inertia diveded by radius squared times 12.";
+  																	mass = 12 * inertia / radius^2;
+  																	break;
+  																}
+  																if (shape.indexOf("sheetA") === 0){
+  																	document.getElementById(centAccelDescription).innerHTML += "Mass was solved for by inertia diveded by radius squared times 3.";
+  																	mass = 3 * inertia / radius^2;
+  																	break;
+  																}
+  															case "":
+  																break;
+  														}
+  														break;
+  													case "":
+  														switch (momentum) {
+  															case "":
+  																break;
+  															default:
+  																switch (radius) {
+  																	case "":
+  																		break;
+  																	default:
+  																		switch (tanVelocity) {
+  																			default:
+  																				mass = momentum / (radius * tanVelocity);
+  																				document.getElementById(centAccelDescription).innerHTML += "Mass was solved for by momentum diveded by radius times tangential velocity.";
+  																				break;
+  																			case "":
+  																				switch (angVelocity) {
+  																					case "":
+  																						break;
+  																					default:
+  																						mass = momentum / (radius^2 * angVelocity);
+  																						document.getElementById(centAccelDescription).innerHTML += "Mass was solved for by momentum diveded by radius squared times angular velocity.";
+  																						break;
+  																				}
+  																				break;
+  																		}
+  																		break;
+  																}
+  																break;
+  														}
+  														break;
+  												}
+  												break;
+  										}
+  								}
+  								break;
+  							case "":
+  								switch (radius) {
+  									case "":
+  										break;
+  									default:
+  										switch (tanVelocity) {
+  											case "":
+  												switch (angVelocity) {
+  													default:
+  														accelC = radius * angVelocity^2;
+  														break;
+  													case "":
+  														break;
+  												}
+  												break;
+  											default:
+  												switch (mass) {
+  													default:
+  														forceC = (mass * tanVelocity^2) / radius;
+  														//document.getElementById('centForceDescription').innerHTML += "Centripital force was solved for by mass times tangential velocity squared diveded by the radius.";
+  														break;
+  													case "":
+  														accelC = tanVelocity^2 / radius;
+  														break;
+  												}
+  												break;
+  										}
+  										break;
+  								}
+  						}
   						break;
   					default:
   						console.log("there is a accelC");

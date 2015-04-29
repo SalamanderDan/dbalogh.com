@@ -153,6 +153,16 @@
 					<td><input id="angD" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
 				</tr>
 				<tr>
+					<td><input id="solveFg" value=true type="checkbox"</td>
+					<td>Gravitational Force</td>
+					<td><input id="forceG" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
+				</tr>
+				<td>
+					<td><input="solveM2" value=true type="checkbox"</td>
+					<td>Mass 2</td>
+					<td><input id="mass2" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
+				</td>
+				<tr>
 					<td><button id="btn1" type="button" onclick="calculate()">Calculate</button></td>
 					<td><button id="btn2" type="submit">Clear</button></td>
 				</tr>
@@ -193,6 +203,10 @@
 		<p id="massDescription"></p>
 		<p id="resultAngVI"></p>
 		<p id="angVIDescription"></p>
+		<p id="resultForceG"></p>
+		<p id="forceGDescription"></p>
+		<p id="resultM2"></p>
+		<p id="M2Description"></p>
   	</body>
   
   	<script>
@@ -218,6 +232,9 @@
   			arc = document.getElementById("arc").value;
   			angD = document.getElementById("angD").value;
   			initial = document.getElementById("angularVelociyInitial").value;
+  			forceG = document.getElementById("forceG").value;
+  			m2 = document.getElementById("mass2").value;
+  			var g = 6.67 * 10^-11;
   			
   			if (document.getElementById("solveAV").checked) { //solving for AV done
   				switch (angVelocity) {
@@ -3468,6 +3485,18 @@
   				document.getElementById("resultArcLength").innerHTML = "Arc length is " + arc + ".";
   				console.log("arc is " + arc);
   			}
+  			
+  			if (document.getElementById("solveFg").checked) {
+  				forceG = (g * mass * mass2) / radius^2;
+  				document.getElementById("resultForceG").innerHTML = "Force due to gravity is  " + forceG + " newtons.";
+  				document.getElementById("forceGDescription").innerHTML = "Force was solved by B times mass1 times mass2 divided by radius squared.";
+    			}
+    			
+    			if (document.getElementById("solveM2").checked) {
+    				m2 = (forceG * radius^2) / (g * mass);
+    				document.getElementById("resultM2").innerHTML = "Mass2 is " + m2 + " kilograms.";
+    				document.getElementById("M2Description").innerHTML = "Mass was solved for by radius squared times force due to gravity divded by g times mass1.";
+    			}
   			
     			document.getElementById("gif").hidden = false;
   	

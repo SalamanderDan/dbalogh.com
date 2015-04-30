@@ -1515,12 +1515,20 @@
   										}
   										break;
   									case "":
-  										switch (radius) {
+  										switch (time) {
+  											case "":
+  												switch (radius) {
   											case "":
   												break;
   											default:
   												document.getElementById("angAccelDescription").innerHTML += "Angular acceleration was solved by radius times angular velocity squared.";
   												accelA = radius * angVelocity^2;
+  												break;
+  										}
+  												break;
+  											default:
+  												accelA = (angVelocity - initial) / time;
+  												document.getElementById("angAccelDescription").innerHTML += "Angular acceleration was solved by final - initial divided by time.";
   												break;
   										}
   										break;

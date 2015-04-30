@@ -379,8 +379,7 @@
   							}
   							break;
   					}
-  					
-  					break;
+    					break;
   				default:
   					console.log("converting");
   					if (units.indexOf("deg") === 0){
@@ -3419,6 +3418,285 @@
   				switch (torque) {
   					case "":
   						console.log("no torque");
+  						switch (force) {
+  							case "":
+  								switch (inertia) {
+  									case "":
+  										console.log("no inertia");
+  										break;
+  									default:
+  										switch (accelA) {
+  											case "":
+  												console.log("no accel");
+  												switch (mass) {
+  														case "":
+  															console.log("no mass");
+  															break;
+  														default:
+  															if (shape.indexOf("na") === 0){
+  																break;
+  															}
+  															if (shape.indexOf("point") === 0){
+  																inertia = mass * (radius^2);
+  																break;
+  															}
+  															if (shape.indexOf("rod") === 0){
+  																inertia = (1/12) * mass * radius^2;
+  																break;
+  															}
+  															if (shape.indexOf("rod2") === 0){
+  																inertia = (1/3) * mass * radius^2;
+  																break;
+  															}
+  															if (shape.indexOf("shell") === 0){
+  																inertia = mass * radius^2;
+  																break;
+  															}
+  															if (shape.indexOf("cylinder") === 0){
+  																inertia = .5 * mass * radius^2;
+  																break;
+  															}
+  															if (shape.indexOf("annular") === 0){
+  																break;
+  															}
+  															if (shape.indexOf("sphere") === 0){
+  																inertia = (2/5) * mass * radius^2;
+  																break;
+  															}
+  															if (shape.indexOf("thin") === 0){
+  																inertia = (2/3) * mass * radius^2;
+  																break;
+  															}
+  															if (shape.indexOf("plate") === 0){
+  																break;
+  															}
+  															if (shape.indexOf("sheet") === 0){
+  																interia = (1/12) * mass * radius^2;
+  																break;
+  															}
+  															if (shape.indexOf("sheetA") === 0){
+  																inertia = (1/3) * mass * radius^2;
+  																break;
+  															}
+  													}
+  													break;
+  											default:
+  												console.log("torque = inertia * accel");
+  												torque = inertia * accelA;
+  												console.log(torque);
+  												break;
+  											}
+  										break;
+  									}
+  								switch (radius) {
+  									default:
+  										force = torque / radius;
+  										console.log("force = torque / radius");
+  										document.getElementById("forceDescription").innerHTML += "Force was solved by torque divided by radius.";
+  										break;
+  									case "":
+  										switch (angD) {
+  												case "":
+  													console.log("in angD");
+  													switch (period) {
+  														case "":
+  															switch (frequency){
+  																case "":
+  																	break;
+  															default:
+  																angVelocity = (2 * Math.PI) * frequency;	
+  																break;
+  															}
+  													default:
+  														angVelocity = (2 * Math.PI) / period;
+  														break;
+  													}
+  													break;
+  												default:
+  													console.log("in angD");
+  													switch (time) {
+  														case "":
+  															break;
+  														default:
+  															angVelocity = angD / time;
+  															break;
+  													}
+  												break;
+  											}
+  											console.log("case in radius");
+  											switch (arc) {
+  												case "":
+  													console.log("case in arc");
+  													break;
+  												default:
+  													switch (angD) {
+  														case "":
+  															console.log("case in angd");
+  															break;
+  														default:
+  															radius = arc / angD;
+  															break;
+  													}
+  											}
+  											switch (tanVelocity) {
+  												case "":
+  													console.log("case in tanV");
+  													break;
+  												default:
+  													switch (accelC) {
+  														case "":
+  															break;
+  														default:
+  															console.log("case in accelC");
+  															switch (mass) {
+  																case "":
+  																	console.log("case in mass");
+  																	switch (forceC) {
+  																		case "":
+  																			console.log("case in forceC");
+  																			break;
+  																		default:
+  																			mass = forceC / accelC;
+  																			break;
+  															
+  																	}
+  																	break;
+  																default:
+  																	switch (forceC) {
+  																		case "":
+  																			console.log("case in force");
+  																			switch (accelC) {
+  																				case "":
+  																					console.log("case in accel");
+  																					break;
+  																				default:
+  																					forceC = mass * accelC;
+  																					break;
+  																			}
+  																		default:
+  																			switch (tanVelocity) {
+  																				case "":
+  																					console.log("case in tanv");
+  																					break;
+  																				default:
+  																					radius = (mass * tanVelocity) / forceC;
+  																					break;
+  																			}
+  																	}
+  															}
+  											
+  									
+  														break;  										
+  														
+  													}
+  											}
+  										break;
+  										
+  								}	
+  							default:
+  								switch (radius) {
+  									case "":
+  										switch (arc) {
+  							default:
+  								switch (angD) {
+  									default:
+  										radius = arc / angD;
+  										document.getElementById("radDescription").innerHTML += "Radius was solved by arc length divided by angular distance.";
+  										break;
+  									case "":
+  										break;
+  									
+  								}
+  								break;
+  							case "":
+  								switch (tanVelocity) {
+  									default:
+  										switch (angVelocity) {
+  											default:
+  												radius = tanVelocity / angVelocity;
+  												document.getElementById("radDescription").innerHTML += "Radius was solved by tangential velocity divided by angular velocity.";
+  												break;
+  												
+  											case "":
+  												switch (initial) {
+  													default:
+  														switch (accelA) {
+  															default:
+  																switch (time) {
+  																	default:
+  																		angVelocity = initial + (accelA * time);
+  																		break;
+  																	case "":
+  																		break;
+  																}
+  																break;
+  															case "":
+  																break;
+  														}
+  														break;
+  													case "":
+  														break;
+  												}
+  												break;
+  										}
+  										break;
+  									case "":
+  										switch (force) {
+  											default:
+  												switch (torque) {
+  													default:
+  														console.log("solved");
+  														radius = torque / force;
+  														document.getElementById("radDescription").innerHTML += "Radius was solved by torque divided by force.";
+  														break;
+  													case "":
+  														switch (inertia) {
+  															default:
+  																switch (accelA) {
+  																	default:
+  																		console.log("torque done");
+  																		torque = inertia * accelA;
+  																		console.log("solved");
+  																		radius = torque / force;
+  																		document.getElementById("radDescription").innerHTML += "Radius was solved by torque divided by force.";
+  																		break;
+  																	case "":
+  																		break;
+  																}
+  																break;
+  															case "":
+  																switch (momentum) {
+  																	default:
+  																		switch (time) {
+  																			default:
+  																				torque = momentum / time;
+  																				break;
+  																			case "":
+  																				break;
+  																		}
+  																		break;
+  																	case "":
+  																		break;
+  																}
+  																break;
+  														}
+  													
+  												}
+  												break;
+  											case "":
+  												break;
+  										}
+  										break;
+  								}
+  								break;
+  						}	
+  									default:
+  										torque = radius * force;
+  										document.getElementById("torqueDescription").innerHTML += "Torque was solved by radius times force.
+  										break;"
+  								}
+  								break;
+  						}
   						break;
   					default:
   						console.log("there is a torque");
@@ -3432,6 +3710,827 @@
   			if (document.getElementById("solveI").checked) {
   				switch (inertia) {
   					case "":
+  						switch (torque) {
+  							case "":
+  								switch (force) {
+  							case "":
+  								switch (inertia) {
+  									case "":
+  										console.log("no inertia");
+  										break;
+  									default:
+  										switch (accelA) {
+  											case "":
+  												console.log("no accel");
+  												switch (mass) {
+  														case "":
+  															console.log("no mass");
+  															break;
+  														default:
+  															if (shape.indexOf("na") === 0){
+  																break;
+  															}
+  															if (shape.indexOf("point") === 0){
+  																inertia = mass * (radius^2);
+  																break;
+  															}
+  															if (shape.indexOf("rod") === 0){
+  																inertia = (1/12) * mass * radius^2;
+  																break;
+  															}
+  															if (shape.indexOf("rod2") === 0){
+  																inertia = (1/3) * mass * radius^2;
+  																break;
+  															}
+  															if (shape.indexOf("shell") === 0){
+  																inertia = mass * radius^2;
+  																break;
+  															}
+  															if (shape.indexOf("cylinder") === 0){
+  																inertia = .5 * mass * radius^2;
+  																break;
+  															}
+  															if (shape.indexOf("annular") === 0){
+  																break;
+  															}
+  															if (shape.indexOf("sphere") === 0){
+  																inertia = (2/5) * mass * radius^2;
+  																break;
+  															}
+  															if (shape.indexOf("thin") === 0){
+  																inertia = (2/3) * mass * radius^2;
+  																break;
+  															}
+  															if (shape.indexOf("plate") === 0){
+  																break;
+  															}
+  															if (shape.indexOf("sheet") === 0){
+  																interia = (1/12) * mass * radius^2;
+  																break;
+  															}
+  															if (shape.indexOf("sheetA") === 0){
+  																inertia = (1/3) * mass * radius^2;
+  																break;
+  															}
+  													}
+  													break;
+  											default:
+  												console.log("torque = inertia * accel");
+  												torque = inertia * accelA;
+  												console.log(torque);
+  												break;
+  											}
+  										break;
+  									}
+  								switch (radius) {
+  									default:
+  										force = torque / radius;
+  										console.log("force = torque / radius");
+  										document.getElementById("forceDescription").innerHTML += "Force was solved by torque divided by radius.";
+  										break;
+  									case "":
+  										switch (angD) {
+  												case "":
+  													console.log("in angD");
+  													switch (period) {
+  														case "":
+  															switch (frequency){
+  																case "":
+  																	break;
+  															default:
+  																angVelocity = (2 * Math.PI) * frequency;	
+  																break;
+  															}
+  													default:
+  														angVelocity = (2 * Math.PI) / period;
+  														break;
+  													}
+  													break;
+  												default:
+  													console.log("in angD");
+  													switch (time) {
+  														case "":
+  															break;
+  														default:
+  															angVelocity = angD / time;
+  															break;
+  													}
+  												break;
+  											}
+  											console.log("case in radius");
+  											switch (arc) {
+  												case "":
+  													console.log("case in arc");
+  													break;
+  												default:
+  													switch (angD) {
+  														case "":
+  															console.log("case in angd");
+  															break;
+  														default:
+  															radius = arc / angD;
+  															break;
+  													}
+  											}
+  											switch (tanVelocity) {
+  												case "":
+  													console.log("case in tanV");
+  													break;
+  												default:
+  													switch (accelC) {
+  														case "":
+  															break;
+  														default:
+  															console.log("case in accelC");
+  															switch (mass) {
+  																case "":
+  																	console.log("case in mass");
+  																	switch (forceC) {
+  																		case "":
+  																			console.log("case in forceC");
+  																			break;
+  																		default:
+  																			mass = forceC / accelC;
+  																			break;
+  															
+  																	}
+  																	break;
+  																default:
+  																	switch (forceC) {
+  																		case "":
+  																			console.log("case in force");
+  																			switch (accelC) {
+  																				case "":
+  																					console.log("case in accel");
+  																					break;
+  																				default:
+  																					forceC = mass * accelC;
+  																					break;
+  																			}
+  																		default:
+  																			switch (tanVelocity) {
+  																				case "":
+  																					console.log("case in tanv");
+  																					break;
+  																				default:
+  																					radius = (mass * tanVelocity) / forceC;
+  																					break;
+  																			}
+  																	}
+  															}
+  											
+  									
+  														break;  										
+  														
+  													}
+  											}
+  										break;
+  										
+  								}	
+  							default:
+  								switch (radius) {
+  									case "":
+  										switch (arc) {
+  							default:
+  								switch (angD) {
+  									default:
+  										radius = arc / angD;
+  										document.getElementById("radDescription").innerHTML += "Radius was solved by arc length divided by angular distance.";
+  										break;
+  									case "":
+  										break;
+  									
+  								}
+  								break;
+  							case "":
+  								switch (tanVelocity) {
+  									default:
+  										switch (angVelocity) {
+  											default:
+  												radius = tanVelocity / angVelocity;
+  												document.getElementById("radDescription").innerHTML += "Radius was solved by tangential velocity divided by angular velocity.";
+  												break;
+  												
+  											case "":
+  												switch (initial) {
+  													default:
+  														switch (accelA) {
+  															default:
+  																switch (time) {
+  																	default:
+  																		angVelocity = initial + (accelA * time);
+  																		break;
+  																	case "":
+  																		break;
+  																}
+  																break;
+  															case "":
+  																break;
+  														}
+  														break;
+  													case "":
+  														break;
+  												}
+  												break;
+  										}
+  										break;
+  									case "":
+  										switch (force) {
+  											default:
+  												switch (torque) {
+  													default:
+  														console.log("solved");
+  														radius = torque / force;
+  														document.getElementById("radDescription").innerHTML += "Radius was solved by torque divided by force.";
+  														break;
+  													case "":
+  														switch (inertia) {
+  															default:
+  																switch (accelA) {
+  																	default:
+  																		console.log("torque done");
+  																		torque = inertia * accelA;
+  																		console.log("solved");
+  																		radius = torque / force;
+  																		document.getElementById("radDescription").innerHTML += "Radius was solved by torque divided by force.";
+  																		break;
+  																	case "":
+  																		break;
+  																}
+  																break;
+  															case "":
+  																switch (momentum) {
+  																	default:
+  																		switch (time) {
+  																			default:
+  																				torque = momentum / time;
+  																				break;
+  																			case "":
+  																				break;
+  																		}
+  																		break;
+  																	case "":
+  																		break;
+  																}
+  																break;
+  														}
+  													
+  												}
+  												break;
+  											case "":
+  												break;
+  										}
+  										break;
+  								}
+  								break;
+  						}	
+  									default:
+  										torque = radius * force;
+  										document.getElementById("torqueDescription").innerHTML += "Torque was solved by radius times force.
+  										break;"
+  								}
+  								break;
+  						}
+  							default:
+  								switch (accelA) {
+  									case "":
+  										switch (angVelocity) {
+  							default:
+  								switch (initial) {
+  									default:
+  										switch (angD) {
+  											default:
+  											accelA = (angVelocity^2 - initial^2) / (2 * angD);
+  											console.log("accelA = (angVelocity^2 - initial^2) / (2 * angD)");
+  											document.getElementById("angAccelDescription").innerHTML += "Angular acceleration was solved by final angular velocity squared minus initial angular velocity squared divided by 2 times angular distance.";
+  											break;
+  											case "":
+  												console.log("no angD");
+  												switch (arc) {
+  						case "":
+  							console.log("no arc");
+  							switch (time) {
+  								case "":
+  									console.log("no time");
+  									break;
+  								default:
+  									console.log("yes time")
+  									switch (angVelocity) {
+  								default:
+  									console.log("angD = angVelocity * time");
+  									angD = time * angD;
+  									break;
+  								case "":
+  									console.log("case1");
+  									switch (radius) {
+  										case "":
+  											switch (angD) {
+  												case "":
+  													console.log("in angD");
+  													switch (period) {
+  														case "":
+  															switch (frequency){
+  																case "":
+  																	break;
+  															default:
+  																angVelocity = (2 * Math.PI) * frequency;	
+  																break;
+  															}
+  													default:
+  														angVelocity = (2 * Math.PI) / period;
+  														break;
+  													}
+  													break;
+  												default:
+  													console.log("in angD");
+  													switch (time) {
+  														case "":
+  															break;
+  														default:
+  															angVelocity = angD / time;
+  															break;
+  													}
+  												break;
+  											}
+  											console.log("case in radius");
+  											switch (arc) {
+  												case "":
+  													console.log("case in arc");
+  													break;
+  												default:
+  													switch (angD) {
+  														case "":
+  															console.log("case in angd");
+  															break;
+  														default:
+  															radius = arc / angD;
+  															break;
+  													}
+  											}
+  											switch (tanVelocity) {
+  												case "":
+  													console.log("case in tanV");
+  													break;
+  												default:
+  													switch (accelC) {
+  														case "":
+  															break;
+  														default:
+  															console.log("case in accelC");
+  															switch (mass) {
+  																case "":
+  																	console.log("case in mass");
+  																	switch (forceC) {
+  																		case "":
+  																			console.log("case in forceC");
+  																			break;
+  																		default:
+  																			mass = forceC / accelC;
+  																			break;
+  															
+  																	}
+  																	break;
+  																default:
+  																	switch (forceC) {
+  																		case "":
+  																			console.log("case in force");
+  																			switch (accelC) {
+  																				case "":
+  																					console.log("case in accel");
+  																					break;
+  																				default:
+  																					forceC = mass * accelC;
+  																					break;
+  																			}
+  																		default:
+  																			switch (tanVelocity) {
+  																				case "":
+  																					console.log("case in tanv");
+  																					break;
+  																				default:
+  																					radius = (mass * tanVelocity) / forceC;
+  																					break;
+  																			}
+  																	}
+  															}
+  											
+  									
+  														break;  										
+  														
+  													}
+  											}
+  									default:
+  										switch (tanVelocity) {
+  											case "":
+  												switch (accelC) {
+  													case "":
+  														switch (mass) {
+  															case "":
+  																switch (forceC) {
+  																	case "":
+  																		forceC = mass * accelC;
+  																		break;
+  																	default:
+  																		tanVelocity = (radius * forceC) / mass;
+  																		break;
+  													
+  																}
+  															default:
+  				  										}
+  														break;
+  													default:
+  														tanVelocity = Math.sqrt(radius * accelC);
+  														break;
+  												}
+  												break;
+  										}
+  										break;
+  									}
+  									
+  							}
+  									break;
+  							}
+  							
+  							break;
+  						default:
+  							switch (radius) {
+  								case "":
+  									console.log("no radius")
+  									switch (tanVelocity) {
+  										case "":
+  											console.log("no tanV")
+  											switch (torque) {
+  												case "":
+  													console.log("no torque")
+  													switch (inertia) {
+  														case "":
+  															console.log("no inertia");
+  															break;
+  														default:
+  															switch (accelA) {
+  																case "":
+  																	console.log("no accel");
+  																	switch (mass) {
+  																		case "":
+  																			console.log("no mass");
+  																			break;
+  																		default:
+  																			if (shape.indexOf("na") === 0){
+  																				break;
+  																			}
+  																			if (shape.indexOf("point") === 0){
+  																				inertia = mass * (radius^2);
+  																				break;
+  																			}
+  																			if (shape.indexOf("rod") === 0){
+  																				inertia = (1/12) * mass * radius^2;
+  																				break;
+  																			}
+  																			if (shape.indexOf("rod2") === 0){
+  																				inertia = (1/3) * mass * radius^2;
+  																				break;
+  																			}
+  																			if (shape.indexOf("shell") === 0){
+  																				inertia = mass * radius^2;
+  																				break;
+  																			}
+  																			if (shape.indexOf("cylinder") === 0){
+  																				inertia = .5 * mass * radius^2;
+  																				break;
+  																			}
+  																			if (shape.indexOf("annular") === 0){
+  																				break;
+  																			}
+  																			if (shape.indexOf("sphere") === 0){
+  																				inertia = (2/5) * mass * radius^2;
+  																				break;
+  																			}
+  																			if (shape.indexOf("thin") === 0){
+  																				inertia = (2/3) * mass * radius^2;
+  																				break;
+  																			}
+  																			if (shape.indexOf("plate") === 0){
+  																				break;
+  																			}
+  																			if (shape.indexOf("sheet") === 0){
+  																				interia = (1/12) * mass * radius^2;
+  																				break;
+  																			}
+  																			if (shape.indexOf("sheetA") === 0){
+  																				inertia = (1/3) * mass * radius^2;
+  																				break;
+  																			}
+  																	}
+  																	break;
+  																default:
+  																	console.log("torque = inertia * accel");
+  																	torque = inertia * accelA;
+  																	break;
+  															}
+  															break;
+  													}
+  													break;
+  												default:
+  													switch (force) {
+  														case "":
+  															console.log("no force");
+  															break;
+  														default:
+  															console.log("radius = torque / force");
+  															radius = torque / force;
+  															break;
+  													}
+  													break;
+  											}
+  											break;
+  										default:
+  											switch (angVelocity) {
+  								default:
+  									console.log("radius = tanVelocity / angVelocity");
+  									radius = tanVelocity / angVelocity;
+  									break;
+  								case "":
+  									console.log("case1");
+  									switch (radius) {
+  										case "":
+  											switch (angD) {
+  												case "":
+  													console.log("in angD");
+  													switch (period) {
+  														case "":
+  															switch (frequency){
+  																case "":
+  																	break;
+  															default:
+  																angVelocity = (2 * Math.PI) * frequency;	
+  																break;
+  															}
+  													default:
+  														angVelocity = (2 * Math.PI) / period;
+  														break;
+  													}
+  													break;
+  												default:
+  													console.log("in angD");
+  													switch (time) {
+  														case "":
+  															break;
+  														default:
+  															angVelocity = angD / time;
+  															break;
+  													}
+  												break;
+  											}
+  											console.log("case in radius");
+  											switch (arc) {
+  												case "":
+  													console.log("case in arc");
+  													break;
+  												default:
+  													switch (angD) {
+  														case "":
+  															console.log("case in angd");
+  															break;
+  														default:
+  															radius = arc / angD;
+  															break;
+  													}
+  											}
+  											switch (tanVelocity) {
+  												case "":
+  													console.log("case in tanV");
+  													break;
+  												default:
+  													switch (accelC) {
+  														case "":
+  															break;
+  														default:
+  															console.log("case in accelC");
+  															switch (mass) {
+  																case "":
+  																	console.log("case in mass");
+  																	switch (forceC) {
+  																		case "":
+  																			console.log("case in forceC");
+  																			break;
+  																		default:
+  																			mass = forceC / accelC;
+  																			break;
+  															
+  																	}
+  																	break;
+  																default:
+  																	switch (forceC) {
+  																		case "":
+  																			console.log("case in force");
+  																			switch (accelC) {
+  																				case "":
+  																					console.log("case in accel");
+  																					break;
+  																				default:
+  																					forceC = mass * accelC;
+  																					break;
+  																			}
+  																		default:
+  																			switch (tanVelocity) {
+  																				case "":
+  																					console.log("case in tanv");
+  																					break;
+  																				default:
+  																					radius = (mass * tanVelocity) / forceC;
+  																					break;
+  																			}
+  																	}
+  															}
+  											
+  									
+  														break;  										
+  														
+  													}
+  											}
+  									default:
+  										switch (tanVelocity) {
+  											case "":
+  												switch (accelC) {
+  													case "":
+  														switch (mass) {
+  															case "":
+  																switch (forceC) {
+  																	case "":
+  																		forceC = mass * accelC;
+  																		break;
+  																	default:
+  																		tanVelocity = (radius * forceC) / mass;
+  																		break;
+  													
+  																}
+  															default:
+  				  										}
+  														break;
+  													default:
+  														tanVelocity = Math.sqrt(radius * accelC);
+  														break;
+  												}
+  												break;
+  										}
+  										break;
+  									}
+  									
+  							}
+  											break;
+  									}
+  									
+  									break;
+  								default:
+  									console.log("angD = arc / radius");
+  									angD = arc / radius;
+  									break;
+  							}
+  							break;
+  					}
+  												break;
+  										}
+  										break;
+  									case "":
+  										break;
+  								}
+  								break;
+  							case "":
+  								console.log("no ang");
+  								switch (radius) {
+  										case "":
+  											switch (angD) {
+  												case "":
+  													console.log("in angD");
+  													switch (period) {
+  														case "":
+  															switch (frequency){
+  																case "":
+  																	break;
+  															default:
+  																angVelocity = (2 * Math.PI) * frequency;	
+  																break;
+  															}
+  													default:
+  														angVelocity = (2 * Math.PI) / period;
+  														break;
+  													}
+  													break;
+  												default:
+  													console.log("in angD");
+  													switch (time) {
+  														case "":
+  															break;
+  														default:
+  															angVelocity = angD / time;
+  															break;
+  													}
+  												break;
+  											}
+  											console.log("case in radius");
+  											switch (arc) {
+  												case "":
+  													console.log("case in arc");
+  													break;
+  												default:
+  													switch (angD) {
+  														case "":
+  															console.log("case in angd");
+  															break;
+  														default:
+  															radius = arc / angD;
+  															break;
+  													}
+  											}
+  											switch (tanVelocity) {
+  												case "":
+  													console.log("case in tanV");
+  													break;
+  												default:
+  													switch (accelC) {
+  														case "":
+  															break;
+  														default:
+  															console.log("case in accelC");
+  															switch (mass) {
+  																case "":
+  																	console.log("case in mass");
+  																	switch (forceC) {
+  																		case "":
+  																			console.log("case in forceC");
+  																			break;
+  																		default:
+  																			mass = forceC / accelC;
+  																			break;
+  															
+  																	}
+  																	break;
+  																default:
+  																	switch (forceC) {
+  																		case "":
+  																			console.log("case in force");
+  																			switch (accelC) {
+  																				case "":
+  																					console.log("case in accel");
+  																					break;
+  																				default:
+  																					forceC = mass * accelC;
+  																					break;
+  																			}
+  																		default:
+  																			switch (tanVelocity) {
+  																				case "":
+  																					console.log("case in tanv");
+  																					break;
+  																				default:
+  																					radius = (mass * tanVelocity) / forceC;
+  																					break;
+  																			}
+  																	}
+  															}
+  											
+  									
+  														break;  										
+  														
+  													}
+  											}
+  									default:
+  										switch (tanVelocity) {
+  											case "":
+  												switch (accelC) {
+  													case "":
+  														switch (mass) {
+  															case "":
+  																switch (forceC) {
+  																	case "":
+  																		forceC = mass * accelC;
+  																		break;
+  																	default:
+  																		tanVelocity = (radius * forceC) / mass;
+  																		break;
+  													
+  																}
+  															default:
+  				  										}
+  														break;
+  													default:
+  														tanVelocity = Math.sqrt(radius * accelC);
+  														break;
+  												}
+  												break;
+  										}
+  										break;
+  									}
+  								break;
+  								
+  						}	
+  									default:
+  										inertia = torque / accelA;
+  										document.getElementById("inertiaDescription").innerHTML += "Inertia was solved torque divided by angular acceleration.";
+  										break;
+  								}
+  								break;
+  						}
   						console.log("no inertia");
   						break;
   					default:
@@ -3448,6 +4547,976 @@
   				switch (momentum) {
   					case "":
   						console.log("no momentum");
+  						switch (inertia) {
+  							case "":
+  								switch (torque) {
+  							case "":
+  								switch (force) {
+  							case "":
+  								switch (inertia) {
+  									case "":
+  										console.log("no inertia");
+  										break;
+  									default:
+  										switch (accelA) {
+  											case "":
+  												console.log("no accel");
+  												switch (mass) {
+  														case "":
+  															console.log("no mass");
+  															break;
+  														default:
+  															if (shape.indexOf("na") === 0){
+  																break;
+  															}
+  															if (shape.indexOf("point") === 0){
+  																inertia = mass * (radius^2);
+  																break;
+  															}
+  															if (shape.indexOf("rod") === 0){
+  																inertia = (1/12) * mass * radius^2;
+  																break;
+  															}
+  															if (shape.indexOf("rod2") === 0){
+  																inertia = (1/3) * mass * radius^2;
+  																break;
+  															}
+  															if (shape.indexOf("shell") === 0){
+  																inertia = mass * radius^2;
+  																break;
+  															}
+  															if (shape.indexOf("cylinder") === 0){
+  																inertia = .5 * mass * radius^2;
+  																break;
+  															}
+  															if (shape.indexOf("annular") === 0){
+  																break;
+  															}
+  															if (shape.indexOf("sphere") === 0){
+  																inertia = (2/5) * mass * radius^2;
+  																break;
+  															}
+  															if (shape.indexOf("thin") === 0){
+  																inertia = (2/3) * mass * radius^2;
+  																break;
+  															}
+  															if (shape.indexOf("plate") === 0){
+  																break;
+  															}
+  															if (shape.indexOf("sheet") === 0){
+  																interia = (1/12) * mass * radius^2;
+  																break;
+  															}
+  															if (shape.indexOf("sheetA") === 0){
+  																inertia = (1/3) * mass * radius^2;
+  																break;
+  															}
+  													}
+  													break;
+  											default:
+  												console.log("torque = inertia * accel");
+  												torque = inertia * accelA;
+  												console.log(torque);
+  												break;
+  											}
+  										break;
+  									}
+  								switch (radius) {
+  									default:
+  										force = torque / radius;
+  										console.log("force = torque / radius");
+  										document.getElementById("forceDescription").innerHTML += "Force was solved by torque divided by radius.";
+  										break;
+  									case "":
+  										switch (angD) {
+  												case "":
+  													console.log("in angD");
+  													switch (period) {
+  														case "":
+  															switch (frequency){
+  																case "":
+  																	break;
+  															default:
+  																angVelocity = (2 * Math.PI) * frequency;	
+  																break;
+  															}
+  													default:
+  														angVelocity = (2 * Math.PI) / period;
+  														break;
+  													}
+  													break;
+  												default:
+  													console.log("in angD");
+  													switch (time) {
+  														case "":
+  															break;
+  														default:
+  															angVelocity = angD / time;
+  															break;
+  													}
+  												break;
+  											}
+  											console.log("case in radius");
+  											switch (arc) {
+  												case "":
+  													console.log("case in arc");
+  													break;
+  												default:
+  													switch (angD) {
+  														case "":
+  															console.log("case in angd");
+  															break;
+  														default:
+  															radius = arc / angD;
+  															break;
+  													}
+  											}
+  											switch (tanVelocity) {
+  												case "":
+  													console.log("case in tanV");
+  													break;
+  												default:
+  													switch (accelC) {
+  														case "":
+  															break;
+  														default:
+  															console.log("case in accelC");
+  															switch (mass) {
+  																case "":
+  																	console.log("case in mass");
+  																	switch (forceC) {
+  																		case "":
+  																			console.log("case in forceC");
+  																			break;
+  																		default:
+  																			mass = forceC / accelC;
+  																			break;
+  															
+  																	}
+  																	break;
+  																default:
+  																	switch (forceC) {
+  																		case "":
+  																			console.log("case in force");
+  																			switch (accelC) {
+  																				case "":
+  																					console.log("case in accel");
+  																					break;
+  																				default:
+  																					forceC = mass * accelC;
+  																					break;
+  																			}
+  																		default:
+  																			switch (tanVelocity) {
+  																				case "":
+  																					console.log("case in tanv");
+  																					break;
+  																				default:
+  																					radius = (mass * tanVelocity) / forceC;
+  																					break;
+  																			}
+  																	}
+  															}
+  											
+  									
+  														break;  										
+  														
+  													}
+  											}
+  										break;
+  										
+  								}	
+  							default:
+  								switch (radius) {
+  									case "":
+  										switch (arc) {
+  							default:
+  								switch (angD) {
+  									default:
+  										radius = arc / angD;
+  										document.getElementById("radDescription").innerHTML += "Radius was solved by arc length divided by angular distance.";
+  										break;
+  									case "":
+  										break;
+  									
+  								}
+  								break;
+  							case "":
+  								switch (tanVelocity) {
+  									default:
+  										switch (angVelocity) {
+  											default:
+  												radius = tanVelocity / angVelocity;
+  												document.getElementById("radDescription").innerHTML += "Radius was solved by tangential velocity divided by angular velocity.";
+  												break;
+  												
+  											case "":
+  												switch (initial) {
+  													default:
+  														switch (accelA) {
+  															default:
+  																switch (time) {
+  																	default:
+  																		angVelocity = initial + (accelA * time);
+  																		break;
+  																	case "":
+  																		break;
+  																}
+  																break;
+  															case "":
+  																break;
+  														}
+  														break;
+  													case "":
+  														break;
+  												}
+  												break;
+  										}
+  										break;
+  									case "":
+  										switch (force) {
+  											default:
+  												switch (torque) {
+  													default:
+  														console.log("solved");
+  														radius = torque / force;
+  														document.getElementById("radDescription").innerHTML += "Radius was solved by torque divided by force.";
+  														break;
+  													case "":
+  														switch (inertia) {
+  															default:
+  																switch (accelA) {
+  																	default:
+  																		console.log("torque done");
+  																		torque = inertia * accelA;
+  																		console.log("solved");
+  																		radius = torque / force;
+  																		document.getElementById("radDescription").innerHTML += "Radius was solved by torque divided by force.";
+  																		break;
+  																	case "":
+  																		break;
+  																}
+  																break;
+  															case "":
+  																switch (momentum) {
+  																	default:
+  																		switch (time) {
+  																			default:
+  																				torque = momentum / time;
+  																				break;
+  																			case "":
+  																				break;
+  																		}
+  																		break;
+  																	case "":
+  																		break;
+  																}
+  																break;
+  														}
+  													
+  												}
+  												break;
+  											case "":
+  												break;
+  										}
+  										break;
+  								}
+  								break;
+  						}	
+  									default:
+  										torque = radius * force;
+  										document.getElementById("torqueDescription").innerHTML += "Torque was solved by radius times force.
+  										break;"
+  								}
+  								break;
+  						}
+  							default:
+  								switch (accelA) {
+  									case "":
+  										switch (angVelocity) {
+  							default:
+  								switch (initial) {
+  									default:
+  										switch (angD) {
+  											default:
+  											accelA = (angVelocity^2 - initial^2) / (2 * angD);
+  											console.log("accelA = (angVelocity^2 - initial^2) / (2 * angD)");
+  											document.getElementById("angAccelDescription").innerHTML += "Angular acceleration was solved by final angular velocity squared minus initial angular velocity squared divided by 2 times angular distance.";
+  											break;
+  											case "":
+  												console.log("no angD");
+  												switch (arc) {
+  						case "":
+  							console.log("no arc");
+  							switch (time) {
+  								case "":
+  									console.log("no time");
+  									break;
+  								default:
+  									console.log("yes time")
+  									switch (angVelocity) {
+  								default:
+  									console.log("angD = angVelocity * time");
+  									angD = time * angD;
+  									break;
+  								case "":
+  									console.log("case1");
+  									switch (radius) {
+  										case "":
+  											switch (angD) {
+  												case "":
+  													console.log("in angD");
+  													switch (period) {
+  														case "":
+  															switch (frequency){
+  																case "":
+  																	break;
+  															default:
+  																angVelocity = (2 * Math.PI) * frequency;	
+  																break;
+  															}
+  													default:
+  														angVelocity = (2 * Math.PI) / period;
+  														break;
+  													}
+  													break;
+  												default:
+  													console.log("in angD");
+  													switch (time) {
+  														case "":
+  															break;
+  														default:
+  															angVelocity = angD / time;
+  															break;
+  													}
+  												break;
+  											}
+  											console.log("case in radius");
+  											switch (arc) {
+  												case "":
+  													console.log("case in arc");
+  													break;
+  												default:
+  													switch (angD) {
+  														case "":
+  															console.log("case in angd");
+  															break;
+  														default:
+  															radius = arc / angD;
+  															break;
+  													}
+  											}
+  											switch (tanVelocity) {
+  												case "":
+  													console.log("case in tanV");
+  													break;
+  												default:
+  													switch (accelC) {
+  														case "":
+  															break;
+  														default:
+  															console.log("case in accelC");
+  															switch (mass) {
+  																case "":
+  																	console.log("case in mass");
+  																	switch (forceC) {
+  																		case "":
+  																			console.log("case in forceC");
+  																			break;
+  																		default:
+  																			mass = forceC / accelC;
+  																			break;
+  															
+  																	}
+  																	break;
+  																default:
+  																	switch (forceC) {
+  																		case "":
+  																			console.log("case in force");
+  																			switch (accelC) {
+  																				case "":
+  																					console.log("case in accel");
+  																					break;
+  																				default:
+  																					forceC = mass * accelC;
+  																					break;
+  																			}
+  																		default:
+  																			switch (tanVelocity) {
+  																				case "":
+  																					console.log("case in tanv");
+  																					break;
+  																				default:
+  																					radius = (mass * tanVelocity) / forceC;
+  																					break;
+  																			}
+  																	}
+  															}
+  											
+  									
+  														break;  										
+  														
+  													}
+  											}
+  									default:
+  										switch (tanVelocity) {
+  											case "":
+  												switch (accelC) {
+  													case "":
+  														switch (mass) {
+  															case "":
+  																switch (forceC) {
+  																	case "":
+  																		forceC = mass * accelC;
+  																		break;
+  																	default:
+  																		tanVelocity = (radius * forceC) / mass;
+  																		break;
+  													
+  																}
+  															default:
+  				  										}
+  														break;
+  													default:
+  														tanVelocity = Math.sqrt(radius * accelC);
+  														break;
+  												}
+  												break;
+  										}
+  										break;
+  									}
+  									
+  							}
+  									break;
+  							}
+  							
+  							break;
+  						default:
+  							switch (radius) {
+  								case "":
+  									console.log("no radius")
+  									switch (tanVelocity) {
+  										case "":
+  											console.log("no tanV")
+  											switch (torque) {
+  												case "":
+  													console.log("no torque")
+  													switch (inertia) {
+  														case "":
+  															console.log("no inertia");
+  															break;
+  														default:
+  															switch (accelA) {
+  																case "":
+  																	console.log("no accel");
+  																	switch (mass) {
+  																		case "":
+  																			console.log("no mass");
+  																			break;
+  																		default:
+  																			if (shape.indexOf("na") === 0){
+  																				break;
+  																			}
+  																			if (shape.indexOf("point") === 0){
+  																				inertia = mass * (radius^2);
+  																				break;
+  																			}
+  																			if (shape.indexOf("rod") === 0){
+  																				inertia = (1/12) * mass * radius^2;
+  																				break;
+  																			}
+  																			if (shape.indexOf("rod2") === 0){
+  																				inertia = (1/3) * mass * radius^2;
+  																				break;
+  																			}
+  																			if (shape.indexOf("shell") === 0){
+  																				inertia = mass * radius^2;
+  																				break;
+  																			}
+  																			if (shape.indexOf("cylinder") === 0){
+  																				inertia = .5 * mass * radius^2;
+  																				break;
+  																			}
+  																			if (shape.indexOf("annular") === 0){
+  																				break;
+  																			}
+  																			if (shape.indexOf("sphere") === 0){
+  																				inertia = (2/5) * mass * radius^2;
+  																				break;
+  																			}
+  																			if (shape.indexOf("thin") === 0){
+  																				inertia = (2/3) * mass * radius^2;
+  																				break;
+  																			}
+  																			if (shape.indexOf("plate") === 0){
+  																				break;
+  																			}
+  																			if (shape.indexOf("sheet") === 0){
+  																				interia = (1/12) * mass * radius^2;
+  																				break;
+  																			}
+  																			if (shape.indexOf("sheetA") === 0){
+  																				inertia = (1/3) * mass * radius^2;
+  																				break;
+  																			}
+  																	}
+  																	break;
+  																default:
+  																	console.log("torque = inertia * accel");
+  																	torque = inertia * accelA;
+  																	break;
+  															}
+  															break;
+  													}
+  													break;
+  												default:
+  													switch (force) {
+  														case "":
+  															console.log("no force");
+  															break;
+  														default:
+  															console.log("radius = torque / force");
+  															radius = torque / force;
+  															break;
+  													}
+  													break;
+  											}
+  											break;
+  										default:
+  											switch (angVelocity) {
+  								default:
+  									console.log("radius = tanVelocity / angVelocity");
+  									radius = tanVelocity / angVelocity;
+  									break;
+  								case "":
+  									console.log("case1");
+  									switch (radius) {
+  										case "":
+  											switch (angD) {
+  												case "":
+  													console.log("in angD");
+  													switch (period) {
+  														case "":
+  															switch (frequency){
+  																case "":
+  																	break;
+  															default:
+  																angVelocity = (2 * Math.PI) * frequency;	
+  																break;
+  															}
+  													default:
+  														angVelocity = (2 * Math.PI) / period;
+  														break;
+  													}
+  													break;
+  												default:
+  													console.log("in angD");
+  													switch (time) {
+  														case "":
+  															break;
+  														default:
+  															angVelocity = angD / time;
+  															break;
+  													}
+  												break;
+  											}
+  											console.log("case in radius");
+  											switch (arc) {
+  												case "":
+  													console.log("case in arc");
+  													break;
+  												default:
+  													switch (angD) {
+  														case "":
+  															console.log("case in angd");
+  															break;
+  														default:
+  															radius = arc / angD;
+  															break;
+  													}
+  											}
+  											switch (tanVelocity) {
+  												case "":
+  													console.log("case in tanV");
+  													break;
+  												default:
+  													switch (accelC) {
+  														case "":
+  															break;
+  														default:
+  															console.log("case in accelC");
+  															switch (mass) {
+  																case "":
+  																	console.log("case in mass");
+  																	switch (forceC) {
+  																		case "":
+  																			console.log("case in forceC");
+  																			break;
+  																		default:
+  																			mass = forceC / accelC;
+  																			break;
+  															
+  																	}
+  																	break;
+  																default:
+  																	switch (forceC) {
+  																		case "":
+  																			console.log("case in force");
+  																			switch (accelC) {
+  																				case "":
+  																					console.log("case in accel");
+  																					break;
+  																				default:
+  																					forceC = mass * accelC;
+  																					break;
+  																			}
+  																		default:
+  																			switch (tanVelocity) {
+  																				case "":
+  																					console.log("case in tanv");
+  																					break;
+  																				default:
+  																					radius = (mass * tanVelocity) / forceC;
+  																					break;
+  																			}
+  																	}
+  															}
+  											
+  									
+  														break;  										
+  														
+  													}
+  											}
+  									default:
+  										switch (tanVelocity) {
+  											case "":
+  												switch (accelC) {
+  													case "":
+  														switch (mass) {
+  															case "":
+  																switch (forceC) {
+  																	case "":
+  																		forceC = mass * accelC;
+  																		break;
+  																	default:
+  																		tanVelocity = (radius * forceC) / mass;
+  																		break;
+  													
+  																}
+  															default:
+  				  										}
+  														break;
+  													default:
+  														tanVelocity = Math.sqrt(radius * accelC);
+  														break;
+  												}
+  												break;
+  										}
+  										break;
+  									}
+  									
+  							}
+  											break;
+  									}
+  									
+  									break;
+  								default:
+  									console.log("angD = arc / radius");
+  									angD = arc / radius;
+  									break;
+  							}
+  							break;
+  					}
+  												break;
+  										}
+  										break;
+  									case "":
+  										break;
+  								}
+  								break;
+  							case "":
+  								console.log("no ang");
+  								switch (radius) {
+  										case "":
+  											switch (angD) {
+  												case "":
+  													console.log("in angD");
+  													switch (period) {
+  														case "":
+  															switch (frequency){
+  																case "":
+  																	break;
+  															default:
+  																angVelocity = (2 * Math.PI) * frequency;	
+  																break;
+  															}
+  													default:
+  														angVelocity = (2 * Math.PI) / period;
+  														break;
+  													}
+  													break;
+  												default:
+  													console.log("in angD");
+  													switch (time) {
+  														case "":
+  															break;
+  														default:
+  															angVelocity = angD / time;
+  															break;
+  													}
+  												break;
+  											}
+  											console.log("case in radius");
+  											switch (arc) {
+  												case "":
+  													console.log("case in arc");
+  													break;
+  												default:
+  													switch (angD) {
+  														case "":
+  															console.log("case in angd");
+  															break;
+  														default:
+  															radius = arc / angD;
+  															break;
+  													}
+  											}
+  											switch (tanVelocity) {
+  												case "":
+  													console.log("case in tanV");
+  													break;
+  												default:
+  													switch (accelC) {
+  														case "":
+  															break;
+  														default:
+  															console.log("case in accelC");
+  															switch (mass) {
+  																case "":
+  																	console.log("case in mass");
+  																	switch (forceC) {
+  																		case "":
+  																			console.log("case in forceC");
+  																			break;
+  																		default:
+  																			mass = forceC / accelC;
+  																			break;
+  															
+  																	}
+  																	break;
+  																default:
+  																	switch (forceC) {
+  																		case "":
+  																			console.log("case in force");
+  																			switch (accelC) {
+  																				case "":
+  																					console.log("case in accel");
+  																					break;
+  																				default:
+  																					forceC = mass * accelC;
+  																					break;
+  																			}
+  																		default:
+  																			switch (tanVelocity) {
+  																				case "":
+  																					console.log("case in tanv");
+  																					break;
+  																				default:
+  																					radius = (mass * tanVelocity) / forceC;
+  																					break;
+  																			}
+  																	}
+  															}
+  											
+  									
+  														break;  										
+  														
+  													}
+  											}
+  									default:
+  										switch (tanVelocity) {
+  											case "":
+  												switch (accelC) {
+  													case "":
+  														switch (mass) {
+  															case "":
+  																switch (forceC) {
+  																	case "":
+  																		forceC = mass * accelC;
+  																		break;
+  																	default:
+  																		tanVelocity = (radius * forceC) / mass;
+  																		break;
+  													
+  																}
+  															default:
+  				  										}
+  														break;
+  													default:
+  														tanVelocity = Math.sqrt(radius * accelC);
+  														break;
+  												}
+  												break;
+  										}
+  										break;
+  									}
+  								break;
+  								
+  						}	
+  									default:
+  										inertia = torque / accelA;
+  										document.getElementById("inertiaDescription").innerHTML += "Inertia was solved torque divided by angular acceleration.";
+  										break;
+  								}
+  								break;
+  						}	
+  							default:
+  								switch (angVelocity) {
+  									case "":
+  										switch (radius) {
+  						case "":
+  							switch (angD) {
+  								case "":
+  									console.log("in angD");
+  									switch (period) {
+  										case "":
+  											switch (frequency){
+  												case "":
+  													break;
+  												default:
+  													angVelocity = (2 * Math.PI) * frequency;
+  													document.getElementById("angVDescription").innerHTML += "Angular Velocity was solved by 2 pi times the frequency."; 
+  													break;
+  											}
+  											break;
+  										default:
+  											angVelocity = (2 * Math.PI) / period;
+  											document.getElementById("angVDescription").innerHTML += "Angular Velocity was solved by 2 pi divided by the frequency.";
+  											break;
+  									}
+  									break;
+  								default:
+  									console.log("in angD");
+  									switch (time) {
+  										case "":
+  											break;
+  										default:
+  											angVelocity = angD / time;
+  											document.getElementById("angVDescription").innerHTML += "Angular Velocity was solved by angular distance divided by time.";
+  											break;
+  									}
+  									break;
+  							}
+  							console.log("case in radius");
+  							switch (arc) {
+  								case "":
+  									console.log("case in arc");
+  									break;
+  								default:
+  									switch (angD) {
+  										case "":
+  											console.log("case in angd");
+  											break;
+  										default:
+  											radius = arc / angD;
+  											document.getElementById("angVDescription").innerHTML += "Radius was solved by arc length divided by angular distance.";
+  											break;
+  									}
+  							}
+  							switch (tanVelocity) {
+  								case "":
+  									console.log("case in tanV");
+  									break;
+  								default:
+  									switch (accelC) {
+  										case "":
+  											break;
+  										default:
+  											console.log("case in accelC");
+  											switch (mass) {
+  												case "":
+  													console.log("case in mass");
+  													switch (forceC) {
+  														case "":
+  															console.log("case in forceC");
+  															break;
+  														default:
+  															mass = forceC / accelC;
+  															break;
+  															
+  													}
+  													break;
+  												default:
+  													switch (forceC) {
+  														case "":
+  															console.log("case in force");
+  															switch (accelC) {
+  																case "":
+  																	console.log("case in accel");
+  																	break;
+  																default:
+  																	forceC = mass * accelC;
+  																	break;
+  															}
+  														default:
+  															switch (tanVelocity) {
+  																case "":
+  																	console.log("case in tanv");
+  																	break;
+  																default:
+  																	radius = (mass * tanVelocity) / forceC;
+  																	document.getElementById("angVDescription").innerHTML += "Radius was solved by mass times tengential velocity divided by centripital force.";
+  																	break;
+  															}
+  															break;
+  													}
+  													break;
+  											}
+  											break;
+  									}
+  									break;
+  							}
+  						default:
+  							switch (tanVelocity) {
+  								case "":
+  									switch (accelC) {
+  										case "":
+  											switch (mass) {
+  												case "":
+  													break;
+  												default:
+  													switch (forceC) {
+  														case "":
+  															forceC = mass * accelC;
+  															
+  														default:
+  															tanVelocity = (radius * forceC) / mass;
+  															break;
+  													
+  													}
+  													break;
+  											}
+   											break;
+  										default:
+  											tanVelocity = Math.sqrt(radius * accelC);
+  											document.getElementById("angVDescription").innerHTML += "Tangential velocity was solved by the square root of radius * accelC.";
+  											break;
+  									}
+  									break;
+  								default:
+  									angVelocity = tanVelocity / radius;
+  									console.log("angVelocity" + angVelocity);
+  									document.getElementById("angVDescription").innerHTML += " Angular velocity was solver by tangential velocity / radius.";
+  									break;
+  							}
+  							break;
+  					}
+  									default:
+  										momentum = inertia * angVelocity;
+  										document.getElementById("momentumDescription").innerHTML += "Momentum was solved by inertia times momentum.";
+  										break;
+  								}
+  						}
   						break;
   					default:
   						console.log("there is a momentum");

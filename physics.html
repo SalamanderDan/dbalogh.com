@@ -405,6 +405,9 @@
   			if (document.getElementById("solveP").checked) { //solving for Period done
   				switch (period) {
   				case "":
+  					if (angVelocity === 0) {
+  						angVelocity = initial;
+  					}
   					console.log("no period");
   					switch (frequency) {
   						case "":
@@ -564,6 +567,9 @@
   			if (document.getElementById("solveF").checked) { //solving for Frequency done
   				switch (frequency) {
   				case "":
+  					if (angVelocity === 0) {
+  						angVelocity = initial;
+  					}
   					switch (period) {
   						case "":
   							switch (angVelocity) {
@@ -720,6 +726,9 @@
   			if (document.getElementById("solveAD").checked) { //solving for Angular Distance done
   				switch (angD) {
   				case "":
+  					if (angVelocity === 0) {
+  						angVelocity = initial;
+  					}
   					console.log("no angD");
   					switch (arc) {
   						case "":
@@ -1697,6 +1706,9 @@
   			if (document.getElementById("solveTV").checked) { //solving for tangential velocity done...I think
   				switch (tanVelocity) {
   					case "":
+  						if (angVelocity === 0) {
+  						angVelocity = initial;
+  					}
   						console.log("no tanVelocity");
   						switch (angVelocity) {
   							default:
@@ -2468,6 +2480,9 @@
   			if (document.getElementById("solveFORCE").checked) {
   				switch (force) {
   					case "":
+  						if (angVelocity === 0) {
+  						angVelocity = initial;
+  					}
   						console.log("no force");
   						switch (torque) {
   							default:
@@ -2766,6 +2781,9 @@
   			if (document.getElementById("solveR").checked) {
   				switch (radius) {
   					case "":
+  						if (angVelocity === 0) {
+  						angVelocity = initial;
+  					}
   						console.log("no radius");
   						switch (arc) {
   							default:
@@ -2874,6 +2892,9 @@
   			if (document.getElementById("solveCF").checked) {
   				switch (forceC) {
   					case "":
+  						if (angVelocity === 0) {
+  						angVelocity = initial;
+  					}
   						console.log("no forceC");
   						switch (accelC) {
   							default:
@@ -3029,6 +3050,9 @@
   			if (document.getElementById("solveCA").checked) {
   				switch (accelC) {
   					case "":
+  						if (angVelocity === 0) {
+  						angVelocity = initial;
+  					}
   						console.log("no accelC");
   						switch (forceC) {
   							default:
@@ -3182,6 +3206,9 @@
   			if (document.getElementById("solveM").checked) {
   				switch (mass) {
   					case "":
+  						if (angVelocity === 0) {
+  						angVelocity = initial;
+  					}
   						console.log("no maass");
   						switch (accelC) {
   							default:
@@ -3454,6 +3481,9 @@
   			if (document.getElementById("solveT").checked) {
   				switch (torque) {
   					case "":
+  						if (angVelocity === 0) {
+  						angVelocity = initial;
+  					}
   						console.log("no torque");
   						switch (force) {
   							case "":
@@ -3747,6 +3777,9 @@
   			if (document.getElementById("solveI").checked) {
   				switch (inertia) {
   					case "":
+  						if (angVelocity === 0) {
+  						angVelocity = initial;
+  					}
   						switch (torque) {
   							case "":
   								switch (force) {
@@ -4583,6 +4616,9 @@
   			if (document.getElementById("solveMOM").checked) {
   				switch (momentum) {
   					case "":
+  						if (angVelocity === 0) {
+  						angVelocity = initial;
+  					}
   						console.log("no momentum");
   						switch (inertia) {
   							case "":
@@ -5580,6 +5616,9 @@
   			if (document.getElementById("solveAL").checked) {
   				switch (arc) {
   					case "":
+  						if (angVelocity === 0) {
+  						angVelocity = initial;
+  					}
   						console.log("no arc");
   						switch (radius) {
   							case "":

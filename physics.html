@@ -1119,16 +1119,35 @@
   						console.log("no AcccelA");
   						switch (angVelocity) {
   							default:
+  								console.log("yes angD")
   								switch (initial) {
   									default:
+  									
   										switch (angD) {
   											default:
-  											accelA = (angVelocity^2 - initial^2) / (2 * angD);
-  											console.log("accelA = (angVelocity^2 - initial^2) / (2 * angD)");
-  											document.getElementById("angAccelDescription").innerHTML += "Angular acceleration was solved by final angular velocity squared minus initial angular velocity squared divided by 2 times angular distance.";
-  											break;
+  												accelA = (angVelocity^2 - initial^2) / (2 * angD);
+  												console.log("accelA = (angVelocity^2 - initial^2) / (2 * angD)");
+  												document.getElementById("angAccelDescription").innerHTML += "Angular acceleration was solved by final angular velocity squared minus initial angular velocity squared divided by 2 times angular distance.";
+  												break;
   											case "":
   												console.log("no angD");
+  												switch (time) {
+  											case "":
+  												switch (radius) {
+  											case "":
+  												break;
+  											default:
+  												document.getElementById("angAccelDescription").innerHTML += "Angular acceleration was solved by radius times angular velocity squared.";
+  												accelA = radius * angVelocity^2;
+  												break;
+  										}
+  												break;
+  											default:
+  												accelA = (angVelocity - initial) / time;
+  												console.log("accelA = (angVelocity - initial) / time;");
+  												document.getElementById("angAccelDescription").innerHTML += "Angular acceleration was solved by final - initial divided by time.";
+  												break;
+  										}
   												switch (arc) {
   						case "":
   							console.log("no arc");
@@ -1515,6 +1534,7 @@
   										}
   										break;
   									case "":
+  										console.log("no ")
   										switch (time) {
   											case "":
   												switch (radius) {
@@ -1528,6 +1548,7 @@
   												break;
   											default:
   												accelA = (angVelocity - initial) / time;
+  												console.log("accelA = (angVelocity - initial) / time;");
   												document.getElementById("angAccelDescription").innerHTML += "Angular acceleration was solved by final - initial divided by time.";
   												break;
   										}

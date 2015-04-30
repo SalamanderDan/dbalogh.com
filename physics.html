@@ -239,9 +239,9 @@
   			if (document.getElementById("solveAV").checked) { //solving for AV done
   				switch (angVelocity) {
   				
-  				case "":
-  					console.log("case1");
-  					switch (radius) {
+  					case "":
+  						console.log("case1");
+  						switch (radius) {
   						case "":
   							switch (angD) {
   								case "":
@@ -379,24 +379,24 @@
   							}
   							break;
   					}
-    					break;
-  				default:
-  					console.log("converting");
-  					if (units.indexOf("deg") === 0){
-  						console.log("from degrees");
-  						angVelocity = angVelocity * 0.01745329252;
-  					}
-  					else if (units.indexOf("rev") === 0) {
-  						console.log("from revolutions");
-  						angVelocity = angVelocity * (2 * Math.PI);
-  					}
-  					else if (units.indexOf("rad") === 0){
-  						console.log("from radians");
-  						angVelocity = angVelocity;
-  					}
-  					document.getElementById("angVDescription").innerHTML = "Angular velocity was already given.";
-  					break;
-  			}
+    						break;
+  					default:
+  						console.log("converting");
+  						if (units.indexOf("deg") === 0){
+  							console.log("from degrees");
+  							angVelocity = (angVelocity / 57.3);
+  						}
+  						else if (units.indexOf("rev") === 0) {
+  							console.log("from revolutions");
+  							angVelocity = angVelocity * (2 * Math.PI);
+  						}
+  						else if (units.indexOf("rad") === 0){
+  							console.log("from radians");
+  							angVelocity = angVelocity;
+  						}
+  						document.getElementById("angVDescription").innerHTML = "Angular velocity was already given.";
+  						break;
+  				}
   			console.log("out");
   			console.log("ang V = " + angVelocity);
   			document.getElementById("resultAngV").innerHTML = "Angular Velocity is " + angVelocity + " radians per second.";
@@ -1515,6 +1515,14 @@
   										}
   										break;
   									case "":
+  										switch (radius) {
+  											case "":
+  												break;
+  											default:
+  												document.getElementById("angAccelDescription").innerHTML += "Angular acceleration was solved by radius times angular velocity squared.";
+  												accelA = radius * angVelocity^2;
+  												break;
+  										}
   										break;
   								}
   								break;

@@ -761,9 +761,6 @@
   			if (document.getElementById("solveAD").checked) { //solving for Angular Distance done
   				switch (angD) {
   				case "":
-  					if (angVelocity === 0) {
-  						angVelocity = initial;
-  					}
   					console.log("no angD");
   					switch (arc) {
   						case "":
@@ -775,15 +772,11 @@
   								default:
   									console.log("yes time")
   									switch (angVelocity) {
-  								default:
-  									console.log("angD = angVelocity * time");
-  									angD = time * angD;
-  									break;
-  								case "":
-  									console.log("case1");
-  									switch (radius) {
   										case "":
-  											switch (angD) {
+  											console.log("case1");
+  											switch (radius) {
+  												case "":
+  													switch (angD) {
   												case "":
   													console.log("in angD");
   													switch (period) {
@@ -811,8 +804,8 @@
   													}
   												break;
   											}
-  											console.log("case in radius");
-  											switch (arc) {
+  													console.log("case in radius");
+  													switch (arc) {
   												case "":
   													console.log("case in arc");
   													break;
@@ -826,7 +819,7 @@
   															break;
   													}
   											}
-  											switch (tanVelocity) {
+  													switch (tanVelocity) {
   												case "":
   													console.log("case in tanV");
   													break;
@@ -878,8 +871,8 @@
   														
   													}
   											}
-  									default:
-  										switch (tanVelocity) {
+  												default:
+  													switch (tanVelocity) {
   											case "":
   												switch (accelC) {
   													case "":
@@ -903,10 +896,13 @@
   												}
   												break;
   										}
-  										break;
+  													break;
+  											}
+  										default:
+  											console.log("angD = angVelocity * time");
+  											angD = time * angD;
+  											break;
   									}
-  									
-  							}
   									break;
   							}
   							break;

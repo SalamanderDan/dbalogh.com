@@ -41,7 +41,7 @@
 					<td><input id="solveAV" type="checkbox"</td>
 					<td>Final Angular Velocity</td>
 					<td><input id="angularVelociy" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
-					<td>	<select id="units">
+					<td>	<select id="units2">
 							<option value="radian">Radians</option>
 							<option value="degree">Degrees</option>
 							<option value="revolution">Revolutions per Second</option>
@@ -162,6 +162,13 @@
 					<td>Mass 2</td>
 					<td><input id="mass2" type="number" onkeydown="if (event.keyCode == 13) document.getElementById('btn1').click()"></td>
 				</tr>
+				<tr>Other Solvables</tr>
+				<tr>
+					<td><input id="solveWork" value=true type="checkbox">Work</td>
+				</tr>
+				<tr>
+					<td><input id="solveLineMOM" value=true type="checkbox">Linear Momentum</td>
+				</tr>
 				<tr>
 					<td><button id="btn1" type="button" onclick="calculate()">Calculate</button></td>
 					<td><button id="btn2" type="submit">Clear</button></td>
@@ -207,6 +214,8 @@
 		<p id="forceGDescription"></p>
 		<p id="resultM2"></p>
 		<p id="M2Description"></p>
+		<p id="resultWork"></p>
+		<p id="resultLineMOM"></p>
   	</body>
   
   	<script>
@@ -227,6 +236,7 @@
   			accelA = document.getElementById("angularAcceleration").value;
   			angVelocity = document.getElementById("angularVelociy").value;
   			units = document.getElementById("units").value;
+  			units2 = document.getElementById("units2").value;
   			shape = document.getElementById("shape").value;
   			time = document.getElementById("time").value;
   			arc = document.getElementById("arc").value;
@@ -235,6 +245,32 @@
   			forceG = document.getElementById("forceG").value;
   			m2 = document.getElementById("mass2").value;
   			var g = 6.67e-11;
+  			
+  			if (units.indexOf("deg") === 0){
+  				console.log("from degrees");
+  				angVelocity = (angVelocity / 57.3);
+  			}
+  			else if (units.indexOf("rev") === 0) {
+  				console.log("from revolutions");
+  				angVelocity = angVelocity * (2 * Math.PI);
+  			}
+  			else if (units.indexOf("rad") === 0){
+  				console.log("from radians");
+  				angVelocity = angVelocity;
+  			}
+  			
+  			if (units2.indexOf("deg") === 0){
+  				console.log("from degrees");
+  				initial = (initial / 57.3);
+  			}
+  			else if (units2.indexOf("rev") === 0) {
+  				console.log("from revolutions");
+  				initial = initial * (2 * Math.PI);
+  			}
+  			else if (units2.indexOf("rad") === 0){
+  				console.log("from radians");
+  				initial = initial;
+  			}
   			
   			if (document.getElementById("solveAV").checked) { //solving for AV done
   				switch (angVelocity) {
@@ -382,18 +418,7 @@
     						break;
   					default:
   						console.log("converting");
-  						if (units.indexOf("deg") === 0){
-  							console.log("from degrees");
-  							angVelocity = (angVelocity / 57.3);
-  						}
-  						else if (units.indexOf("rev") === 0) {
-  							console.log("from revolutions");
-  							angVelocity = angVelocity * (2 * Math.PI);
-  						}
-  						else if (units.indexOf("rad") === 0){
-  							console.log("from radians");
-  							angVelocity = angVelocity;
-  						}
+  						
   						document.getElementById("angVDescription").innerHTML = "Angular velocity was already given.";
   						break;
   				}
@@ -1131,7 +1156,6 @@
   								console.log("yes angD")
   								switch (initial) {
   									default:
-  									
   										switch (angD) {
   											default:
   												accelA = (angVelocity^2 - initial^2) / (2 * angD);
@@ -1141,21 +1165,21 @@
   											case "":
   												console.log("no angD");
   												switch (time) {
-  											case "":
-  												switch (radius) {
-  											case "":
+  													case "":
+  														switch (radius) {
+  															case "":
+  																break;
+  															default:
+  																document.getElementById("angAccelDescription").innerHTML += "Angular acceleration was solved by radius times angular velocity squared.";
+  																accelA = radius * angVelocity^2;
+  																break;
+  														}
   												break;
-  											default:
-  												document.getElementById("angAccelDescription").innerHTML += "Angular acceleration was solved by radius times angular velocity squared.";
-  												accelA = radius * angVelocity^2;
-  												break;
-  										}
-  												break;
-  											default:
-  												accelA = (angVelocity - initial) / time;
-  												console.log("accelA = (angVelocity - initial) / time;");
-  												document.getElementById("angAccelDescription").innerHTML += "Angular acceleration was solved by final - initial divided by time.";
-  												break;
+  													default:
+  														accelA = (angVelocity - initial) / time;
+  														console.log("accelA = (angVelocity - initial) / time;");
+  														document.getElementById("angAccelDescription").innerHTML += "Angular acceleration was solved by final - initial divided by time.";
+  														break;
   										}
   												switch (arc) {
   						case "":

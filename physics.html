@@ -6368,6 +6368,7 @@
     			if (document.getElementById("solveWork").checked) {
     				angD = initial * time;
     				work = torque * angD;
+    				work = Math.abs(work);
     				document.getElementById("resultWork").innerHTML = "Work is " + work + " joules."
     			}
   			

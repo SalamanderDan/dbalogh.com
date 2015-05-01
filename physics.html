@@ -248,6 +248,7 @@
   			initial = document.getElementById("angularVelociyInitial").value;
   			forceG = document.getElementById("forceG").value;
   			m2 = document.getElementById("mass2").value;
+  			var work = 0;
   			var g = 6.67e-11;
   			
   			if (units.indexOf("deg") === 0){
@@ -6362,6 +6363,11 @@
     				m2 = (forceG * radius^2) / (g * mass);
     				document.getElementById("resultM2").innerHTML = "Mass2 is " + m2 + " kilograms.";
     				document.getElementById("M2Description").innerHTML = "Mass was solved for by radius squared times force due to gravity divded by g times mass1.";
+    			}
+    			
+    			if (document.getElementById("solveWork").checked) {
+    				work = torque * angD;
+    				document.getElementById("resultWork").InnerHTML = "Work is " + work + " joules."
     			}
   			
     			document.getElementById("gif").hidden = false;

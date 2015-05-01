@@ -3394,9 +3394,7 @@
   			if (document.getElementById("solveCA").checked) {
   				switch (accelC) {
   					case "":
-  						if (angVelocity === 0) {
-  						angVelocity = initial;
-  					}
+  						
   						console.log("no accelC");
   						switch (forceC) {
   							default:
@@ -3517,6 +3515,7 @@
   												switch (angVelocity) {
   													default:
   														accelC = radius * (angVelocity * angVelocity);
+  														console.log(accelC)
   														break;
   													case "":
   														break;

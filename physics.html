@@ -3889,7 +3889,7 @@
   																break;
   															}
   													}
-  													break;
+  												break;
   											default:
   												console.log("torque = inertia * accel");
   												torque = inertia * accelA;
@@ -3898,6 +3898,9 @@
   											}
   										break;
   									}
+  								if (torque !== 0) {
+  									break;
+  								}
   								switch (radius) {
   									default:
   										force = torque / radius;

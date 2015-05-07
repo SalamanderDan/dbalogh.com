@@ -517,7 +517,45 @@
   			}
   		}
   		forceC.calculate = function() {
-  			
+  			while (forceC.value === "") {
+  				if (accelC.value != "" && mass.value != ""){
+  					forceC.value = mass.value * accelC.value;
+  					document.getElementById("centForceDescription").innerHTML = "Centripital force was solved by mass times centripital acceleration.";
+  				}
+  				else if (mass.value != "" tanVelocility.value != "" && radius.value != ""){
+  					forceC.value = (mass.value * tanVelocity.value) / radius;
+  					document.getElementById("centForceDescription").innerHTML = "Centripital force was solved by mass times angential velocity divded by radius.";
+  				}
+  				else if (mass.value != "" && radius.value != "" && angVelocity.value != ""){
+  					forceC.value = mass.value * radius.value * angVelocity.value^2;
+  					document.getElementById("centForceDescription").innerHTML = "Centripital force was solved by mass times radius times angular velocity squared.";
+  				}
+  				else if (accelC.value === "" && mass.value != ""){
+  					accelC.calculate();
+  				}
+  				else if (accelC.value != "" && mass.value === ""){
+  					mass.calculate();
+  				}
+  				else if (mass.value === "" && tanVelocity.value != "" && radius.value != ""){
+  					mass.calculate();
+  				}
+  				else if (mass.value != "" && tanVelocity.value === "" && radius.value != ""){
+  					tanVelocity.calculate();
+  				}
+  				else if (mass.value != "" && tanvelocity.value != "" && radius.value === ""){
+  					radius.calculate();
+  				}
+  				else if (mass.value === "" && radius.value != "" && angVelocity.value != ""){
+  					mass.calculate();
+  				} 
+  				else if (mass.value != "" && radius.value === "" && angVelocity.value != ""){
+  					radius.calculate();
+  				}
+  				else if (mass.value != "" && radius.value != "" && angVelocity.value === ""){
+  					angVelocity.calculate();
+  				} 
+  			}
+  			document.getElementById("resultCentForce").innerHTML = "Centripital force is " + forceC + " newtons.";
   		}
   		radius.calculate = function () {
   			

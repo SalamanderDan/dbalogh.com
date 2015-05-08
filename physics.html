@@ -685,7 +685,39 @@
   		}
   		accelA.calculate = function(){
   			while (accelA.value == ""){
-  				
+  				if (torque.value != "" && inertia.value != ""){
+  					accelA.value = torque.value / inertia.value;
+  					document.getElementById("angAccelDescription").innerHTML = "Angular acceleration was solved by torque divded by inertia.";
+  				}
+  				else if (angVelocity.value != "" && time.value != "" && initial.value != ""){
+  					accelA.value = (angVelocity.value - initial.value) / time.value;
+  					document.getElementById("angAccelDescription").innerHTML = "Angular acceleration was solved by final angular velocity minus initial divded by time.";
+  				}
+  				else if (angVelocity.value != "" && time.value != ""){
+  					accelA.value = angVelocity.value / time.value;
+  					document.getElementById("angAccelDescription").innerHTML = "Angular acceleration was solved by angular velocity divded by time.";
+  				}
+  				else if (torque.value == "" && inertia.value != ""){
+  					torque.calculate();
+  				}
+  				else if (torque.value != "" && inertia.value == ""){
+  					inertia.calculate();
+  				}
+  				else if (angVelocity.value == "" && time.value != "" && initial.value != ""){
+  					angVelocity.calculate();
+  				}
+  				else if (angVelocity.value != "" && time.value == "" && initial.value != ""){
+  					time.calculate();
+  				}
+  				else if (angVelocity.value != "" && time.value != "" && initial.value == ""){
+  					initial.calculate();
+  				}
+  				else if (angVelocity.value == "" && time.value != ""){
+  					angVelocity.calculate();
+  				}
+  				else if (angVelocity.value != "" && time.value == ""){
+  					time.calculate();
+  				}
   			}
   			document.getElementById("resultAngAccel").innerHTML = "Angular acceleration is " + accelA.value + " radians per second squared.";t
   		}
@@ -696,10 +728,44 @@
   			
   		}
   		arc.calculate = function() {
-  			
+  			while (arc.value == ""){
+  				if (radius.value != "" && angD.value != ""){
+  					arc.value = radius.value * angD.value;
+  					document.getElementById("arcLengthDescription").innerHTML = "Arc length was solved by radius times angular distance."
+  				}
+  				else if (radius.value == "" && angD.value != ""){
+  					radius.calculate()
+  				}
+  				else if (radius.value != "" && angD.value == ""){
+  					angD.calculate();
+  				}
+  			}
+  			document.getElementById("resultArcLength").innerHTML = "Arc length is " + arc.value + " meters.";
   		}
   		angD.calculate = function() {
-  			
+  			while (angD.value == ""){
+  				if (radius.value != "" && arc.value != ""){
+  					angD.value = arc.value / radius.value;
+  					document.getElementById("angDDescription").innerHTML = "Angular Distance was solved by arc length divided by radius.";
+  				}
+  				else if (angVelocity.value != "" && time.value != ""){
+  					angD.value = angVelocity.value * time.value;
+  					document.getElementById("angDDescription").innerHTML = "Angular distance was solved by angular velocity times time.";
+  				}
+  				else if (radius.value == "" && arc.value != ""){
+  					radius.calculate();
+  				}
+  				else if (radius.value != "" && arc.value == ""){
+  					arc.calculate();
+  				}
+  				else if (angVelocity.value == "" && time.value != ""){
+  					angVelocity.calculate();
+  				}
+  				else if (angVelocity.value != "" && time.value == ""){
+  					time.calculate()
+  				}
+  			}
+  			document.getElementById("resultAngD").innerHTML = "Angular distance is " + angD.value + " radians.";
   		}
   		initial.calculate = function() {
   			

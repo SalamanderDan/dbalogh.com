@@ -653,15 +653,41 @@
   		}
   		tanVelocity.calculate = function(){
   			while (tanVelocity.value == ""){
-  				
+  				if (radius.value != "" && angVelocity.value != ""){
+  					tanVelocity.value = radius.value * angVelocity.value;
+  					document.getElementById("tanVelDescription").innerHTML = "Tangential velocity was solved by radius times angular velocity.";
+  				}
+  				else if (accelC.value != "" && radius.value != ""){
+  					tanVelocity.value = Math.sqrt(accelC.value * radius.value);
+  					document.getElementById("tanVelDescription").innerHTML = "Tangential velocity was solved by the square root of centripital acceleration times radius.";
+  				}
+  				else if (momentum.value != "" && mass.value != "" && radius.value != ""){
+  					tanVelocity.value = momentum.value / (mass.value * radius.value);
+  					document.getElementById("tanVelDescription").innerHTML = "Tangential velocity was solved by momentum divided by mass times radius.";
+  				}
+  				else if (radius.value == ""){
+  					radius.calculate();
+  				}
+  				else if (angVelocity == "" && radius.value != ""){
+  					angVelocity.calculate();
+  				}
+  				else if (accelC.value == "" && radius.value != ""){
+  					accelC.calculate();
+  				}
+  				else if (momentum.value == "" && mass.value != ""){
+  					momeuntim.calculate();
+  				}
+  				else if (momentum.value != "" && mass.value == ""){
+  					mass.calculate();
+  				}
   			}
-  			document.getElementById("tanVelDescription").innerHTML = "Tangential velocity is " + tanVelocity.value + " meters per second.";
+  			document.getElementById("resultTanVel").innerHTML = "Tangential velocity is " + tanVelocity.value + " meters per second.";
   		}
   		accelA.calculate = function(){
   			while (accelA.value == ""){
   				
   			}
-  			document.getElementById("angAccelDescription").innerHTML = "Angular acceleration is " + accelA.value + " radians per second squared.";t
+  			document.getElementById("resultAngAccel").innerHTML = "Angular acceleration is " + accelA.value + " radians per second squared.";t
   		}
   		angVelocity.calculate = function(){
   			

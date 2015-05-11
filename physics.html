@@ -781,7 +781,32 @@
   			document.getElementById("resultAngV").innerHTML = "Angular velocity is " + angVelocity.value + " radians per second.";
   		}
   		time.calculate = function(){
-  			
+  			while (time.value != ""){
+  				if (angVelocity.value != "" && angD.value != ""){
+  					time.value = angD / angVelocity.value;
+  					document.getElementById("timeDescription").innerHTML = "Time was solved by angular distance divided by angular velocity.";
+  				}
+  				else if (accelA.value != "" && angVelocity.value != "" && initial.value != ""){
+  					time.value = (angVelocity.value - initial.value) / accelA.value;
+  					document.getElementById("timeDescription").innerHTML = "Time was solved by final - initial angular velocity divided by angular acceleration.";
+  				}
+  				else if (angVelocity.value == "" && angD.value != ""){
+  					angVelocity.calculate();
+  				}
+  				else if (angVelocity.value != "" && angD.value == ""){
+  					angD.calculate();
+  				}
+  				else if (accelA.value == "" && angVelocity.value != "" && initial.value != ""){
+  					accelA.calculate();
+  				}
+  				else if (accelA.value != "" && angVelocity.value == "" && initial.value != ""){
+  					angVelocity.calculate();
+  				}
+  				else if (accelA.value != "" && angVelocity.value != "" && initial.value == ""){
+  					initial.calculate();
+  				}
+  			}
+  			document.getElementById("resultTime").innerHTML = "Time is " + time.value + " seconds.";
   		}
   		arc.calculate = function() {
   			while (arc.value == ""){

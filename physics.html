@@ -513,10 +513,11 @@
   				else if (radius.value != "" && angVelocity.value == ""){
   					angVelocity.calculate();
   				}
+  				
   			}
   		}
   		forceC.calculate = function() {
-  			while (forceC.value == "") {
+  			
   				if (accelC.value != "" && mass.value != ""){
   					forceC.value = mass.value * accelC.value;
   					document.getElementById("centForceDescription").innerHTML = "Centripital force was solved by mass times centripital acceleration.";
@@ -553,11 +554,11 @@
   				else if (mass.value != "" && radius.value != "" && angVelocity.value == ""){
   					angVelocity.calculate();
   				} 
-  			}
+  			
   			document.getElementById("resultCentForce").innerHTML = "Centripital force is " + forceC + " newtons.";
   		}
   		radius.calculate = function () {
-  			while (radius.value == ""){
+  			
   				if (arc.value != "" && angD.value != ""){
   					radius.value = arc.value / angD.value;
   					document.getElementById("radDescription").innerHTML = "Radius was solved by arc length divded by angular distance.";
@@ -609,11 +610,11 @@
   				else if (time.value == "" && tanVelocity.value != ""){
   					time.calculate();
   				}
-  			}
+  			
   			document.getElementById("resultRad").innerHTML = "Radius is " + radius.value + " meters.";
   		}
   		period.calculate = function() {
-  			while (period.value == ""){
+  			
   				if (frequency.value != ""){
   					period.value = 1 / frequency.value;
   					document.getElementById("perDescription").innerHTML = "Period was solved by 1 divided by the frequency.";
@@ -628,11 +629,11 @@
   				else if (frequency.value == ""){
   					frequency.calculate();
   				}
-  			}
+  			
   			document.getElementById("resultPer").innerHTML = "Period is " + period.value + " seconds.";
   		}
   		frequency.calculate = function() {
-  			while (frequency.value == ""){
+  			
   				if (period.value != ""){
   					frequency.value = 1 / period.value;
   					document.getElementById("freqDescription").innerHTML = "Frequency was solved by 1 divded by period.";
@@ -647,11 +648,11 @@
   				else if (period.value == ""){
   					period.calculate();
   				}
-  			}
+  			
   			document.getElementById("resultFreq").innerHTML = "Frequency is " + frequency.value + " Hz.";
   		}
   		tanVelocity.calculate = function(){
-  			while (tanVelocity.value == ""){
+  			
   				if (radius.value != "" && angVelocity.value != ""){
   					tanVelocity.value = radius.value * angVelocity.value;
   					document.getElementById("tanVelDescription").innerHTML = "Tangential velocity was solved by radius times angular velocity.";
@@ -679,11 +680,11 @@
   				else if (momentum.value != "" && mass.value == ""){
   					mass.calculate();
   				}
-  			}
+  			
   			document.getElementById("resultTanVel").innerHTML = "Tangential velocity is " + tanVelocity.value + " meters per second.";
   		}
   		accelA.calculate = function(){
-  			while (accelA.value == ""){
+  			
   				if (torque.value != "" && inertia.value != ""){
   					accelA.value = torque.value / inertia.value;
   					document.getElementById("angAccelDescription").innerHTML = "Angular acceleration was solved by torque divded by inertia.";
@@ -717,11 +718,11 @@
   				else if (angVelocity.value != "" && time.value == ""){
   					time.calculate();
   				}
-  			}
+  			
   			document.getElementById("resultAngAccel").innerHTML = "Angular acceleration is " + accelA.value + " radians per second squared.";t
   		}
   		angVelocity.calculate = function(){
-  			while (angVelocity.value == ""){
+  			
   				if (angD.value != "" && time.value != ""){
   					angVelocity.value = angD.value / time.value;
   					document.getElementById("angVDescription").innerHTML = "Angular velocity was solved by angluar distance divided by time.";
@@ -776,11 +777,11 @@
   				else if (frequency.value == ""){
   					frequency.calculate();
   				}
-  			}
+  			
   			document.getElementById("resultAngV").innerHTML = "Angular velocity is " + angVelocity.value + " radians per second.";
   		}
   		time.calculate = function(){
-  			while (time.value != ""){
+  			
   				if (angVelocity.value != "" && angD.value != ""){
   					time.value = angD / angVelocity.value;
   					document.getElementById("timeDescription").innerHTML = "Time was solved by angular distance divided by angular velocity.";
@@ -804,7 +805,7 @@
   				else if (accelA.value != "" && angVelocity.value != "" && initial.value == ""){
   					initial.calculate();
   				}
-  			}
+  			
   			document.getElementById("resultTime").innerHTML = "Time is " + time.value + " seconds.";
   		}
   		arc.calculate = function() {
@@ -823,7 +824,6 @@
   			document.getElementById("resultArcLength").innerHTML = "Arc length is " + arc.value + " meters.";
   		}
   		angD.calculate = function() {
-  			while (angD.value == ""){
   				if (radius.value != "" && arc.value != ""){
   					angD.value = arc.value / radius.value;
   					document.getElementById("angDDescription").innerHTML = "Angular Distance was solved by arc length divided by radius.";
@@ -844,7 +844,7 @@
   				else if (angVelocity.value != "" && time.value == ""){
   					time.calculate()
   				}
-  			}
+  			
   			document.getElementById("resultAngD").innerHTML = "Angular distance is " + angD.value + " radians.";
   		}
   		initial.calculate = function() {
@@ -867,7 +867,6 @@
   			console.log("click");
   			for (var i = 0; i < solveArr.length; i++) {
   				console.log("sort through checked.")
-  				console.log(solveArr[i]);
 	  			if (solveArr[i].checked) {
 	  				console.log("Go to " + solveArr[i]);
   					solveArr[i].calculate();

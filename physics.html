@@ -254,46 +254,46 @@
   			[momentum, force, inertia, torque, mass, accelC, forceC, radius, period, frequency, tanVelocity, accelA, angVelocity, initial, time, arc, forceG, m2, angD];
   	
   		momentum.value = document.getElementById("momentum").value;
-  		momentum.checked = document.getElementById("solveMOM").checked;
+  		momentum.solve= document.getElementById("solveMOM").checked;
   		force.value = document.getElementById("force").value;
-  		force.checked = document.getElementById("solveFORCE").checked;
+  		force.solve= document.getElementById("solveFORCE").checked;
   		inertia.value = document.getElementById("inertia").value;
-  		inertia.checked = document.getElementById("solveI").checked;
+  		inertia.solve= document.getElementById("solveI").checked;
   		torque.value = document.getElementById("torque").value;
-  		torque.checked = document.getElementById("solveT").checked;
+  		torque.solve= document.getElementById("solveT").checked;
   		mass.value = document.getElementById("mass").value;
-  		mass.checked = document.getElementById("solveM").checked;
+  		mass.solve= document.getElementById("solveM").checked;
   		accelC.value = document.getElementById("accelC").value;
-  		accelC.checked = document.getElementById("solveCA").checked;
+  		accelC.solve= document.getElementById("solveCA").checked;
   		forceC.value = document.getElementById("forceC").value;
-  		forceC.checked = document.getElementById("solveCF").checked;
+  		forceC.solve= document.getElementById("solveCF").checked;
   		radius.value = document.getElementById("radius").value;
-  		radius.checked = document.getElementById("solveR").checked;
+  		radius.solve= document.getElementById("solveR").checked;
   		period.value = document.getElementById("period").value;
-  		period.checked = document.getElementById("solveP").checked;
+  		period.solve= document.getElementById("solveP").checked;
   		frequency.value = document.getElementById("frequency").value;
-  		frequency.checked = document.getElementById("solveF").checked;
+  		frequency.solve= document.getElementById("solveF").checked;
   		tanVelocity.value = document.getElementById("tangentialVelocity").value;
-  		tanVelocity.checked = document.getElementById("solveTV").checked;
+  		tanVelocity.solve= document.getElementById("solveTV").checked;
   		accelA.value = document.getElementById("angularAcceleration").value;
-  		accelA.checked = document.getElementById("solveAA").checked;
+  		accelA.solve= document.getElementById("solveAA").checked;
   		angVelocity.value = document.getElementById("angularVelociy").value;
-  		angVelocity.checked = document.getElementById("solveAV").checked;
+  		angVelocity.solve= document.getElementById("solveAV").checked;
   		units = document.getElementById("units").value;
   		units2 = document.getElementById("units2").value;
   		shape.value = document.getElementById("shape").value;
   		time.value = document.getElementById("time").value;
-  		time.checked = document.getElementById("solveTIME").checked;
+  		time.solve= document.getElementById("solveTIME").checked;
   		arc.value = document.getElementById("arc").value;
-  		arc.checked = document.getElementById("solveAL").checked;
+  		arc.solve= document.getElementById("solveAL").checked;
   		angD.value = document.getElementById("angD").value;
-  		angD.checked = document.getElementById("solveAD").checked;
+  		angD.solve= document.getElementById("solveAD").checked;
   		initial.value = document.getElementById("angularVelociyInitial").value;
-  		initial.checked = document.getElementById("solveAVI").checked;
+  		initial.solve= document.getElementById("solveAVI").checked;
   		forceG.value = document.getElementById("forceG").value;
-  		forceG.checked = document.getElementById("solveFg").checked;
+  		forceG.solve= document.getElementById("solveFg").checked;
   		m2.value = document.getElementById("mass2").value;
-  		m2.checked = document.getElementById("solveM2").checked;
+  		m2.solve= document.getElementById("solveM2").checked;
   		
   		momentum.calculate = function() {
   			while (momentum.value == "") {
@@ -868,7 +868,7 @@
   			console.log("click");
   			for (var i = 0; i < solveArr.length; i++) {
   				console.log("sort through checked.")
-	  			if (solveArr[i].checked) {
+	  			if (solveArr[i].solve) {
 	  				console.log("Go to " + solveArr[i]);
   					solveArr[i].calculate();
   				}

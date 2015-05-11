@@ -865,7 +865,8 @@
   		
   		function calculate() {
   			console.log("click");
-  			for (var i = 0; i < solveArr.length; i++) {
+  			for (var name in scoreArr) {
+  				var value = scoreArr[name]
   				console.log("sort through checked.")
 	  			if (solveArr[i].checked) {
 	  				console.log("Go to " + solveArr[i]);

@@ -865,9 +865,11 @@
   		}
   		
   		function calculate() {
+  			console.log("click");
   			for (var i = 0; i < solveArr.length; i++) {
   				var thing = solveArr[i];
 	  			if (thing.checked) {
+	  				console.log("Go to " + thing);
   					thing.calculate();
   				}
   			}

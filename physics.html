@@ -722,7 +722,63 @@
   			document.getElementById("resultAngAccel").innerHTML = "Angular acceleration is " + accelA.value + " radians per second squared.";t
   		}
   		angVelocity.calculate = function(){
-  			
+  			while (angVelocity.value == ""){
+  				if (angD.value != "" && time.value != ""){
+  					angVelocity.value = angD.value / time.value;
+  					document.getElementById("angVDescription").innerHTML = "Angular velocity was solved by angluar distance divided by time.";
+  				}
+  				else if (radius.value != "" && tanVelocity.value != ""){
+  					angVelocity.value = tanVelocity.value / radius.value;
+  					document.getElementById("angVDescription").innerHTML = "Angular velocity was solved by tangential velocity divided by radius.";
+  				}
+  				else if (period.value != ""){
+  					angVelocity.value = (2 * Math.PI) / period.value;
+  					document.getElementById("angVDescription").innerHTML = "Angular velocity was solved by 2 pi divided by period.";
+  				}
+  				else if (frequency.value != ""){
+  					angVelocity.value = (2 * Math.PI) * frequency.value;
+  					document.getElementById("angVDescription").innerHTML = "Angular velocity was solved by 2 pi times frequency.";
+  				}
+  				else if (momentum.value != "" && inertia.value != ""){
+  					angVelocity.value = momentum.value / inertia.value;
+  					document.getElementById("angVDescription").innerHTML = "Angular velocity was solved by momentum divided by inertia.";
+  				}
+  				else if (accelC.value != "" && radius.value != ""){
+  					angVelocity.value = Math.sqrt(accelC.value / radius.value);
+  					document.getElementById("angVDescription").innerHTML = "Angular velocity was solved by the square root of centripital acceleration divided by radius.";
+  				}
+  				else if (angD.value == "" && time.value != ""){
+  					angD.calculate();
+  				}
+  				else if (angD.value != "" && time.value == ""){
+  					time.calculate();
+  				}
+  				else if (radius.value == "" && tanVelocity.value != ""){
+  					radius.calculate();
+  				}
+  				else if (radius.value != "" && tanVelocity.value == ""){
+  					tanVelocity.calculate();
+  				}
+  				else if (momentum.value == "" && inertia.value != ""){
+  					momentum.calculate();
+  				}
+  				else if (momentum.value != "" && inertia.value == ""){
+  					inertia.calculate();
+  				}
+  				else if (accelC.value == "" && radius.value != ""){
+  					accelC.calculate();
+  				}
+  				else if (accelC.value != "" && radius.value == ""){
+  					radius.calculate();
+  				}
+  				else if (period.value == ""){
+  					period.calculate();
+  				}
+  				else if (frequency.value == ""){
+  					frequency.calculate();
+  				}
+  			}
+  			document.getElementById("resultAngV").innerHTML = "Angular velocity is " + angVelocity.value + " radians per second.";
   		}
   		time.calculate = function(){
   			

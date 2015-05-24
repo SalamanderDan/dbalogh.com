@@ -295,7 +295,7 @@
   		m2.checked= document.getElementById("solveM2").checked;
   		
   		momentum.calculate = function() {
-  			while (momentum.value == "") {
+  			
   				
   				if (mass.value != "" && radius.value != "" && tanVelocity.value != ""){
   					momentum.value = mass.value * radius.value * tanVelocity.value;
@@ -333,12 +333,12 @@
   				else if (inertia.value != "" && angVelocity.value == ""){
   					angVelocity.calculate();
   				}
-  			}
+  			
   		
   			document.getElementById("resultMomentum").innerHTML = "Momentum is " + momentum.value + "."; 
   		}
   		force.calculate = function() {
-  			while (force.value == "") {
+  			
   				if (torque.value != "" && radius.value != ""){
   					force.value = torque.value / radius.value;
   					document.getElementById("forceDescription").innerHTML = "Force was solved by torque divided by radius.";
@@ -349,12 +349,12 @@
   				if (torque.value != "" && radius.value == ""){
   					radius.calculate();
   				}
-  			}
+  			
   			
   			document.getElementById("resultForce").innerHTML = "Force is " + force.value + " newtons.";
   		}
   		inertia.calculate = function() {
-  			while(inertia.value == ""){
+  			
   				if (torque.value != "" && accelA.value != ""){
   					inertia.value = torque.value / accelA.value;
   					document.getElementById("inertiaDescription").innerHTML = "Inertia was solved by torque divided by angular acceleration.";
@@ -411,11 +411,11 @@
   				else if (momentum.value != "" && angVelocity.value == ""){
   					angVelocity.calculate();
   				}
-  			}
+  			
   			document.getElementById("resultInertia").innerHTML = "Inertia is " + inertia.value + ".";
   		}
   		torque.calculate = function() {
-  			while (torque.value == ""){
+  			
   				if (radius.value != "" && force.value != "") {
   					torque.value = radius.value * force.value;
   					document.getElementById("torqueDescription").innerHTML = "Torque was solved  by radius times force.";
@@ -437,11 +437,11 @@
   					accelA.calculate();
   				}
   				
-  			}
+  			
   			document.getElementById("resultTorque").innerHTML = "Torque is " + torque.value + " newton meters.";
   		}
   		mass.calculate = function() {
-  			while (mass.value == "") {
+  			
   				if (forceC.value != "" && accelC.value != ""){
   					mass.value = forceC.value / accelC.value;
   					document.getElementById("massDescription").innerHTML = "Mass was solved by cenripital force divded by centripital acceleration.";
@@ -478,11 +478,11 @@
   				else if (forceC.value != "" && tanVelocity.value != "" && radius.value == ""){
   					radius.calculate();
   				}
-  			}
+  			
   			document.getElementById("resultMass").innerHTML = "Mass is " + mass.value + " kilograms.";
   		}
   		accelC.calculate = function() {
-  			while (accelC.value == ""){
+  			
   				if (forceC.value != "" && mass.value != "") {
   					accelC.value = forceC.value / mass.value;
   					document.getElementById("centAccelDescription").innerHTML = "Centripital acceleration was solved by centripital force divded mass.";
@@ -514,7 +514,7 @@
   					angVelocity.calculate();
   				}
   				
-  			}
+  			document.getElementById("resultCentAccel").innerHTML = "Centripital acceleration is " + accelC.value + " radians per second squared.";
   		}
   		forceC.calculate = function() {
   			

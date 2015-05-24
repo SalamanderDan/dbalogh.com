@@ -277,22 +277,22 @@
   		accelA.value = document.getElementById("angularAcceleration").value;
   		accelA.checked= document.getElementById("solveAA").checked;
   		angVelocity.value = document.getElementById("angularVelociy").value;
-  		angVelocity.checked= document.getElementById("solveAV").checked;
+  		angVelocity.checked = document.getElementById("solveAV").checked;
   		units = document.getElementById("units").value;
   		units2 = document.getElementById("units2").value;
   		shape.value = document.getElementById("shape").value;
   		time.value = document.getElementById("time").value;
-  		time.checked= document.getElementById("solveTIME").checked;
+  		time.checked = document.getElementById("solveTIME").checked;
   		arc.value = document.getElementById("arc").value;
-  		arc.checked= document.getElementById("solveAL").checked;
+  		arc.checked = document.getElementById("solveAL").checked;
   		angD.value = document.getElementById("angD").value;
-  		angD.checked= document.getElementById("solveAD").checked;
+  		angD.checked = document.getElementById("solveAD").checked;
   		initial.value = document.getElementById("angularVelociyInitial").value;
-  		initial.checked= document.getElementById("solveAVI").checked;
+  		initial.checked = document.getElementById("solveAVI").checked;
   		forceG.value = document.getElementById("forceG").value;
-  		forceG.checked= document.getElementById("solveFg").checked;
+  		forceG.checked = document.getElementById("solveFg").checked;
   		m2.value = document.getElementById("mass2").value;
-  		m2.checked= document.getElementById("solveM2").checked;
+  		m2.checked = document.getElementById("solveM2").checked;
   		
   		momentum.calculate = function() {
   			
@@ -865,13 +865,62 @@
   		
   		function calculate() {
   			console.log("click");
-  			for (var i = 0; i < solveArr.length; i++) {
-  				var value = solveArr[name]
-  				console.log("sort through checked.")
-	  			if (solveArr[i].checked) {
-	  				console.log("Go to " + solveArr[i]);
-  					solveArr[i].calculate();
-  				}
+  			if (document.getElementById("solveFORCE").checked){
+  				force.calculate();
+  			}
+  			else if (document.getElementById("solveMOM").checked){
+  				momentum.calculate();
+  			}
+  			else if (document.getElementById("solveI").checked){
+  				inertia.calculate();
+  			}
+  			else if (document.getElementById("solveT").checked){
+  				torque.calculate();
+  			}
+  			else if (document.getElementById("solveM").checked){
+  				mass.calculate();
+  			}
+  			else if (document.getElementById("solveCA").checked){
+  				accelC.calculate();
+  			}
+  			else if (document.getElementById("solveCF").checked){
+  				forceC.calculate();
+  			}
+  			else if (document.getElementById("solveR").checked){
+  				radius.calculate();
+  			}
+  			else if (document.getElementById("solveF").checked){
+  				frequency.calculate();
+  			}
+  			else if (document.getElementById("solveP").checked){
+  				period.calculate();
+  			}
+  			else if (document.getElementById("solveTV").checked){
+  				tanVelocity.calculate();
+  			}
+  			else if (document.getElementById("solveAA").checked){
+  				accelA.calculate();
+  			}
+  			else if (document.getElementById("solveAV").checked){
+  				angVelocity.calculate();
+  			}
+  			else if (document.getElementById("solveTIME").checked){
+  				time.calculate();
+  			}
+  			else if (document.getElementById("solveAL").checked){
+  				arc.calculate();
+  			}
+  			else if (document.getElementById("solveAD").checked){
+  				angD.calculate();
+  			}
+  			else if (document.getElementById("solveAVI").checked){
+  				initial.calculate();
+  			}
+  			else if (document.getElementById("solveFg").checked){
+  				forceG.calculate();
+  			}
+  			else if (document.getElementById("solveM2").checked){
+  				m2.calculate();
   			}
   		}
   		

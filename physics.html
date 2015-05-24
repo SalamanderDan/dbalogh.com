@@ -295,8 +295,6 @@
   		m2.checked = document.getElementById("solveM2").checked;
   		
   		momentum.calculate = function() {
-  			
-  				
   				if (mass.value != "" && radius.value != "" && tanVelocity.value != ""){
   					momentum.value = mass.value * radius.value * tanVelocity.value;
   					document.getElementById("momentumDescription").innerHTML = "Momentum was solved by mass times radius times tangential velocity.";
@@ -730,6 +728,7 @@
   				else if (radius.value != "" && tanVelocity.value != ""){
   					angVelocity.value = tanVelocity.value / radius.value;
   					document.getElementById("angVDescription").innerHTML = "Angular velocity was solved by tangential velocity divided by radius.";
+  					goto <angV>
   				}
   				else if (period.value != ""){
   					angVelocity.value = (2 * Math.PI) / period.value;
@@ -777,7 +776,7 @@
   				else if (frequency.value == ""){
   					frequency.calculate();
   				}
-  			
+  			[lbl] <angV>
   			document.getElementById("resultAngV").innerHTML = "Angular velocity is " + angVelocity.value + " radians per second.";
   		}
   		time.calculate = function(){

@@ -23,6 +23,7 @@
 		}
 		
 	</style>
+	
 	<head>
 		<link rel="shortcut icon" type="favicon.ico" href="favicon.ico">
 		<meta name="keywords" content="Physics, chapter 8, rotational dynamics, calculator">
@@ -727,6 +728,7 @@
   				}
   				else if (radius.value != "" && tanVelocity.value != ""){
   					angVelocity.value = tanVelocity.value / radius.value;
+  					console.log(angVelocity.value);
   					document.getElementById("angVDescription").innerHTML = "Angular velocity was solved by tangential velocity divided by radius.";
     				}
   				else if (period.value != ""){
@@ -769,12 +771,12 @@
   				else if (accelC.value != "" && radius.value == ""){
   					radius.calculate();
   				}
-  				else if (period.value == ""){
-  					period.calculate();
-  				}
-  				else if (frequency.value == ""){
-  					frequency.calculate();
-  				}
+  				//else if (period.value == ""){
+  				//	period.calculate();
+  				//}
+  				//else if (frequency.value == ""){
+  				//	frequency.calculate();
+  				//}
     			document.getElementById("resultAngV").innerHTML = "Angular velocity is " + angVelocity.value + " radians per second.";
   		}
   		time.calculate = function(){

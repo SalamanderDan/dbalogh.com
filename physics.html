@@ -229,72 +229,6 @@
   	</body>
   
   	<script>
-  		var work = 0;
-  		var g = 6.67e-11;
-  		var momentum = function(){}
-  		var force = function(){}
-  		var inertia = function(){}
-  		var torque = function(){}
-  		var mass = function(){}
-  		var accelC = function(){}
-  		var forceC = function(){}
-  		var radius = function(){}
-  		var period = function(){}
-  		var frequency = function(){}
-  		var tanVelocity = function(){}
-  		var accelA = function(){}
-  		var angVelocity = function(){}
-  		var initial = function(){}
-  		var time = function(){}
-  		var arc = function(){}
-  		var forceG = function(){}
-  		var m2 = function(){}
-  		var angD = function(){}
-  		
-  		var solveArr = [momentum, force, inertia, torque, mass, accelC, forceC, radius, period, frequency, tanVelocity, accelA, angVelocity, initial, time, arc, forceG, m2, angD];
-  	
-  		momentum.value = document.getElementById("momentum").value;
-  		momentum.checked= document.getElementById("solveMOM").checked;
-  		force.value = document.getElementById("force").value;
-  		force.checked= document.getElementById("solveFORCE").checked;
-  		inertia.value = document.getElementById("inertia").value;
-  		inertia.checked= document.getElementById("solveI").checked;
-  		torque.value = document.getElementById("torque").value;
-  		torque.checked= document.getElementById("solveT").checked;
-  		mass.value = document.getElementById("mass").value;
-  		mass.checked= document.getElementById("solveM").checked;
-  		accelC.value = document.getElementById("accelC").value;
-  		accelC.checked= document.getElementById("solveCA").checked;
-  		forceC.value = document.getElementById("forceC").value;
-  		forceC.checked= document.getElementById("solveCF").checked;
-  		radius.value = document.getElementById("radius").value;
-  		radius.checked= document.getElementById("solveR").checked;
-  		period.value = document.getElementById("period").value;
-  		period.checked= document.getElementById("solveP").checked;
-  		frequency.value = document.getElementById("frequency").value;
-  		frequency.checked= document.getElementById("solveF").checked;
-  		tanVelocity.value = document.getElementById("tangentialVelocity").value;
-  		tanVelocity.checked= document.getElementById("solveTV").checked;
-  		accelA.value = document.getElementById("angularAcceleration").value;
-  		accelA.checked= document.getElementById("solveAA").checked;
-  		angVelocity.value = document.getElementById("angularVelociy").value;
-  		angVelocity.checked = document.getElementById("solveAV").checked;
-  		units = document.getElementById("units").value;
-  		units2 = document.getElementById("units2").value;
-  		shape.value = document.getElementById("shape").value;
-  		time.value = document.getElementById("time").value;
-  		time.checked = document.getElementById("solveTIME").checked;
-  		arc.value = document.getElementById("arc").value;
-  		arc.checked = document.getElementById("solveAL").checked;
-  		angD.value = document.getElementById("angD").value;
-  		angD.checked = document.getElementById("solveAD").checked;
-  		initial.value = document.getElementById("angularVelociyInitial").value;
-  		initial.checked = document.getElementById("solveAVI").checked;
-  		forceG.value = document.getElementById("forceG").value;
-  		forceG.checked = document.getElementById("solveFg").checked;
-  		m2.value = document.getElementById("mass2").value;
-  		m2.checked = document.getElementById("solveM2").checked;
-  		
   		momentum.calculate = function() {
   				if (mass.value != "" && radius.value != "" && tanVelocity.value != ""){
   					momentum.value = mass.value * radius.value * tanVelocity.value;
@@ -864,6 +798,73 @@
   		
   		function calculate() {
   			console.log("click");
+  			
+  			var work = 0;
+  			var g = 6.67e-11;
+  			var momentum = function(){}
+  			var force = function(){}
+  			var inertia = function(){}
+  			var torque = function(){}
+  			var mass = function(){}
+  			var accelC = function(){}
+  			var forceC = function(){}
+  			var radius = function(){}
+  			var period = function(){}
+  			var frequency = function(){}
+  			var tanVelocity = function(){}
+  			var accelA = function(){}
+  			var angVelocity = function(){}
+  			var initial = function(){}
+  			var time = function(){}
+  			var arc = function(){}
+  			var forceG = function(){}
+  			var m2 = function(){}
+  			var angD = function(){}
+  			
+  			var solveArr = [momentum, force, inertia, torque, mass, accelC, forceC, radius, period, frequency, tanVelocity, accelA, angVelocity, initial, time, arc, forceG, m2, angD];
+  		
+  			momentum.value = document.getElementById("momentum").value;
+  			momentum.checked= document.getElementById("solveMOM").checked;
+  			force.value = document.getElementById("force").value;
+  			force.checked= document.getElementById("solveFORCE").checked;
+  			inertia.value = document.getElementById("inertia").value;
+  			inertia.checked= document.getElementById("solveI").checked;
+  			torque.value = document.getElementById("torque").value;
+  			torque.checked= document.getElementById("solveT").checked;
+  			mass.value = document.getElementById("mass").value;
+  			mass.checked= document.getElementById("solveM").checked;
+  			accelC.value = document.getElementById("accelC").value;
+  			accelC.checked= document.getElementById("solveCA").checked;
+  			forceC.value = document.getElementById("forceC").value;
+  			forceC.checked= document.getElementById("solveCF").checked;
+  			radius.value = document.getElementById("radius").value;
+  			radius.checked= document.getElementById("solveR").checked;
+  			period.value = document.getElementById("period").value;
+  			period.checked= document.getElementById("solveP").checked;
+  			frequency.value = document.getElementById("frequency").value;
+  			frequency.checked= document.getElementById("solveF").checked;
+  			tanVelocity.value = document.getElementById("tangentialVelocity").value;
+  			tanVelocity.checked= document.getElementById("solveTV").checked;
+  			accelA.value = document.getElementById("angularAcceleration").value;
+  			accelA.checked= document.getElementById("solveAA").checked;
+  			angVelocity.value = document.getElementById("angularVelociy").value;
+  			angVelocity.checked = document.getElementById("solveAV").checked;
+  			units = document.getElementById("units").value;
+  			units2 = document.getElementById("units2").value;
+  			shape.value = document.getElementById("shape").value;
+  			time.value = document.getElementById("time").value;
+  			time.checked = document.getElementById("solveTIME").checked;
+  			arc.value = document.getElementById("arc").value;
+  			arc.checked = document.getElementById("solveAL").checked;
+  			angD.value = document.getElementById("angD").value;
+  			angD.checked = document.getElementById("solveAD").checked;
+  			initial.value = document.getElementById("angularVelociyInitial").value;
+  			initial.checked = document.getElementById("solveAVI").checked;
+  			forceG.value = document.getElementById("forceG").value;
+  			forceG.checked = document.getElementById("solveFg").checked;
+  			m2.value = document.getElementById("mass2").value;
+  			m2.checked = document.getElementById("solveM2").checked;
+  			
   			if (document.getElementById("solveFORCE").checked){
   				console.log("To force");
   				force.calculate();

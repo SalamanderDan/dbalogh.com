@@ -229,6 +229,31 @@
   	</body>
   
   	<script>
+  	
+  		var work = 0;
+  		var g = 6.67e-11;
+  		var momentum = function(){}
+  		var force = function(){}
+ 		var inertia = function(){}
+ 		var torque = function(){}
+		var mass = function(){}
+  		var accelC = function(){}
+  		var forceC = function(){}
+  		var radius = function(){}
+  		var period = function(){}
+  		var frequency = function(){}
+  		var tanVelocity = function(){}
+  		var accelA = function(){}
+  		var angVelocity = function(){}
+  		var initial = function(){}
+  		var time = function(){}
+  		var arc = function(){}
+  		var forceG = function(){}
+  		var m2 = function(){}
+  		var angD = function(){}
+  		
+  		var solveArr = [momentum, force, inertia, torque, mass, accelC, forceC, radius, period, frequency, tanVelocity, accelA, angVelocity, initial, time, arc, forceG, m2, angD];
+  	
   		momentum.calculate = function() {
   				if (mass.value != "" && radius.value != "" && tanVelocity.value != ""){
   					momentum.value = mass.value * radius.value * tanVelocity.value;
@@ -799,30 +824,6 @@
   		function calculate() {
   			console.log("click");
   			
-  			var work = 0;
-  			var g = 6.67e-11;
-  			var momentum = function(){}
-  			var force = function(){}
-  			var inertia = function(){}
-  			var torque = function(){}
-  			var mass = function(){}
-  			var accelC = function(){}
-  			var forceC = function(){}
-  			var radius = function(){}
-  			var period = function(){}
-  			var frequency = function(){}
-  			var tanVelocity = function(){}
-  			var accelA = function(){}
-  			var angVelocity = function(){}
-  			var initial = function(){}
-  			var time = function(){}
-  			var arc = function(){}
-  			var forceG = function(){}
-  			var m2 = function(){}
-  			var angD = function(){}
-  			
-  			var solveArr = [momentum, force, inertia, torque, mass, accelC, forceC, radius, period, frequency, tanVelocity, accelA, angVelocity, initial, time, arc, forceG, m2, angD];
-  		
   			momentum.value = document.getElementById("momentum").value;
   			momentum.checked= document.getElementById("solveMOM").checked;
   			force.value = document.getElementById("force").value;

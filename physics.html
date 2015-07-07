@@ -728,8 +728,7 @@
   				else if (radius.value != "" && tanVelocity.value != ""){
   					angVelocity.value = tanVelocity.value / radius.value;
   					document.getElementById("angVDescription").innerHTML = "Angular velocity was solved by tangential velocity divided by radius.";
-  					goto <angV>
-  				}
+    				}
   				else if (period.value != ""){
   					angVelocity.value = (2 * Math.PI) / period.value;
   					document.getElementById("angVDescription").innerHTML = "Angular velocity was solved by 2 pi divided by period.";
@@ -776,8 +775,7 @@
   				else if (frequency.value == ""){
   					frequency.calculate();
   				}
-  			[lbl] <angV>
-  			document.getElementById("resultAngV").innerHTML = "Angular velocity is " + angVelocity.value + " radians per second.";
+    			document.getElementById("resultAngV").innerHTML = "Angular velocity is " + angVelocity.value + " radians per second.";
   		}
   		time.calculate = function(){
   			

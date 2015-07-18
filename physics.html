@@ -276,9 +276,9 @@
   					momentum.value = inertia.value * angVelocity.value;
   					document.getElementById("momentumDescription").innerHTML = "Momentum was solved by inertia times angular velocity.";
   				}
-  				else if (mass.value == "" && radius.value != "" && tanVelocity.value != ""){
-  					mass.calculate();
-  				}
+  			//	else if (mass.value == "" && radius.value != "" && tanVelocity.value != ""){
+  			//		mass.calculate();
+  			//	}
   				else if (mass.value != "" && radius.value == "" && tanVelocity.value != ""){
   					radius.calculate();
   				}

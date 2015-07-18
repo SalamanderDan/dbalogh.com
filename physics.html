@@ -876,6 +876,9 @@
   			m2.value = document.getElementById("mass2").value;
   			m2.checked = document.getElementById("solveM2").checked;
   			
+  			force.calculate();
+  			momentum.calculate();
+  			
   			if (document.getElementById("solveFORCE").checked){
   				console.log("To force");
   				force.calculate();

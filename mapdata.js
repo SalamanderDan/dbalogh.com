@@ -220,7 +220,7 @@ var simplemaps_countymap_mapdata={
     },
     "17097": {
       name: "Lake",
-      description: "MEEEEE!!!"
+      description: "MEEEEE!!!" + "<br>" + "This is line 2"
     },
     "17099": {
       name: "La Salle"

@@ -219,7 +219,8 @@ var simplemaps_countymap_mapdata={
       name: "Knox"
     },
     "17097": {
-      name: "Lake"
+      name: "Lake",
+      description: "MEEEEE!!!"
     },
     "17099": {
       name: "La Salle"

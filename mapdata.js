@@ -1477,7 +1477,9 @@ var simplemaps_countymap_mapdata={
       name: "Bayfield"
     },
     "55009": {
-      name: "Brown"
+      color: "#97a4ff",
+      name: "Brown",
+      description: "<table><tbody><tr><td>Schneider National</td></tr></tbody></table>"
     },
     "55011": {
       name: "Buffalo"
@@ -1501,7 +1503,9 @@ var simplemaps_countymap_mapdata={
       name: "Crawford"
     },
     "55025": {
-      name: "Dane"
+      color: "#001ffd",
+      name: "Dane",
+      description: "<table><tbody><tr><td>Alliant Energy</td></tr><tr><td>American Family Insurance</td></tr><tr><td>CUNA Mutal Group</td></tr><tr><td>Spectrum Brands</td></tr><tr><td>Alliant Energy</td></tr></tbody></table>"
     },
     "55027": {
       name: "Dodge"
@@ -1552,7 +1556,9 @@ var simplemaps_countymap_mapdata={
       name: "Juneau"
     },
     "55059": {
-      name: "Kenosha"
+      color: "#97a4ff",
+      name: "Kenosha",
+      description: "<table><tbody><tr><td>Snap-on Incorperated</td></tr></tbody></table>"
     },
     "55061": {
       name: "Kewaunee"
@@ -1585,7 +1591,9 @@ var simplemaps_countymap_mapdata={
       name: "Menominee"
     },
     "55079": {
-      name: "Milwaukee"
+      color: "#001ffd",
+      name: "Milwaukee",
+      description: "<table><tbody><tr><td>AO Smith</td></tr><tr><td>Gardner Denver Holdings</td></tr><tr><td>Harley Davidson</td></tr><tr><td>Kohl's Corporation</td></tr><tr><td>Manpower Group</td></tr><tr><td>Northwestern Mutual</td></tr><tr><td>REV Group</td></tr><tr><td>Rexnord Corporation</td></tr><tr><td>Rockwell Automation</td></tr><tr><td>WEC Energy Group</td></tr></tbody></table>"
     },
     "55081": {
       name: "Monroe"
@@ -1612,19 +1620,25 @@ var simplemaps_countymap_mapdata={
       name: "Polk"
     },
     "55097": {
-      name: "Portage"
+      color: "#97a4ff",
+      name: "Portage",
+      description: "<table><tbody><tr><td>Sentry Insurance</td></tr></tbody></table>"
     },
     "55099": {
       name: "Price"
     },
     "55101": {
-      name: "Racine"
+      color: "#6477ff",
+      name: "Racine",
+      description: "<table><tbody><tr><td>Modine Manufacturing</td></tr><tr><td>SC Johnson</td></tr></tbody></table>"
     },
     "55103": {
       name: "Richland"
     },
     "55105": {
-      name: "Rock"
+      name: "Rock",
+      color: "#6477ff",
+      description: "<table><tbody><tr><td>Regal Beloit</td></tr><tr><td>ABC Supply</td></tr></tbody></table>"
     },
     "55107": {
       name: "Rusk"
@@ -1666,7 +1680,9 @@ var simplemaps_countymap_mapdata={
       name: "Washington"
     },
     "55133": {
-      name: "Waukesha"
+      color: "#314aff",
+      name: "Waukesha",
+      description: "<table><tbody><tr><td>Fiserv</td></tr><tr><td>Generac Holdings</td></tr><tr><td>Quad/Graphics</td></tr></tbody></table>"
     },
     "55135": {
       name: "Waupaca"
@@ -1675,7 +1691,9 @@ var simplemaps_countymap_mapdata={
       name: "Waushara"
     },
     "55139": {
-      name: "Winnebago"
+      color: "#314aff",
+      name: "Winnebago",
+      description: "<table><tbody><tr><td>Bemic Company</td></tr><tr><td>Oshkosh Corporation</td></tr><tr><td>Plexus Corporation</td></tr></tbody></table>"
     },
     "55141": {
       name: "Wood"

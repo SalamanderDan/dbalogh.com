@@ -1701,10 +1701,11 @@ var simplemaps_countymap_mapdata={
   },
   locations: {
     "0": {
-      lat: 41.884,
-      lng: -87.632,
-      name: "Depaul University",
-      url: "https://www.depaul.edu/"
+      lat: 41.9248,
+      lng: -87.6566,
+      name: "Chicago Universities",
+      url: "https://www.depaul.edu/",
+      description: "<table><tbody><tr><td>DePaul University</td><td>Evening or weekend</td><td>$39,000</td></tr><tr><td>Loyola</td><td>Evening or weekend</td><td>$81,000</td></tr><tr><td>Northwestern University</td><td>Evening or weekend</td><td>$152,000</td></tr><tr><td>University of Illinois Chicago</td><td>Evening or weekend</td><td>$50,000</td></tr><tr><td>University of Chicago</td><td>Evening or weekend</td><td>$144,000</td></tr></tbody></table>"
     },
     "1": {
       lat: 42.282,
@@ -1717,55 +1718,64 @@ var simplemaps_countymap_mapdata={
       lat: 39.167,
       lng: -86.535,
       name: "University of Indiana",
-      url: "https://www.indiana.edu/"
+      url: "https://www.indiana.edu/",
+      description: "<table><tbody><tr><td>Evening</td><td>$74,500</td></tr><tr><td>Online</td><td>$74,500</td></tr></tbody></table>"
     },
     "3": {
       lat: 41.976,
       lng: -91.673,
       name: "University of Iowa",
-      url: "https://uiowa.edu/"
+      url: "https://uiowa.edu/",
+      description: "<table><tbody><tr><td>Professional MBA</td><td>$31,500</td></tr></tbody></table>"
     },
     "4": {
       lat: 34.041,
       lng: -117.558,
       name: "University of Illinois",
-      url: "https://illinois.edu/"
+      url: "https://illinois.edu/",
+      description: "<table><tbody><tr><td>Online</td><td>$22,000</td></tr></tbody></table>"
     },
     "5": {
       lat: 39.962,
       lng: -83.003,
       name: "Ohio State University",
-      url: "https://www.osu.edu/"
+      url: "https://www.osu.edu/",
+      description: "<table><tbody><tr><td>Working Professionals</td><td>$75,000</td></tr></tbody></table>"
     },
     "6": {
       lat: 44.817,
       lng: -91.501,
       name: "UW Consortium",
-      url: "https://www.wisconsinonlinemba.org/"
+      url: "https://www.wisconsinonlinemba.org/",
+      description: "<table><tbody><tr><td>Online</td><td>$26,000</td></tr></tbody></table>"
     },
     "7": {
       lat: 43.0783,
       lng: -87.882,
       name: "UW-Milwaukee",
-      url: "https://uwm.edu/"
+      url: "https://uwm.edu/",
+      description: "<table><tbody><tr><td>Part-time</td><td>$37,000</td></tr></tbody></table>"
     },
     "9": {
       lat: 44.979,
       lng: -93.265,
       name: "University of Minnesota",
-      url: "https://twin-cities.umn.edu/"
+      url: "https://twin-cities.umn.edu/",
+      description: "<table><tbody><tr><td>Part-time</td><td>$82,000</td></tr></tbody></table>"
     },
     "10": {
       lat: 42.835,
       lng: -88.738,
       name: "UW-Whitewater",
-      url: "http://www.uww.edu/"
+      url: "http://www.uww.edu/",
+      description: "<table><tbody><tr><td>Evening</td><td>$20,000</td></tr><tr><td>Online</td><td>$23,000</td></tr></tbody></table>"
     },
     "11": {
       lat: 43.0388,
       lng: -87.9286,
       name: "Marquette University",
-      url: "https://marquette.edu"
+      url: "https://marquette.edu",
+      description: "<table><tbody><tr><td>Part-time</td><td>$44,000</td></tr></tbody></table>"
     }
   },
   lines: {

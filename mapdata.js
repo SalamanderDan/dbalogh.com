@@ -120,6 +120,7 @@ var simplemaps_countymap_mapdata={
       name: "Coles"
     },
     "17031": {
+      color: "#001ffd",
       name: "Cook",
       description: "<table><tbody><tr><td>Accenture</td></tr><tr><td>Allstate</td></tr><tr><td>Anixter International</td></tr><tr><td>Archer Daniels Midland</td></tr><tr><td>Arthur Gallagher</td></tr><tr><td>At&T</td></tr><tr><td>BMO</td></tr><tr><td>Beoing</td></tr><tr><td>Conagra Brands</td></tr><tr><td>Exelon</td></tr><tr><td>Grant Thornton</td></tr><tr><td>Groupon</td></tr><tr><td>Hyatt</td></tr><tr><td>Illinois Tool Works</td></tr><tr><td>Ingredion</td></tr><tr><td>JLL</td></tr><tr><td>Johns Lang LaSalle</td></tr><tr><td>Kemper</td></tr><tr><td>Komatsu</td></tr><tr><td>LKQ</td></tr><tr><td>Medline</td></tr><tr><td>Motorola</td></tr><tr><td>Northern Trust</td></tr><tr><td>Old Republic International</td></tr><tr><td>Quaker Oats</td></tr><tr><td>RR Donnelley & Sons</td></tr><tr><td>Sears Holdings</td></tr><tr><td>ThyssenKrupp North America</td></tr><tr><td>TransUnion</td></tr><tr><td>United Continental Holdings</td></tr><tr><td>United Airlines</td></tr><tr><td>US Foods</td></tr><tr><td>Veolia Environmental Services</td></tr></tbody></table>"
     },
@@ -139,6 +140,7 @@ var simplemaps_countymap_mapdata={
       name: "Douglas"
     },
     "17043": {
+      color: "#001ffd",
       name: "Du Page",
       description: "<table><tbody><tr><td>Advocate Health Care</td></tr><tr><td>Dover</td></tr><tr><td>McDonald's</td></tr><tr><td>Navistar International</td></tr><tr><td>TreeHouse Foods</td></tr><tr><td>Univar</td></tr><tr><td>Ulta Beauty</td></tr></tbody></table>"
     },
@@ -221,6 +223,7 @@ var simplemaps_countymap_mapdata={
       name: "Knox"
     },
     "17097": {
+      color: "#001ffd",
       name: "Lake",
       description: "<table><tbody><tr><td>Abbott</td></tr><tr><td>AbbVie</td></tr><tr><td>Baxter</td></tr><tr><td>Brunswick</td></tr><tr><td>Caterpillar</td></tr><tr><td>CDW</td></tr><tr><td>Discover Financial Services</td></tr><tr><td>Grainger</td></tr><tr><td>HSBC</td></tr><tr><td>Mondelez International</td></tr><tr><td>Packaging Corporation of America</td></tr><tr><td>Stericycle</td></tr><tr><td>Tenneco</td></tr><tr><td>Walgreen Company</td></tr></tbody></table>"
     },
@@ -246,6 +249,7 @@ var simplemaps_countymap_mapdata={
       name: "McHenry"
     },
     "17113": {
+      color: "#6477ff",
       name: "Mclean",
       description: "<table><tbody><tr><td>State Farm</td></tr></tbody></table>"
     },
@@ -319,6 +323,7 @@ var simplemaps_countymap_mapdata={
       name: "Richland"
     },
     "17161": {
+      color: "#6477ff",
       name: "Rock Island",
       description: "<table><tbody><tr><td>John Deere</td></tr></tbody></table>"
     },
@@ -389,10 +394,12 @@ var simplemaps_countymap_mapdata={
       name: "Adams"
     },
     "18003": {
+      color: "#6477ff",
       name: "Allen",
       description: "<table><tbody><tr><td>Steel Dynamics</td></tr></tbody></table>"
     },
     "18005": {
+      color: "#6477ff",
       name: "Bartholomew",
       description: "<table><tbody><tr><td>Cummins</td></tr></tbody></table>"
     },
@@ -445,6 +452,7 @@ var simplemaps_countymap_mapdata={
       name: "Dubois"
     },
     "18039": {
+      color: "#6477ff",
       name: "Elkhart",
       description: "<table><tbody><tr><td>Thror Industries</td></tr></tbody></table>"
     },
@@ -515,6 +523,7 @@ var simplemaps_countymap_mapdata={
       name: "Knox"
     },
     "18085": {
+      color: "#6477ff",
       name: "Kosciusko",
       description: "<table><tbody><tr><td>Zimmer Biomet</td></tr></tbody></table>"
     },
@@ -534,6 +543,7 @@ var simplemaps_countymap_mapdata={
       name: "Madison"
     },
     "18097": {
+      color: "#314aff",
       name: "Marion",
       description: "<table><tbody><tr><td>Anthem</td></tr><tr><td>Anthem</td></tr><tr><td>Eli Lilly and Company</td></tr><tr><td>Fransciscan Health</td></tr><tr><td>Simon Property Group</td></tr></tbody></table>"
     },
@@ -547,6 +557,7 @@ var simplemaps_countymap_mapdata={
       name: "Miami"
     },
     "18105": {
+      color: "#6477ff",
       name: "Monroe",
       description: "<table><tbody><tr><td>WTIU</td></tr></tbody></table>"
     },
@@ -635,6 +646,7 @@ var simplemaps_countymap_mapdata={
       name: "Union"
     },
     "18163": {
+      color: "#6477ff",
       name: "Vanderburgh",
       description: "<table><tbody><tr><td>Berry Global Group</td></tr></tbody></table>"
     },
@@ -816,6 +828,7 @@ var simplemaps_countymap_mapdata={
       name: "Jackson"
     },
     "19099": {
+      color: "#6477ff",
       name: "Jasper",
       description: "<table><tbody><tr><td>Maytag</td></tr></tbody></table>"
     },
@@ -838,6 +851,7 @@ var simplemaps_countymap_mapdata={
       name: "Lee"
     },
     "19113": {
+      color: "#314aff",
       name: "Linn",
       description: "<table><tbody><tr><td>Rockwell Collins</td></tr><tr><td>Aegon</td></tr><tr><td>Transamerica Life Insurance</td></tr></tbody></table>"
     },
@@ -878,6 +892,7 @@ var simplemaps_countymap_mapdata={
       name: "Montgomery"
     },
     "19139": {
+      color: "#6477ff",
       name: "Muscatine",
       description: "<table><tbody><tr><td>HNI</td></tr></tbody></table>"
     },
@@ -900,6 +915,7 @@ var simplemaps_countymap_mapdata={
       name: "Pocahontas"
     },
     "19153": {
+      color: "#001ffd",
       name: "Polk",
       description: "<table><tbody><tr><td>Casey's General Stores</td></tr><tr><td>Hy-Vee</td></tr><tr><td>Principal Financial Group</td></tr><tr><td>MercyOne</td></tr><tr><td>Berkshire Hathaway</td></tr><tr><td>Meredith Corporation</td></tr><tr><td>AmerUs Group</td></tr></tbody></table>"
     },
@@ -961,6 +977,7 @@ var simplemaps_countymap_mapdata={
       name: "Winneshiek"
     },
     "19193": {
+      color: "#6477ff",
       name: "Woodbury",
       description: "<table><tbody><tr><td>Terra Industries</td></tr></tbody></table>"
     },
@@ -1001,6 +1018,7 @@ var simplemaps_countymap_mapdata={
       name: "Benzie"
     },
     "26021": {
+      color: "#6477ff",
       name: "Berrien",
       description: "<table><tbody><tr><td>Whirlpool</td></tr></tbody></table>"
     },
@@ -1008,6 +1026,7 @@ var simplemaps_countymap_mapdata={
       name: "Branch"
     },
     "26025": {
+      color: "#6477ff",
       name: "Calhoun",
       description: "<table><tbody><tr><td>Kellogg</td></tr></tbody></table>"
     },
@@ -1045,6 +1064,7 @@ var simplemaps_countymap_mapdata={
       name: "Emmet"
     },
     "26049": {
+      color: "#6477ff",
       name: "Genesee",
       description: "<table><tbody><tr><td>McLaren Health Care</td></tr></tbody></table>"
     },
@@ -1085,10 +1105,12 @@ var simplemaps_countymap_mapdata={
       name: "Isabella"
     },
     "26075": {
+      color: "#6477ff",
       name: "Jackson",
       description: "<table><tbody><tr><td>CMS Energy</td></tr></tbody></table>"
     },
     "26077": {
+      color: "#6477ff",
       name: "Kalamazoo",
       description: "<table><tbody><tr><td>Stryker Corporation</td></tr></tbody></table>"
     },
@@ -1096,6 +1118,7 @@ var simplemaps_countymap_mapdata={
       name: "Kalkaska"
     },
     "26081": {
+      color: "#314aff",
       name: "Kent",
       description: "<table><tbody><tr><td>Meijer</td><tr><td>Steelcase</td><tr><td>SpartanNash</td><tr><td>Gordon Food Service</td></tr></tbody></table>"
     },
@@ -1142,6 +1165,7 @@ var simplemaps_countymap_mapdata={
       name: "Menominee"
     },
     "26111": {
+      color: "#6477ff",
       name: "Midland",
       description: "<table><tbody><tr><td>Dow Chemical Company</td></tr></tbody></table>"
     },
@@ -1164,6 +1188,7 @@ var simplemaps_countymap_mapdata={
       name: "Newaygo"
     },
     "26125": {
+      color: "#001ffd",
       name: "Oakland",
       description: "<table><tbody><tr><td>Borgwarner</td></tr><tr><td>FCA</td></tr><tr><td>Penske Automotive</td></tr><tr><td>Cooper-Standard Automotive</td></tr><tr><td>Beaumont Health</td></tr><tr><td>Lear</td></tr><tr><td>Ferderal-Mogul</td></tr><tr><td>Kelly Services</td></tr><tr><td>Meritor</td></tr>tr><td>ZF North America</td></tr></tbody></table>"
     },
@@ -1219,10 +1244,12 @@ var simplemaps_countymap_mapdata={
       name: "Van Buren"
     },
     "26161": {
+      color: "#314aff",
       name: "Washtenaw",
       description: "<table><tbody><tr><td>Con-Way</td></tr><tr><td>Domino's Pizza</td></tr></tbody></table>"
     },
     "26163": {
+      color: "#001ffd",
       name: "Wayne",
       description: "<table><tbody><tr><td>Ford Motor Companies</td></tr><tr><td>General Motors</td></tr><tr><td>Henry Ford Health System</td></tr><tr><td>DTE Energy</td></tr><tr><td>Blue Cross Blue Shield</td></tr><tr><td>Quicken Loans</td></tr><tr><td>Ally Financial</td></tr><tr><td>Little Caesar's</td></tr><tr><td>Masco Corporation</td></tr></tbody></table>"
     },
@@ -1233,6 +1260,7 @@ var simplemaps_countymap_mapdata={
       name: "Aitkin"
     },
     "27003": {
+      color: "#6477ff",
       name: "Anoka",
       description: "<table><tbody><tr><td>Medtronic</td></tr></tbody></table>"
     },
@@ -1285,6 +1313,7 @@ var simplemaps_countymap_mapdata={
       name: "Crow Wing"
     },
     "27037": {
+      color: "#314aff",
       name: "Dakota",
       description: "<table><tbody><tr><td>CHS</td></tr><tr><td>Patterson Companies</td></tr></tbody></table>"
     },
@@ -1310,6 +1339,7 @@ var simplemaps_countymap_mapdata={
       name: "Grant"
     },
     "27053": {
+      color: "#001ffd",
       name: "Hennepin",
       description: "<table><tbody><tr><td>Donaldson Company</td></tr><tr><td>Toro</td></tr><tr><td>CH Robinson</td></tr><tr><td>Supervalu</td></tr><tr><td>Apogee Enterprises</td></tr><tr><td>Nash Finch</td></tr><tr><td>Regic Corporation</td></tr><tr><td>General Mills</td></tr><tr><td>Pentair</td></tr><tr><td>Tennant Company</td></tr><tr><td>Polaris</td></tr><tr><td>Ameriprise</td></tr><tr><td>Graco</td></tr><tr><td>PepsiAmericas</td></tr><tr><td>Sleep Number</td></tr><tr><td>Target Corporation</td></tr><tr><td>Thrivent Financial</td></tr><tr><td>US Bank</td></tr><tr><td>Valspar</td></tr><tr><td>Xcel Energy</td></tr><tr><td>Carlson Holdings</td></tr><tr><td>Michel Foods</td></tr><tr><td>UnitedHealth Group</td></tr><tr><td>Mosiac</td></tr><tr><td>Best Buy</td></tr><tr><td>NVent Electric</td></tr><tr><td>TCF Financial</td></tr></tbody></table>"
     },
@@ -1371,6 +1401,7 @@ var simplemaps_countymap_mapdata={
       name: "Martin"
     },
     "27093": {
+      color: "#6477ff",
       name: "Meeker",
       description: "<table><tbody><tr><td>Winnebago Industries</td></tr></tbody></table>"
     },
@@ -1381,6 +1412,7 @@ var simplemaps_countymap_mapdata={
       name: "Morrison"
     },
     "27099": {
+      color: "#6477ff",
       name: "Mower",
       description: "<table><tbody><tr><td>Hormel</td></tr></tbody></table>"
     },
@@ -1397,6 +1429,7 @@ var simplemaps_countymap_mapdata={
       name: "Norman"
     },
     "27109": {
+      color: "#6477ff",
       name: "Olmsted",
       description: "<table><tbody><tr><td>Mayo Clinic</td></tr></tbody></table>"
     },
@@ -1419,6 +1452,7 @@ var simplemaps_countymap_mapdata={
       name: "Pope"
     },
     "27123": {
+      color: "#001ffd",
       name: "Ramsey",
       description: "<table><tbody><tr><td>Land O'Lakes</td></tr><tr><td>3M</td></tr><tr><td>Deluxe Corp</td></tr><tr><td>Ecolab</td></tr><tr><td>Securian Financial</td></tr><tr><td>HC Fuller</td></tr></tbody></table>"
     },
@@ -1441,6 +1475,7 @@ var simplemaps_countymap_mapdata={
       name: "Roseau"
     },
     "27137": {
+      color: "#6477ff",
       name: "St Louis",
       description: "<table><tbody><tr><td>Allete</td></tr></tbody></table>"
     },
@@ -1481,6 +1516,7 @@ var simplemaps_countymap_mapdata={
       name: "Waseca"
     },
     "27163": {
+      color: "#6477ff",
       name: "Washington",
       description: "<table><tbody><tr><td>Imation</td></tr></tbody></table>"
     },
@@ -1491,6 +1527,7 @@ var simplemaps_countymap_mapdata={
       name: "Wilkin"
     },
     "27169": {
+      color: "#6477ff",
       name: "Winona",
       description: "<table><tbody><tr><td>Fastenal</td></tr></tbody></table>"
     },
@@ -1513,7 +1550,7 @@ var simplemaps_countymap_mapdata={
       name: "Bayfield"
     },
     "55009": {
-      color: "#97a4ff",
+      color: "#314aff",
       name: "Brown",
       description: "<table><tbody><tr><td>Associated Bank</td></tr><tr><td>Green Bay Packaging</td></tr><tr><td>Schneider National</td></tr><tr><td>Schreiber</td></tr><tr><td>Shopko</td></tr></tbody></table>"
     },
@@ -1524,6 +1561,7 @@ var simplemaps_countymap_mapdata={
       name: "Burnett"
     },
     "55015": {
+      color: "#6477ff",
       name: "Calumet",
       description: "<table><tbody><tr><td>Ariens Company</td></tr></tbody></table>"
     },
@@ -1545,6 +1583,7 @@ var simplemaps_countymap_mapdata={
       description: "<table><tbody><tr><td>Alliant Energy</td></tr><tr><td>American Family Insurance</td></tr><tr><td>CUNA Mutal Group</td></tr><tr><td>Departnebt of Employee Trust Funds</td></tr><tr><td>State of Wisconsin</td></tr><tr><td>UW Health</td></tr><tr><td>Spectrum Brands</td></tr><tr><td>WPS</td></tr><tr><td>Epic</td></tr></tbody></table>"
     },
     "55027": {
+      color: "#6477ff",
       name: "Dodge",
       description: "<table><tbody><tr><td>Michel's Corporate</td></tr></tbody></table>"
     },
@@ -1558,6 +1597,7 @@ var simplemaps_countymap_mapdata={
       name: "Dunn"
     },
     "55035": {
+      color: "#6477ff",
       name: "Eau Claire",
       description: "<table><tbody><tr><td>Menards</td></tr></tbody></table>"
     },
@@ -1565,6 +1605,7 @@ var simplemaps_countymap_mapdata={
       name: "Florence"
     },
     "55039": {
+      color: "#314aff",
       name: "Fond Du Lac",
       description: "<table><tbody><tr><td>JF Ahern</td></tr><tr><td>Mercury Marine</td></tr></tbody></table>"
     },
@@ -1581,6 +1622,7 @@ var simplemaps_countymap_mapdata={
       name: "Green Lake"
     },
     "55049": {
+      color: "#6477ff",
       name: "Iowa",
       description: "<table><tbody><tr><td>Lands' End</td></tr></tbody></table>"
     },
@@ -1591,6 +1633,7 @@ var simplemaps_countymap_mapdata={
       name: "Jackson"
     },
     "55055": {
+      color: "#6477ff",
       name: "Jefferson",
       description: "<table><tbody><tr><td>Trek Bicycle</td></tr></tbody></table>"
     },
@@ -1598,7 +1641,7 @@ var simplemaps_countymap_mapdata={
       name: "Juneau"
     },
     "55059": {
-      color: "#97a4ff",
+      color: "#314aff",
       name: "Kenosha",
       description: "<table><tbody><tr><td>Amazon</td></tr><tr><td>Snap-on Incorperated</td></tr><tr><td>Uline</td></tr></tbody></table>"
     },
@@ -1606,6 +1649,7 @@ var simplemaps_countymap_mapdata={
       name: "Kewaunee"
     },
     "55063": {
+      color: "#6477ff",
       name: "La Crosse",
       description: "<table><tbody><tr><td>Kwik Trip</td></tr></tbody></table>"
     },
@@ -1616,6 +1660,7 @@ var simplemaps_countymap_mapdata={
       name: "Langlade"
     },
     "55069": {
+      color: "#6477ff",
       name: "Lincoln",
       description: "<table><tbody><tr><td>Church Mutual</td></tr></tbody></table>"
     },
@@ -1649,10 +1694,12 @@ var simplemaps_countymap_mapdata={
       name: "Oneida"
     },
     "55087": {
+      color: "#314aff",
       name: "Outagamie",
       description: "<table><tbody><tr><td>Boldt Company</td></tr><tr><td>Secura Insurance</td></tr><tr><td>US Venture</td></tr></tbody></table>"
     },
     "55089": {
+      color: "#6477ff",
       name: "Ozaukee",
       description: "<table><tbody><tr><td>Charter Manufacturing</td></tr></tbody></table>"
     },
@@ -1666,7 +1713,7 @@ var simplemaps_countymap_mapdata={
       name: "Polk"
     },
     "55097": {
-      color: "#97a4ff",
+      color: "#6477ff",
       name: "Portage",
       description: "<table><tbody><tr><td>Sentry Insurance</td></tr></tbody></table>"
     },
@@ -1674,7 +1721,7 @@ var simplemaps_countymap_mapdata={
       name: "Price"
     },
     "55101": {
-      color: "#6477ff",
+      color: "#314aff",
       name: "Racine",
       description: "<table><tbody><tr><td>Johnson Financial Group</td></tr><tr><td>Modine Manufacturing</td></tr><tr><td>SC Johnson</td></tr></tbody></table>"
     },
@@ -1683,7 +1730,7 @@ var simplemaps_countymap_mapdata={
     },
     "55105": {
       name: "Rock",
-      color: "#6477ff",
+      color: "#001ffd",
       description: "<table><tbody><tr><td>Regal Beloit</td></tr><tr><td>The DeLong Co</td></tr><tr><td>Grainger</td></tr><tr><td>Kerry</td></tr><tr><td>SPX</td></tr><tr><td>ABC Supply</td></tr></tbody></table>"
     },
     "55107": {
@@ -1702,6 +1749,7 @@ var simplemaps_countymap_mapdata={
       name: "Shawano"
     },
     "55117": {
+      color: "#314aff",
       name: "Sheboygan",
       description: "<table><tbody><tr><td>Kohler</td></tr><tr><td>Masters Gallery Foods</td></tr><tr><td>Sargento</td></tr><tr><td>Acuity Insurance</td></tr><tr><td>Johnsonville</td></tr></tbody></table>"
     },
@@ -1709,6 +1757,7 @@ var simplemaps_countymap_mapdata={
       name: "Taylor"
     },
     "55121": {
+      color: "#6477ff",
       name: "Trempealeau",
       description: "<table><tbody><tr><td>Ashley Furniture</td></tr></tbody></table>"
     },
@@ -1719,6 +1768,7 @@ var simplemaps_countymap_mapdata={
       name: "Vilas"
     },
     "55127": {
+      color: "#6477ff",
       name: "Walworth",
       description: "<table><tbody><tr><td>kikkoman</td></tr></tbody></table>"
     },
@@ -1730,7 +1780,7 @@ var simplemaps_countymap_mapdata={
       description: "<table><tbody><tr><td>West Bend Mutual Group</td></tr></tbody></table>"
     },
     "55133": {
-      color: "#314aff",
+      color: "#001ffd",
       name: "Waukesha",
       description: "<table><tbody><tr><td>Fiserv</td></tr><tr><td>Hydrite Chemical</td></tr><tr><td>US Bank</td></tr><tr><td>JX Enterprises</td></tr><tr><td>ACS Group</td></tr><tr><td>Rogers Health</td></tr><tr><td>Quad/Graphics</td></tr><tr><td>GE Healthcare</td></tr><tr><td>HUSCO International</td></tr><tr><td>Milwaukee Tool</td></tr><tr><td>ProHealth Care</td></tr><tr><td>Generac Holdings</td></tr></tbody></table>"
     },

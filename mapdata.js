@@ -1817,7 +1817,7 @@ var simplemaps_countymap_mapdata={
     "2": {
       lat: 39.167,
       lng: -86.535,
-      name: "University of Indiana",
+      name: "Indiana University",
       url: "https://www.indiana.edu/",
       description: "<table><tbody><tr><td>Evening</td><td>$74,500</td></tr><tr><td>Online</td><td>$74,500</td></tr></tbody></table>"
     },
@@ -1829,11 +1829,18 @@ var simplemaps_countymap_mapdata={
       description: "<table><tbody><tr><td>Professional MBA</td><td>$31,500</td></tr></tbody></table>"
     },
     "4": {
-      lat: 34.041,
-      lng: -117.558,
-      name: "University of Illinois",
+      lat: 40.4259,
+      lng: -86.9081,
+      name: "Purdue University, West Lafayette",
+      url: "https://www.purdue.edu/",
+      description: "<table><tbody><tr><td>Online</td><td>$54,000</td></tr><tr><td>Weekend</td><td>$51,000</td></tr></tbody></table>"
+    },
+    "5": {
+      lat: 40.1164,
+      lng: -88.2434,
+      name: "University of Illinois at Champaign-Urbana",
       url: "https://illinois.edu/",
-      description: "<table><tbody><tr><td>Online</td><td>$22,000</td></tr></tbody></table>"
+      description: "<table><tbody><tr><td>Online</td><td>$22,000</td></tr><tr><td>Online</td><td>$22,000</td></tr></tbody></table>"
     },
     "6": {
       lat: 44.817,

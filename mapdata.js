@@ -1840,7 +1840,7 @@ var simplemaps_countymap_mapdata={
       lng: -88.2434,
       name: "University of Illinois at Champaign-Urbana",
       url: "https://illinois.edu/",
-      description: "<table><tbody><tr><td>Online</td><td>$22,000</td></tr><tr><td>Online</td><td>$22,000</td></tr></tbody></table>"
+      description: "<table><tbody><tr><td>Online</td><td>$22,000</td></tr></tbody></table>"
     },
     "6": {
       lat: 44.817,

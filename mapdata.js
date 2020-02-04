@@ -1835,13 +1835,6 @@ var simplemaps_countymap_mapdata={
       url: "https://illinois.edu/",
       description: "<table><tbody><tr><td>Online</td><td>$22,000</td></tr></tbody></table>"
     },
-    "5": {
-      lat: 39.962,
-      lng: -83.003,
-      name: "Ohio State University",
-      url: "https://www.osu.edu/",
-      description: "<table><tbody><tr><td>Working Professionals</td><td>$75,000</td></tr></tbody></table>"
-    },
     "6": {
       lat: 44.817,
       lng: -91.501,
@@ -1852,9 +1845,9 @@ var simplemaps_countymap_mapdata={
     "7": {
       lat: 43.0783,
       lng: -87.882,
-      name: "UW-Milwaukee",
+      name: "Milwaukee",
       url: "https://uwm.edu/",
-      description: "<table><tbody><tr><td>Part-time</td><td>$37,000</td></tr></tbody></table>"
+      description: "<table><tbody><tr><td>UW-Milwaukee</td><td>Part-time</td><td>$37,000</td></tr><tr><td>Marquette University</td><td>Part-time</td><td>$44,000</td></tr></tbody></table>"
     },
     "9": {
       lat: 44.979,
@@ -1869,13 +1862,6 @@ var simplemaps_countymap_mapdata={
       name: "UW-Whitewater",
       url: "http://www.uww.edu/",
       description: "<table><tbody><tr><td>Evening</td><td>$20,000</td></tr><tr><td>Online</td><td>$23,000</td></tr></tbody></table>"
-    },
-    "11": {
-      lat: 43.0388,
-      lng: -87.9286,
-      name: "Marquette University",
-      url: "https://marquette.edu",
-      description: "<table><tbody><tr><td>Part-time</td><td>$44,000</td></tr></tbody></table>"
     }
   },
   lines: {

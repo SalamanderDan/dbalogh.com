@@ -385,7 +385,9 @@ var simplemaps_countymap_mapdata={
       name: "Williamson"
     },
     "17201": {
-      name: "Winnebago"
+      color: "#6477ff",
+      name: "Winnebago",
+      description: "<table><tbody><tr><td>Collins Aerospace</td></tr></tbody></table>"
     },
     "17203": {
       name: "Woodford"
@@ -771,7 +773,9 @@ var simplemaps_countymap_mapdata={
       name: "Dickinson"
     },
     "19061": {
-      name: "Dubuque"
+      color: "#6477ff",
+      name: "Dubuque",
+      description: "<table><tbody><tr><td>John Deere</td></tr></tbody></table>"
     },
     "19063": {
       name: "Emmet"
@@ -1776,6 +1780,7 @@ var simplemaps_countymap_mapdata={
       name: "Washburn"
     },
     "55131": {
+      color: "#6477ff",
       name: "Washington",
       description: "<table><tbody><tr><td>West Bend Mutual Group</td></tr></tbody></table>"
     },
@@ -1855,6 +1860,13 @@ var simplemaps_countymap_mapdata={
       name: "Milwaukee",
       url: "https://uwm.edu/",
       description: "<table><tbody><tr><td>UW-Milwaukee</td><td>Part-time</td><td>$37,000</td></tr><tr><td>Marquette University</td><td>Part-time</td><td>$44,000</td></tr></tbody></table>"
+    },
+    "8": {
+      lat: 44.03429,
+      lng: -88.5477,
+      name: "UW-Oshkosh",
+      url: "https://uwosh.edu/",
+      description: "<table><tbody><tr><td>Professional</td><td>$30,000</td></tr>"
     },
     "9": {
       lat: 44.979,
